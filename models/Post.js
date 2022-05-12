@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Post = require("../model/Post");
 
 const postSchema = new Schema({
   userID: {
@@ -28,4 +29,5 @@ const postSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Post", postSchema);
+const postModel = model("Post", postSchema);
+module.exports = postModel;

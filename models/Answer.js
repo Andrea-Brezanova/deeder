@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Answer = require("../model/Answer");
 
 const answerSchema = new Schema({
   location: {
@@ -28,4 +29,5 @@ const answerSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Answer", answerSchema);
+const answerModel = model("Answer", answerSchema);
+module.exports = answerModel;

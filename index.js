@@ -1,14 +1,13 @@
+require("dotenv/config");
 const express = require("express");
 const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/posts");
-const mongoose = require("mongoose");
+require("./db");
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-const mongoDB = "mongodb+srv://Deeder:<AndreaKwame>@database.px0rq.mongodb.net/Deeder?retryWrites=true&w=majority";
-mongoose.connect(mongoDB);
-
-const db = mongoose.connection;
+console.log("hi")
 
 app.use(express.json());
 
