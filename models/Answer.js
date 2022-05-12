@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Answer = require("../model/Answer");
 
 const answerSchema = new Schema({
   location: {
