@@ -1,0 +1,31 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const answerSchema = new Schema({
+  location: {
+    type: String,
+    required: false,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  phone: {
+    type: Number,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
+  },
+  postID: {
+    type: String,
+    required: true,
+  },
+  userID: {
+    type: String,
+    required: true,
+  },
+});
+
+module.exports = mongoose.model("Answer", answerSchema);
