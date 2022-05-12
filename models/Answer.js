@@ -29,4 +29,5 @@ const answerSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Answer", answerSchema);
+const answerModel = model("Answer", answerSchema);
+module.exports = answerModel;
