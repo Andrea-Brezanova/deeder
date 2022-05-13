@@ -1,3 +1,5 @@
+const userModel = require("../models/User");
+
 const login = (req, res, next) => {
     res.send("login");
   };

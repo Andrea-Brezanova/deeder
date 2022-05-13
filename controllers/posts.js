@@ -1,3 +1,5 @@
+const postModel = require("../models/Post");
+
 const getPosts = (req, res, next) => {
   res.send("all posts");
 };
