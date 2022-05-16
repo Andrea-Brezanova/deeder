@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Post = require("../models/Post");
 
-const postSchema = new Schema({
+const postSchema = new mongoose.Schema({
   userID: {
     type: String,
     required: true,
@@ -29,5 +29,5 @@ const postSchema = new Schema({
   },
 });
 
-const postModel = model("Post", postSchema);
+const postModel = mongoose.model("Post", postSchema);
 module.exports = postModel;
