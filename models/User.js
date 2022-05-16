@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const { stringify } = require("nodemon/lib/utils");
 const Schema = mongoose.Schema;
+const User = require("../models/User");
 
 const userSchema = new Schema({
   Name: {
