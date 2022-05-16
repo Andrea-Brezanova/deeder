@@ -17,7 +17,7 @@ const answerSchema = new mongoose.Schema({
   },
   date: {
     type: Date,
-    required: true,
+    default: Date.now,
   },
   postID: {
     type: String,

@@ -2,13 +2,11 @@ const mongoose = require("mongoose");
 const User = require("../models/User");
 
 const userSchema = new mongoose.Schema({
-  Name: {
+  name: {
     type: String,
-    required: true,
   },
-  Phone_Number: {
+  phoneNumber: {
     type: Number,
-    required: true,
   },
   email: {
     type: String,
@@ -20,9 +18,8 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
 
-  Location: {
+  location: {
     type: String,
-    required: true,
   },
 });
 
