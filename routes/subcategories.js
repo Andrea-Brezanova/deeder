@@ -9,12 +9,12 @@ const {
 
 const subcategoriesRouter = express.Router();
 
-// subcategoriesRouter.route("/").get(getSubcategories).post(createSubcategory);
+subcategoriesRouter.route("/").get(getSubcategories).post(createSubcategory);
 
-// subcategoriesRouter
-//   .route("/:id")
-//   .get(getSubcategory)
-//   .put(updateSubcategory)
-//   .delete(deleteSubcategory);
+subcategoriesRouter
+  .route("/subcategories")
+  .get(getSubcategory)
+  .put(updateSubcategory)
+  .delete(deleteSubcategory);
 
 module.exports = subcategoriesRouter;
