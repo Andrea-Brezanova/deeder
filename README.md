@@ -1,2 +1,2 @@
 # deeder
-An application for voluteering
+An application for volunteering
