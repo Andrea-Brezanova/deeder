@@ -10,7 +10,7 @@ const categorySchema = new Schema({
       _id: {
             type: String,
             required: true
-      },    
+      },
 })
 
 const categoryModel = model("Category", categorySchema);
