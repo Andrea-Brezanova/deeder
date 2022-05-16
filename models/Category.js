@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { stringify } = require("nodemon/lib/utils");
 const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
@@ -10,7 +9,7 @@ const categorySchema = new Schema({
       _id: {
             type: String,
             required: true
-      },    
+      },
 })
 
 const categoryModel = model("Category", categorySchema);
