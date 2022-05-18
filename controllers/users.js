@@ -1,4 +1,6 @@
 const userModel = require("../models/User");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 
 //Log into existing account
@@ -13,15 +15,7 @@ const signup = async (req, res, next) => {
     const {
       body: { userName, email, password },
     } = req;
-  
-    //Check DB for exisiting user 
-    const found = await userModel.findOne({email});
 
-    console.log(found)
-    if (found) throw new Error("User Already Exist");
-
-    //Create new user 
-    const user = await userModel.create({ userName, email, password });
     res.json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });
