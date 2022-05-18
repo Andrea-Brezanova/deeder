@@ -2,14 +2,13 @@ const userModel = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-//Log into existing account
-const login = (req, res, next) => {
 
-  res.send("login");
-};
 
 //Create a new account
 const signup = async (req, res, next) => {
+
+const login = async (req, res, next) => {
+
   try {
     const {
       body: { userName, email, password },
@@ -28,14 +27,10 @@ const signup = async (req, res, next) => {
     res.json(token);
   } catch (error) {
     res.status(500).json({ message: error.message });
-  }
-};
+
+//C: CRUD operations:
 
 
-
-
-
-//Get all users
 const getUsers = (req, res, next) => {
   res.send("all users");
 };
