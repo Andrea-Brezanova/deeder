@@ -1,9 +1,9 @@
 const userModel = require("../models/User");
 
 const login = (req, res, next) => {
+  //res.json()
   res.send("login");
 };
-
 const signup = async (req, res, next) => {
   try {
     const {
@@ -13,12 +13,10 @@ const signup = async (req, res, next) => {
     //Check DB for exisiting user  
     const user = await userModel.create({ email, password });
     res.json(user);
-    
   } catch (error) {
-    console.log(error.message)
-      res.status(500).json({message:error.message});
+    res.status(500).json({ message: error.message });
+    //console.log(error.message)
   }
-  
 };
 
 module.exports = {
