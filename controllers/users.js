@@ -2,27 +2,52 @@ const userModel = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-
-//Log into existing account
-const login = (req, res, next) => {
-  
-  res.send("login");
-};
-
-//Create a new account
-const signup = async (req, res, next) => {
+//A:Log into existing account
+const login = async (req, res, next) => {
   try {
     const {
       body: { userName, email, password },
     } = req;
 
-    res.json(user);
+
+    //Check DB for email (see if user exists)
+    const found = await userModel.findOne({ email }).select("+password");
+    if (!found)
+      throw new Error(
+        "The email you entered does not correspond to any account, try again please"
+      );
+
+    //Compare hashes (see if password matches the email it is associated with)
+    const match = await bcrypt.compare(password, found.password);
+    if (!match)
+      throw new Error("The password you provided does not match your email");
+
+    //Create access token
+    const accessToken = jwt.sign(
+      { id: found._id, email: found.email, userName, userName: found.userName },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "120s",
+      }
+    );
+    res.json(accessToken);
+
+
   } catch (error) {
     res.status(500).json({ message: error.message });
-    console.log(error.message)
+    console.log(error.message);
   }
 };
 
+
+
+
+
+
+
+
+
+//C: CRUD operations:
 //Get all users
 const getUsers = (req, res, next) => {
   res.send("all users");
