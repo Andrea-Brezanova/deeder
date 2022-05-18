@@ -1,4 +1,5 @@
 const userModel = require("../models/User");
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -69,10 +70,7 @@ const signup = async (req, res, next) => {
     res.status(500).json({ message: error.message });
     console.log(error.message);
   }
-};
 
-//C: CRUD operations:
-//Get all users
 const getUsers = (req, res, next) => {
   res.send("all users");
 };
