@@ -70,6 +70,7 @@ const signup = async (req, res, next) => {
     res.status(500).json({ message: error.message });
     console.log(error.message);
   }
+}
 
 
   const getUsers = (req, res, next) => {
@@ -105,4 +106,4 @@ const signup = async (req, res, next) => {
     login,
     signup,
   };
-}
+
