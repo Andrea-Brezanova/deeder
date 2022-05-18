@@ -71,6 +71,7 @@ const signup = async (req, res, next) => {
     console.log(error.message);
   }
 
+
   const getUsers = (req, res, next) => {
     res.send("all users");
   };
