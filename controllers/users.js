@@ -10,6 +10,7 @@ const signup = async (req, res, next) => {
       body: { email, password },
     } = req;
   
+    //Check DB for exisiting user  
     const user = await userModel.create({ email, password });
     res.json(user);
   } catch (error) {

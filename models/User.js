@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    lowercase: true
   },
   password: {
     type: String,
@@ -23,10 +24,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-userSchema.pre("save", function (next) {
-
-  next();
-});
 
 const userModel = mongoose.model("User", userSchema);
 
