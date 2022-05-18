@@ -1,11 +1,10 @@
-const userModel = require("../models/User");
+const userModel = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-
 //Log into existing account
 const login = (req, res, next) => {
-  
+
   res.send("login");
 };
 
@@ -15,13 +14,26 @@ const signup = async (req, res, next) => {
     const {
       body: { userName, email, password },
     } = req;
+    //KWCheck DB for exisiting user 
+    const found = await userModel.findOne({ email });
+    if (found) throw new Error("User Already Exist");
 
-    res.json(user);
+    const hash = await bcrypt.hash(password, 6);
+
+    const user = await userModel.create({ userName, email, password: hash });
+
+    const token = jwt.sign({ id: user._id, email }, process.env.JWT_SECRET, {
+      expiresIn: "500s"
+    });
+    res.json(token);
   } catch (error) {
     res.status(500).json({ message: error.message });
-    console.log(error.message)
   }
 };
+
+
+
+
 
 //Get all users
 const getUsers = (req, res, next) => {
