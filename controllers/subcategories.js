@@ -1,4 +1,4 @@
-const subcategoriesModel = require("../models/Subcategory");
+const subcategoryModel = require("../models/Subcategory");
 
 const getSubcategories = (req, res, next) => {
   res.send("all subcategories");
