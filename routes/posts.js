@@ -1,4 +1,6 @@
 const express = require("express");
+const verifyJWT = require("../middleware/verifyJWT");
+
 const {
   getPosts,
   getPost,
@@ -9,7 +11,7 @@ const {
 
 const postsRouter = express.Router();
 
-postsRouter.route("/").get(getPosts).post(createPost);
+postsRouter.route("/").get(verifyJWT, getPosts).post(createPost);
 
 postsRouter.route("/:id").get(getPost).put(updatePost).delete(deletePost);
 
