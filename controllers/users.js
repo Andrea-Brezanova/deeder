@@ -1,21 +1,21 @@
 const userModel = require("../models/User");
 
 const login = (req, res, next) => {
-  //res.json()
+  
   res.send("login");
 };
 const signup = async (req, res, next) => {
   try {
     const {
-      body: { email, password },
+      body: { userName, email, password },
     } = req;
   
     //Check DB for exisiting user  
-    const user = await userModel.create({ email, password });
+    const user = await userModel.create({ userName, email, password });
     res.json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });
-    //console.log(error.message)
+    console.log(error.message)
   }
 };
 
