@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const Post = require("../models/Post");
 
 const postSchema = new mongoose.Schema({
-  userID: {
+  userName: {
     type: String,
     required: true,
   },
@@ -21,7 +21,7 @@ const postSchema = new mongoose.Schema({
   },
   date: {
     type: Date,
-    required: true,
+    default: Date.now,
   },
   subcategoryID: {
     type: String,

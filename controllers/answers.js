@@ -1,4 +1,4 @@
-const answersModel = require("../models/Answer");
+const answerModel = require("../models/Answer");
 
 const getAnswers = (req, res, next) => {
       res.send("all answers");
