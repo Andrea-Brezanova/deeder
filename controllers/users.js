@@ -9,6 +9,7 @@ const login = async (req, res, next) => {
       body: { userName, email, password },
     } = req;
 
+
     //Check DB for email (see if user exists)
     const found = await userModel.findOne({ email }).select("+password");
     if (!found)
@@ -30,6 +31,8 @@ const login = async (req, res, next) => {
       }
     );
     res.json(accessToken);
+
+
   } catch (error) {
     res.status(500).json({ message: error.message });
     console.log(error.message);
