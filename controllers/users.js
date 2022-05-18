@@ -1,14 +1,19 @@
-const userModel = require("../models/User");
+const userModel = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-//A:Log into existing account
+
+
+//Create a new account
+const signup = async (req, res, next) => {
+}
 const login = async (req, res, next) => {
+
   try {
     const {
       body: { userName, email, password },
     } = req;
-
+    
     //Check DB for email (see if user exists)
     const found = await userModel.findOne({ email }).select("+password");
     if (!found)
@@ -30,43 +35,27 @@ const login = async (req, res, next) => {
       }
     );
     res.json(accessToken);
-  } catch (error) {
+    } catch (error) {
     res.status(500).json({ message: error.message });
-    console.log(error.message);
   }
-};
-
-//B:Sign up for a new account
-const signup = async (req, res, next) => {
-  try {
-    const {
-      body: { userName, email, password },
-    } = req;
-
-    //Check DB for exisiting user
+    
+  
+    
+    //KWCheck DB for exisiting user 
     const found = await userModel.findOne({ email });
     if (found) throw new Error("User Already Exist");
 
-    //Store hash in your password DB
-    const hash = await bcrypt.hash(password, 5);
 
-    //Create new user
+    const hash = await bcrypt.hash(password, 6);
+
     const user = await userModel.create({ userName, email, password: hash });
 
-    //Create access token
-    const accessToken = jwt.sign(
-      { id: user._id, email, userName },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "120s",
-      }
-    );
-    res.json(accessToken);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-    console.log(error.message);
-  }
+    const token = jwt.sign({ id: user._id, email }, process.env.JWT_SECRET, {
+      expiresIn: "500s"
+    });
+    res.json(token);
 };
+
 
 //C: CRUD operations:
 //Get all users
