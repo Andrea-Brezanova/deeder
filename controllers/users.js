@@ -14,7 +14,7 @@ const signup = async (req, res, next) => {
 
     //Check DB for an exisiting user
     const found = await userModel.findOne({ email });
-    if (found) throw new Error("this user  Exists");
+    if (found) throw new Error("THE USER EXIST ALREADY");
 
     const hash = await bcrypt.hash(password, 6);
 
