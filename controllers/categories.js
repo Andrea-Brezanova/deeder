@@ -1,4 +1,4 @@
-const categoriesModel = require("../models/Category");
+const categoryModel = require("../models/Category");
 
 const getCategories = (req, res, next) => {
   res.send("all categories");
