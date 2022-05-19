@@ -1,5 +1,4 @@
 const userModel = require("../models/User");
-
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -70,40 +69,34 @@ const signup = async (req, res, next) => {
     res.status(500).json({ message: error.message });
     console.log(error.message);
   }
-}
+};
 
+//Display all users
+const getUsers = async (req, res, next) => {
+  try {
+    const users = await userModel.find({});
+    res.json(users);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
 
-  const getUsers = (req, res, next) => {
-    res.send("all users");
-  };
+//Display one user
+const getUser = async (req, res, next) => {
+  try {
+    const {
+      params: { id },
+    } = req;
+    const user = await userModel.findById(id);
+    res.json(user);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
 
-  //Get one user
-  const getUser = (req, res, next) => {
-    res.send("one user");
-  };
-
-  //Create a new user
-  const createUser = (req, res, next) => {
-    res.send("create user");
-  };
-
-  //Modify existing user
-  const updateUser = (req, res, next) => {
-    res.send("update user");
-  };
-
-  //Delete existing user
-  const deleteUser = (req, res, next) => {
-    res.send("delete user");
-  };
-
-  module.exports = {
-    getUsers,
-    getUser,
-    createUser,
-    updateUser,
-    deleteUser,
-    login,
-    signup,
-  };
-
+module.exports = {
+  login,
+  signup,
+  getUser,
+  getUsers
+};

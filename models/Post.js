@@ -1,29 +1,28 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const Post = require("../models/Post");
+
 
 const postSchema = new mongoose.Schema({
-  userName: {
+  title: {
     type: String,
     required: true,
   },
-  location: {
-    type: String,
-    required: false,
+  author: {
+    type: mongoose.Types.ObjectId,
+    required: true,
+    ref:"User"
   },
-  description: {
+  body: {
     type: String,
     required: true,
-  },
-  phone: {
-    type: Number,
   },
   date: {
     type: Date,
     default: Date.now,
   },
-  subcategoryID: {
-    type: String,
+  subcategory: {
+    type: mongoose.Types.ObjectId,
+    required: true,
+    ref:"Subcategory"
   },
 });
 
