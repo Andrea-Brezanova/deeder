@@ -1,24 +1,77 @@
 const answerModel = require("../models/Answer");
 
-const getAnswers = (req, res, next) => {
-      res.send("all answers");
+//Display all answers
+const getAnswers = async (req, res, next) => {
+      try {
+        const answers = await answerModel.find({});
+        res.json(answers);
+      } catch (error) {
+        res.status(500).send(error.message);
+      }
 };
 
-const getAnswer = (req, res, next) => {
-      res.send("one answer");
-};
+//Display one answer
+const getAnswer = async (req, res, next) => {
+      try {
+        const {
+          params: { id  },
+        } = req;
+        const answer = await answerModel.findById(id);
+        res.json(answer);
+      } catch (error) {
+        res.status(500).send(error.message);
+      }
+    };
 
-const createAnswer = (req, res, next) => {
-      res.send("create answer");
-};
+//Create a new answer
+const createAnswer = async (req, res, next) => {
+      try {
+        const {
+          body: { userName, location, description, phone, postID, userID  },
+        } = req;
+        const newAnswer = await answerModel.create({ userName, location, description, phone, postID, userID  });
+        res.json(newAnswer);
+      } catch (error) {
+        res.status(500).send(error.message);
+      }
+    };
 
-const updateAnswer = (req, res, next) => {
-      res.send("update answer");
-};
+//Modify existing answer
+const updateAnswer = async (req, res, next) => {
+      try {
+        const {
+          params: { id  },
+        } = req;
+    
+        const {
+          body: {
+            userName,
+            location,
+            description,
+            phone,
+            postID,
+            userID
+          }
+        } = req;
+        const answer = await answerModel.findByIdAndUpdate(id, { userName, location, description, phone, postID, userID });
+        res.json(answer);
+      } catch (error) {
+        res.status(500).send(error.message);
+      }
+    };
 
-const deleteAnswer = (req, res, next) => {
-      res.send("delete answer");
-};
+//Remove existing answer
+const deleteAnswer = async (req, res, next) => {
+      try {
+        const {
+          params: { id  },
+        } = req;
+        const answer = await answerModel.findByIdAndDelete(id);
+        res.json(answer);
+      } catch (error) {
+        res.status(500).send(error.message);
+      }
+    };
 
 module.exports = {
       getAnswers,

@@ -23,7 +23,7 @@ const login = async (req, res, next) => {
     if (!match)
       throw new Error("The password you provided does not match your email");
 
-    //If both match, create access token
+    //Create access token
     const accessToken = jwt.sign(
       { id: found._id, email: found.email, userName: found.userName },
       process.env.JWT_SECRET,

@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 const Answer = require("../models/Answer");
 
 const answerSchema = new mongoose.Schema({
+  userName: {
+    type: String,
+    required: true,
+  },
   location: {
     type: String,
     required: false,
