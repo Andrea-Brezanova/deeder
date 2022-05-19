@@ -1,9 +1,9 @@
 const categoryModel = require("../models/Category");
 
 //Display all Categories
-const getCategory = async (req, res, next) => {
+const getCategories = async (req, res, next) => {
   try {
-    const categories = await postModel.find({});
+    const categories = await categoryModel.find({});
     res.json(categories);
   } catch (error) {
     res.status(500).send(error.message);
@@ -11,12 +11,12 @@ const getCategory = async (req, res, next) => {
 };
 
 //Display one category
-const getCategories = async (req, res, next) => {
+const getCategory = async (req, res, next) => {
   try {
     const {
       params: { id },
     } = req;
-    const category = await postModel.findById(id);
+    const category = await categoryModel.findById(id);
     res.json(category);
   } catch (error) {
     res.status(500).send(error.message);
@@ -27,9 +27,9 @@ const getCategories = async (req, res, next) => {
 const createCategory = async (req, res, next) => {
   try {
     const {
-      body: { userName, location, description, phone, subcategoryID },
+      body: { name }
     } = req;
-    const newCategory = await postModel.create({ userName, location, description, phone, subcategoryID });
+    const newCategory = await categoryModel.create({ name });
     res.json(newCategory);
   } catch (error) {
     res.status(500).send(error.message);
@@ -45,12 +45,11 @@ const updateCategory = async (req, res, next) => {
 
     const {
       body: {
-        userName,
-        location,
-        phone
+        name,
+
       }
     } = req;
-    const category = await categoryModel.findByIdAndUpdate(id, { userName, location, phone });
+    const category = await categoryModel.findByIdAndUpdate(id, { name });
     res.json(category);
   } catch (error) {
     res.status(500).send(error.message);
@@ -63,7 +62,7 @@ const deleteCategory = async (req, res, next) => {
     const {
       params: { id },
     } = req;
-    const post = await categoryModel.findByIdAndDelete(id);
+    const category = await categoryModel.findByIdAndDelete(id);
     res.json(category);
   } catch (error) {
     res.status(500).send(error.message);
