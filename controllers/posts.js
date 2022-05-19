@@ -1,5 +1,5 @@
 const postModel = require("../models/Post");
-// const postsRouter = require("../routes/posts");
+const postsRouter = require("../routes/posts");
 
 //Display all posts
 const getPosts = async (req, res, next) => {
