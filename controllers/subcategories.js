@@ -1,6 +1,7 @@
 const subcategoryModel = require("../models/Subcategory");
 
-const getSubcategory = async (req, res, next) => {
+//Display ALL SubCategories
+const getSubcategories = async (req, res, next) => {
   try {
     const subcategories = await postModel.find({});
     res.json(subcategories);
@@ -10,7 +11,7 @@ const getSubcategory = async (req, res, next) => {
 };
 
 //Display one subcategory
-const getSubcategories = async (req, res, next) => {
+const getSubcategory = async (req, res, next) => {
   try {
     const {
       params: { id },
@@ -26,9 +27,9 @@ const getSubcategories = async (req, res, next) => {
 const createSubcategory = async (req, res, next) => {
   try {
     const {
-      body: { userName, location, description, phone, categoryID },
+      body: { name, category },
     } = req;
-    const newSubcategory = await subcategoryModel.create({ userName, location, description, phone, categoryID });
+    const newSubcategory = await subcategoryModel.create({ name, category });
     res.json(newSubcategory);
   } catch (error) {
     res.status(500).send(error.message);
@@ -44,12 +45,11 @@ const updateSubcategory = async (req, res, next) => {
 
     const {
       body: {
-        userName,
-        location,
-        phone
+        name,
+        category
       }
     } = req;
-    const subcategory = await subcategoryModel.findByIdAndUpdate(id, { userName, location, phone });
+    const subcategory = await subcategoryModel.findByIdAndUpdate(id, { name, category });
     res.json(subcategory);
   } catch (error) {
     res.status(500).send(error.message);
