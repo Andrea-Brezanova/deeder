@@ -1,24 +1,75 @@
 const categoryModel = require("../models/Category");
 
-const getCategories = (req, res, next) => {
-  res.send("all categories");
+//Display all Categories
+const getCategory = async (req, res, next) => {
+  try {
+    const categories = await postModel.find({});
+    res.json(categories);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 };
 
-const getCategory = (req, res, next) => {
-  res.send("one category");
+//Display one category
+const getCategories = async (req, res, next) => {
+  try {
+    const {
+      params: { id },
+    } = req;
+    const category = await postModel.findById(id);
+    res.json(category);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 };
 
-const createCategory = (req, res, next) => {
-  res.send("create category");
+//Create a new CATEGORY
+const createCategory = async (req, res, next) => {
+  try {
+    const {
+      body: { userName, location, description, phone, subcategoryID },
+    } = req;
+    const newCategory = await postModel.create({ userName, location, description, phone, subcategoryID });
+    res.json(newCategory);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 };
 
-const updateCategory = (req, res, next) => {
-  res.send("update category");
+//Modify existing CATEGORY
+const updateCategory = async (req, res, next) => {
+  try {
+    const {
+      params: { id },
+    } = req;
+
+    const {
+      body: {
+        userName,
+        location,
+        phone
+      }
+    } = req;
+    const category = await categoryModel.findByIdAndUpdate(id, { userName, location, phone });
+    res.json(category);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 };
 
-const deleteCategory = (req, res, next) => {
-  res.send("delete category");
+//Remove existing Category
+const deleteCategory = async (req, res, next) => {
+  try {
+    const {
+      params: { id },
+    } = req;
+    const post = await categoryModel.findByIdAndDelete(id);
+    res.json(category);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 };
+
 
 module.exports = {
   getCategories,
