@@ -8,9 +8,7 @@ const { Schema, model } = require("mongoose");
 const userSchema = new mongoose.Schema({
   userName: {
     type: String,
-  },
-  phoneNumber: {
-    type: Number,
+    required: true,
   },
   email: {
     type: String,
@@ -22,9 +20,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     select: false,
-
   },
-
+  phone: {
+    type: Number,
+  },
   location: {
     type: String,
   },

@@ -1,35 +1,30 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Types = mongoose.Types;
+const model = mongoose.model;
 const Answer = require("../models/Answer");
 
 const answerSchema = new mongoose.Schema({
-  userName: {
+  title: {
     type: String,
     required: true,
   },
-  location: {
-    type: String,
-    required: false,
-  },
-  description: {
-    type: String,
+  author: {
+    type: Types.ObjectId,
     required: true,
   },
-  phone: {
-    type: Number,
+  body: {
+    type: String,
     required: true,
   },
   date: {
     type: Date,
     default: Date.now,
   },
-  postID: {
-    type: String,
+  post: {
+    type: Types.ObjectId,
     required: true,
-  },
-  userID: {
-    type: String,
-    required: true,
+    ref:"Post"
   },
 });
 

@@ -4,7 +4,7 @@ const postModel = require("../models/Post");
 //Display all posts
 const getPosts = async (req, res, next) => {
   try {
-    const posts = await postModel.find({});
+    const posts = await postModel.find({}).populate("author", "name email");
     res.json(posts);
   } catch (error) {
     res.status(500).send(error.message);
@@ -28,9 +28,9 @@ const getPost = async (req, res, next) => {
 const createPost = async (req, res, next) => {
   try {
     const {
-      body: { userName, location, description, phone, subcategoryID  },
+      body: { author, title, body, date, subcategory  },
     } = req;
-    const newPost = await postModel.create({ userName, location, description, phone, subcategoryID  });
+    const newPost = await postModel.create({ author, title, body, date, subcategory });
     res.json(newPost);
   } catch (error) {
     res.status(500).send(error.message);
@@ -46,12 +46,10 @@ const updatePost = async (req, res, next) => {
 
     const {
       body: {
-        userName,
-        location,
-        phone
+        author, title, body, date, subcategory
       }
     } = req;
-    const post = await postModel.findByIdAndUpdate(id, {userName, location, phone});
+    const post = await postModel.findByIdAndUpdate(id, { author, title, body, date, subcategory });
     res.json(post);
   } catch (error) {
     res.status(500).send(error.message);
