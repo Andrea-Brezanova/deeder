@@ -1,6 +1,6 @@
 require("dotenv/config");
 const express = require("express");
-//const usersRouter = require("./routes/user");
+const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/posts");
 const categoriesRouter = require("./routes/categories");
 const subcategoriesRouter = require("./routes/subcategories");
@@ -14,7 +14,7 @@ console.log("hi");
 
 app.use(express.json());
 
-app.use("/users", answersRouter);
+app.use("/users", usersRouter);
 app.use("/posts", postsRouter);
 app.use("/categories", categoriesRouter);
 app.use("/subcategories", subcategoriesRouter);
