@@ -1,4 +1,5 @@
 const userModel = require("../models/User");
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -69,40 +70,40 @@ const signup = async (req, res, next) => {
     res.status(500).json({ message: error.message });
     console.log(error.message);
   }
-};
+}
 
-//C: CRUD operations:
-//Get all users
-const getUsers = (req, res, next) => {
-  res.send("all users");
-};
 
-//Get one user
-const getUser = (req, res, next) => {
-  res.send("one user");
-};
+  const getUsers = (req, res, next) => {
+    res.send("all users");
+  };
 
-//Create a new user
-const createUser = (req, res, next) => {
-  res.send("create user");
-};
+  //Get one user
+  const getUser = (req, res, next) => {
+    res.send("one user");
+  };
 
-//Modify existing user
-const updateUser = (req, res, next) => {
-  res.send("update user");
-};
+  //Create a new user
+  const createUser = (req, res, next) => {
+    res.send("create user");
+  };
 
-//Delete existing user
-const deleteUser = (req, res, next) => {
-  res.send("delete user");
-};
+  //Modify existing user
+  const updateUser = (req, res, next) => {
+    res.send("update user");
+  };
 
-module.exports = {
-  getUsers,
-  getUser,
-  createUser,
-  updateUser,
-  deleteUser,
-  login,
-  signup,
-};
+  //Delete existing user
+  const deleteUser = (req, res, next) => {
+    res.send("delete user");
+  };
+
+  module.exports = {
+    getUsers,
+    getUser,
+    createUser,
+    updateUser,
+    deleteUser,
+    login,
+    signup,
+  };
+
