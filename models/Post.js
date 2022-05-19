@@ -17,7 +17,6 @@ const postSchema = new mongoose.Schema({
   },
   phone: {
     type: Number,
-    required: true,
   },
   date: {
     type: Date,
@@ -25,7 +24,6 @@ const postSchema = new mongoose.Schema({
   },
   subcategoryID: {
     type: String,
-    required: true,
   },
 });
 
