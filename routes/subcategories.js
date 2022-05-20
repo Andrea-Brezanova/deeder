@@ -12,7 +12,7 @@ const subcategoriesRouter = express.Router();
 subcategoriesRouter.route("/").get(getSubcategories).post(createSubcategory);
 
 subcategoriesRouter
-  .route("/subcategories")
+  .route("/:id")
   .get(getSubcategory)
   .put(updateSubcategory)
   .delete(deleteSubcategory);

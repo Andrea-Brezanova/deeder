@@ -16,7 +16,7 @@ const getCategory = async (req, res, next) => {
     const {
       params: { id },
     } = req;
-    const category = await categoryModel.findById(id);
+    const category = await categoryModel.findById(id).populate(("author"));
     res.json(category);
   } catch (error) {
     res.status(500).send(error.message);
@@ -29,7 +29,7 @@ const createCategory = async (req, res, next) => {
     const {
       body: { name }
     } = req;
-    const newCategory = await categoryModel.create({ name });
+    const newCategory = await categoryModel.create({ name }).populate("author");
     res.json(newCategory);
   } catch (error) {
     res.status(500).send(error.message);
@@ -46,10 +46,9 @@ const updateCategory = async (req, res, next) => {
     const {
       body: {
         name,
-
       }
     } = req;
-    const category = await categoryModel.findByIdAndUpdate(id, { name });
+    const category = await categoryModel.findByIdAndUpdate( id, { name });
     res.json(category);
   } catch (error) {
     res.status(500).send(error.message);

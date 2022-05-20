@@ -1,10 +1,7 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const Types = mongoose.Types;
-const model = mongoose.model;
-const Answer = require("../models/Answer");
+const { Schema, model, Types }= require("mongoose");
 
-const answerSchema = new mongoose.Schema({
+
+const answerSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -12,6 +9,7 @@ const answerSchema = new mongoose.Schema({
   author: {
     type: Types.ObjectId,
     required: true,
+    ref: "User"
   },
   body: {
     type: String,
@@ -28,5 +26,5 @@ const answerSchema = new mongoose.Schema({
   },
 });
 
-const answerModel = mongoose.model("Answer", answerSchema);
+const answerModel = model("Answer", answerSchema);
 module.exports = answerModel;

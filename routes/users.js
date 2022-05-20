@@ -8,6 +8,10 @@ usersRouter.post("/signup", signup);
 
 usersRouter.get("/all", getUsers);
 
-usersRouter.route("/:id").get(getUser)
+usersRouter
+.route("/:id")
+.get(getUser)
+.put(getUser)
+.delete(getUser);
 
 module.exports = usersRouter;

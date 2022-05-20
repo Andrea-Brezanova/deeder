@@ -12,7 +12,7 @@ const answersRouter = express.Router();
 answersRouter.route("/").get(getAnswers).post(createAnswer);
 
 answersRouter
-  .route("/answers")
+  .route("/:id")
   .get(getAnswer)
   .put(updateAnswer)
   .delete(deleteAnswer);

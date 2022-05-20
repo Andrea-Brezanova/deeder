@@ -1,15 +1,14 @@
-const mongoose = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
 
-
-const postSchema = new mongoose.Schema({
+const postSchema = new Schema({
   title: {
     type: String,
     required: true,
   },
   author: {
-    type: mongoose.Types.ObjectId,
+    type: Types.ObjectId,
     required: true,
-    ref:"User"
+    ref: "User",
   },
   body: {
     type: String,
@@ -20,11 +19,11 @@ const postSchema = new mongoose.Schema({
     default: Date.now,
   },
   subcategory: {
-    type: mongoose.Types.ObjectId,
+    type: Types.ObjectId,
     required: true,
-    ref:"Subcategory"
+    ref: "Subcategory",
   },
 });
 
-const postModel = mongoose.model("Post", postSchema);
+const postModel = model("Post", postSchema);
 module.exports = postModel;

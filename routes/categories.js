@@ -12,7 +12,7 @@ const categoriesRouter = express.Router();
 categoriesRouter.route("/").get(getCategories).post(createCategory);
 
 categoriesRouter
-  .route("/categories")
+  .route("/:id")
   .get(getCategory)
   .put(updateCategory)
   .delete(deleteCategory);
