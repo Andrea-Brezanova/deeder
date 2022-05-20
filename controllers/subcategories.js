@@ -3,7 +3,7 @@ const subcategoryModel = require("../models/Subcategory");
 //Display ALL SubCategories
 const getSubcategories = async (req, res, next) => {
   try {
-    const subcategories = await postModel.find({});
+    const subcategories = await subcategoryModel.find({}).populate("category");
     res.json(subcategories);
   } catch (error) {
     res.status(500).send(error.message);
@@ -16,7 +16,7 @@ const getSubcategory = async (req, res, next) => {
     const {
       params: { id },
     } = req;
-    const subcategory = await subcategoryModel.findById(id);
+    const subcategory = await subcategoryModel.findById(id).populate("category");
     res.json(subcategory);
   } catch (error) {
     res.status(500).send(error.message);
@@ -62,7 +62,7 @@ const deleteSubcategory = async (req, res, next) => {
     const {
       params: { id },
     } = req;
-    const post = await subcategoryModel.findByIdAndDelete(id);
+    const subcategory = await subcategoryModel.findByIdAndDelete(id);
     res.json(subcategory);
   } catch (error) {
     res.status(500).send(error.message);

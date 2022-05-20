@@ -94,9 +94,46 @@ const getUser = async (req, res, next) => {
   }
 };
 
+//Modify existing user
+const updateUser = async (req, res, next) => {
+  try {
+    const {
+      params: { id },
+    } = req;
+
+    const {
+      body: { userName, location, email, password, phone },
+    } = req;
+    const user = await postModel.findByIdAndUpdate(id, {
+      userName,
+      location,
+      email,
+      password,
+      phone,
+    });
+    res.json(user);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
+
+//Remove existing user
+const deleteUser = async (req, res, next) => {
+  try {
+    const {
+      params: { id },
+    } = req;
+    const user = await userModel.findByIdAndDelete(id);
+    res.json(user);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
 module.exports = {
   login,
   signup,
   getUser,
-  getUsers
+  getUsers,
+  updateUser,
+  deleteUser,
 };

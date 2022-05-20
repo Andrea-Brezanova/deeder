@@ -11,8 +11,13 @@ const {
 
 const postsRouter = express.Router();
 
+postsRouter.use(verifyJWT);
 postsRouter.route("/").get(verifyJWT, getPosts).post(createPost);
 
-postsRouter.route("/:id").get(getPost).put(updatePost).delete(deletePost);
+postsRouter
+.route("/:id")
+.get(getPost)
+.put(updatePost)
+.delete(deletePost);
 
 module.exports = postsRouter;
