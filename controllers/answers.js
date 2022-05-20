@@ -8,7 +8,7 @@ const getAnswers = async (req, res, next) => {
     } = req;
     const searchQuery = post ? { post } : {};
 
-    const answers = await answerModel.find(searchQuery).populate("author");
+    const answers = await answerModel.find(searchQuery).populate("author").populate("post");
     res.json(answers);
   } catch (error) {
     res.status(500).send(error.message);
@@ -21,7 +21,7 @@ const getAnswer = async (req, res, next) => {
     const {
       params: { id },
     } = req;
-    const answer = await answerModel.findById(id).populate("author post");
+    const answer = await answerModel.findById(id).populate("author").populate("post");
     res.json(answer);
   } catch (error) {
     res.status(500).send(error.message);

@@ -4,7 +4,7 @@ const postModel = require("../models/Post");
 //Display all posts
 const getPosts = async (req, res, next) => {
   try {
-    const posts = await postModel.find({}).populate("author subcategory");
+    const posts = await postModel.find({}).populate("author").populate("subcategory");
     res.json(posts);
   } catch (error) {
     res.status(500).send(error.message);
@@ -17,7 +17,7 @@ const getPost = async (req, res, next) => {
     const {
       params: { id  },
     } = req;
-    const post = await postModel.findById(id).populate("author subcategory");
+    const post = await postModel.findById(id).populate("author subcategory").populate("subcategory");
     res.json(post);
   } catch (error) {
     res.status(500).send(error.message);
