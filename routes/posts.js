@@ -12,12 +12,12 @@ const {
 const postsRouter = express.Router();
 
 postsRouter.use(verifyJWT);
-postsRouter.route("/").get(verifyJWT, getPosts).post(createPost);
+postsRouter.route("/").get(getPosts).post(verifyJWT, createPost);
 
 postsRouter
 .route("/:id")
 .get(getPost)
-.put(updatePost)
-.delete(deletePost);
+.put(verifyJWT, updatePost)
+.delete(verifyJWT, deletePost);
 
 module.exports = postsRouter;
