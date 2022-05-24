@@ -1,17 +1,20 @@
 require("dotenv/config");
+require("./db");
 const express = require("express");
+const cors = require("cors");
 const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/posts");
 const categoriesRouter = require("./routes/categories");
 const subcategoriesRouter = require("./routes/subcategories");
 const answersRouter = require("./routes/answers");
-require("./db");
+
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 console.log("hi");
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/users", usersRouter);

@@ -6,4 +6,13 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 4rem;
+  color: #ffff;
+  background-color: rgb(5, 82, 95);
+}
+
+.nav-items {
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  color: #ffff;
 }
