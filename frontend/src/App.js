@@ -13,7 +13,6 @@ import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
 
-
 function App() {
   return (
     <div className="App">
