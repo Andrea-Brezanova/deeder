@@ -18,3 +18,15 @@
   color: #ffff;
 }
 
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
