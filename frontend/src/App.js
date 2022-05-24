@@ -12,7 +12,6 @@ import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
 import { Routes, Route } from "react-router-dom";
 
-
 function App() {
   return (
     <div className="App">
