@@ -2,23 +2,6 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export default function SignIn() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = async (formData) => {
-    try {
-      const { data } = await axios.post(
-        `${process.env.REACT_APP_API_URL}/auth/signin`,
-        formData
-      );
-      console.log(data);
-    } catch (error) {}
-  };
-
   return (
     <div class="sign-in">
       <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
@@ -33,3 +16,5 @@ export default function SignIn() {
     </div>
   );
 }
+
+export default SignIn;
