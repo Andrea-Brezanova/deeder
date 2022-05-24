@@ -7,7 +7,7 @@ function AllPosts() {
 
   const getPosts = async () => {
     try {
-        const response = await axios.get("http://localhost:3001/posts");
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/posts`);
         console.log(response.data);
       } catch (error) {
           console.log(error);
