@@ -20,7 +20,7 @@ export default function SignIn() {
   };
 
   return (
-    <div class="sign-in">
+    <div className="sign-in">
       <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="email">E-mail:</label>
         <input type="email" {...register("email", { required: true })} />
