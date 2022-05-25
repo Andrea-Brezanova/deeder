@@ -10,6 +10,7 @@ export default function Navbar() {
     <div className="nav">
       <div>Logo</div>
       <div class-name="nav-items">
+      <Link to="/protected/profile">Profile</Link>
         {!isAuthenticated ? (
           <>
             <Link to="/">Home</Link>
