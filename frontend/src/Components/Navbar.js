@@ -1,16 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../redux/reducers/auth";
 
 export default function Navbar() {
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
     <div className="nav">
-        <div>Logo</div>
-        <div class-name="nav-items">
+      <div>Logo</div>
+      <div class-name="nav-items">
+      <Link to="/protected/profile">Profile</Link>
+        {!isAuthenticated ? (
+          <>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/signin">Signin</Link>
-            <Link to="/signup">Signup</Link>
-        </div>
+            <Link to="/signin">Sign in</Link>
+            <Link to="/signup">Sign up</Link>
+          </>
+        ) : (
+          <Link to="/" onClick={()=>{
+            localStorage.removeItem("token");
+            dispatch(logout());
+          }}>Log out</Link>
+        )}
+      </div>
     </div>
-  )
+  );
 }
