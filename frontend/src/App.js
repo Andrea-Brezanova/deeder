@@ -23,14 +23,14 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="signin" element={<SignIn />} />
           <Route path="signup" element={<SignUp />} />
-          <Route path="protected" element={<Protected />} >
+          <Route path="protected" element={<Protected />}>
             <Route path="profile" element={<Profile />} />
+            <Route path="offer-help" element={<OfferHelp />} />
+            <Route path="get-help" element={<GetHelp />} />
+            <Route path="offer-company" element={<OfferCompany />} />
+            <Route path="get-company" element={<GetCompany />} />
           </Route>
           <Route path="allposts" element={<AllPosts />} />
-          <Route path="offer-help" element={<OfferHelp />} />
-          <Route path="get-help" element={<GetHelp />} />
-          <Route path="offer-company" element={<OfferCompany />} />
-          <Route path="get-company" element={<GetCompany />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

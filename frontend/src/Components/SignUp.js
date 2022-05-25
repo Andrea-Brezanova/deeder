@@ -1,10 +1,15 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import jwt_decode from "jwt-decode";
 import { login } from "../redux/reducers/auth";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
+
 
 function SignUp() {
   const dispatch = useDispatch();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -17,16 +22,18 @@ function SignUp() {
         `${process.env.REACT_APP_API_URL}/users/signup`,
         formData
       );
-
-      dispatch(login({ token: data }));
+      const user = jwt_decode(data);  
+      dispatch(login({ token: data, user }));
       localStorage.setItem("token", data);
-
+      navigate("/")
       console.log(data);
     } catch (error) {
         console.log(error)
     }
   };
   return (
+    <>
+    {!isAuthenticated ? (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="userName">User Name:</label>
@@ -41,6 +48,10 @@ function SignUp() {
         <button type="submit">Submit</button>
       </form>
     </div>
+    ) : (
+      <Navigate to="/" />
+    )}
+    </>
   );
 }
 
