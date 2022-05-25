@@ -12,7 +12,7 @@ export default function SignIn() {
   const onSubmit = async (formData) => {
     try {
       const { data } = await axios.post(
-        `${process.env.REACT_APP_API_URL}/auth/signin`,
+        `${process.env.REACT_APP_API_URL}/users/login`,
         formData
       );
       console.log(data);
@@ -20,7 +20,7 @@ export default function SignIn() {
   };
 
   return (
-    <div class="sign-in">
+    <div className="sign-in">
       <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="email">E-mail:</label>
         <input type="email" {...register("email", { required: true })} />
