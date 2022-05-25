@@ -1,21 +1,27 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { login } from "../redux/reducers/auth";
+import { useDispatch } from "react-redux";
 
 function SignUp() {
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (formData) => {
     try {
-      const response = await axios.post(
+      const { data } = await axios.post(
         `${process.env.REACT_APP_API_URL}/users/signup`,
-        data
+        formData
       );
 
-      console.log(response);
+      dispatch(login({ token: data }));
+      localStorage.setItem("token", data);
+
+      console.log(data);
     } catch (error) {
         console.log(error)
     }

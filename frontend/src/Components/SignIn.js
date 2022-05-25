@@ -1,8 +1,12 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { login } from "../redux/reducers/auth";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SignIn() {
+  const dispatch = useDispatch();
+  // const token = useSelector(state => state.auth.token)
   const {
     register,
     handleSubmit,
@@ -15,6 +19,10 @@ export default function SignIn() {
         `${process.env.REACT_APP_API_URL}/users/login`,
         formData
       );
+
+      dispatch(login({ token: data }));
+      localStorage.setItem("token", data);
+
       console.log(data);
     } catch (error) {}
   };
@@ -32,6 +40,7 @@ export default function SignIn() {
         )}
         <button type="submit">Click to Login</button>
       </form>
+      {/* <p>{token}</p> */}
     </div>
   );
 }
