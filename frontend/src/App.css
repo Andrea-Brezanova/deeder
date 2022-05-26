@@ -1,12 +1,13 @@
 * {
   text-align: center;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  background-color: rgb(247, 248, 250);
-
+  
+  background-color: rgb(227, 228, 230);
 }
 
 .nav {
@@ -119,3 +120,9 @@ button:hover {
   font-size: smaller;
 }
 
+.hero1 {
+  /* background-image: url("../public/Images/hand.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh; */
+}
