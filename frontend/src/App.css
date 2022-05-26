@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-image: linear-gradient(rgb(10, 29, 92) 20%, rgb(100, 205, 185));
+  /*background-image: linear-gradient(rgb(10, 29, 92), rgb(100, 205, 185));*/
 }
 
 .nav {
@@ -21,7 +21,6 @@ body {
   background-color: rgb(10, 29, 92);
   text-decoration: none !important;
   font-family: "DM Sans", sans-serif;
-  
   font-size: 1.5rem;
 }
 
@@ -30,7 +29,6 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  
 }
 
 .deeder {
@@ -40,7 +38,6 @@ body {
   font-family: 'Pacifico', cursive;
   font-weight: bold;
   font-size: 40px;
-
 }
 
 .nav-items {
@@ -53,19 +50,70 @@ body {
 .nav-link {
   text-decoration: none;
 }
+
 img {
   height: 20%;
   width: 20%;
 }
 
-
 .signup-container {
   display: flex;
+  margin-top:50px;
   justify-content: center;
 }
 
-.signup-form {
+/*.signup-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+}*/
+
+
+.sign-in{
+  display: flex;
+  margin-top:50px;
+  justify-content: center;
+
 }
+
+label{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+input[type=email], input[type=password], input[type=text] {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: flex;
+  border-radius: 10px; 
+  margin: 9px ;
+  border:1px solid;
+}
+
+label, input{
+display: flex;
+}
+
+button{
+  width: 30%;
+  cursor: pointer;
+  margin: 8px 0;
+  background-color: rgb(10, 29, 92);
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  height: 50px;
+  border-radius: 10px;
+ 
+}
+
+button:hover {
+    opacity: 0.9;
+    color: orange;
+   
+}
+.alert{
+  color:red;
+  font-size: smaller;
+}
+
