@@ -14,7 +14,6 @@ export default function Footer() {
             <a href="#.com">Catalog</a>
             <a href="#.com">Help</a>
             <a href="#.com">Articles</a>
-
           </div>
           <div className="mid-footer">
             <h3>Read more</h3>
