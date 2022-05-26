@@ -13,6 +13,7 @@ import GetHelp from "./Components/GetHelp";
 import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
+      <Footer />
     </div>
   );
 }
