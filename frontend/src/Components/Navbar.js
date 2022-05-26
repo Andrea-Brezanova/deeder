@@ -25,7 +25,7 @@ export default function Navbar() {
               to="/"
               className="nav-link"
               style={({ isActive }) => ({
-                color: isActive ? "white" : "white",
+                color: isActive ? "orange" : "white",
               })}
             >
               Home
@@ -34,7 +34,7 @@ export default function Navbar() {
               to="/about"
               className="nav-link"
               style={({ isActive }) => ({
-                color: isActive ? "white" : "white",
+                color: isActive ? "orange" : "white",
               })}
             >
               About
@@ -43,7 +43,7 @@ export default function Navbar() {
               to="/signin"
               className="nav-link"
               style={({ isActive }) => ({
-                color: isActive ? "white" : "white",
+                color: isActive ? "orange" : "white",
               })}
             >
               Sign in
@@ -52,7 +52,7 @@ export default function Navbar() {
               to="/signup"
               className="nav-link"
               style={({ isActive }) => ({
-                color: isActive ? "white" : "white",
+                color: isActive ? "orange" : "white",
               })}
             >
               Sign up
@@ -64,7 +64,7 @@ export default function Navbar() {
               to="/protected/profile"
               className="nav-link"
               style={({ isActive }) => ({
-                color: isActive ? "white" : "white",
+                color: isActive ? "orange" : "white",
               })}
             >
               Profile
