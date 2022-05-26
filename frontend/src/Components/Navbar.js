@@ -60,6 +60,24 @@ export default function Navbar() {
           </>
         ) : (
           <>
+           <NavLink
+              to="/"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "orange" : "white",
+              })}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "orange" : "white",
+              })}
+            >
+              About
+            </NavLink>
             <NavLink
               to="/protected/profile"
               className="nav-link"
