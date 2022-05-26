@@ -5,7 +5,8 @@
 
 body {
   margin: 0;
-  /*background-image: linear-gradient(rgb(10, 29, 92), rgb(100, 205, 185));*/
+  background-color: rgb(247, 248, 250);
+
 }
 
 .nav {
@@ -18,7 +19,7 @@ body {
   padding: 1rem 4rem;
   gap: 2rem;
   color: #ffff;
-  background-color: rgb(10, 29, 92);
+  background-color: rgb(1, 20, 82);
   text-decoration: none !important;
   font-family: "DM Sans", sans-serif;
   font-size: 1.5rem;
@@ -74,6 +75,7 @@ img {
   justify-content: center;
 
 }
+
 
 label{
   font-family: Arial, Helvetica, sans-serif;
