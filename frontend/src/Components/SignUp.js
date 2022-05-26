@@ -37,15 +37,15 @@ function SignUp() {
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="userName">User Name:</label>
-        <input type="text" {...register("userName", { required: true })} />
-        {errors.userName && <div>User name is required</div>}
+        <input type="text" placeholder="Enter your user-name" {...register("userName", { required: true })} />
+        {errors.userName && <div class="alert">User name is required</div>}
         <label htmlFor="email">Email:</label>
-        <input type="email" {...register("email", { required: true })} />
-        {errors.email && <div>Email is required</div>}
+        <input type="email" placeholder="Enter your E-mail" {...register("email", { required: true })} />
+        {errors.email && <div class="alert">Email is required</div>}
         <label htmlFor="password">Password:</label>
-        <input type="password" {...register("password", { required: true })} />
-        {errors.password && <div>Password is required</div>}
-        <button type="submit">Submit</button>
+        <input type="password" placeholder="Enter your password" {...register("password", { required: true })} />
+        {errors.password && <div class="alert">Password is required</div>}
+        <button className="signup-button" type="submit">Sign Up</button>
       </form>
     </div>
     ) : (

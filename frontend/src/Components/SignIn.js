@@ -10,7 +10,7 @@ export default function SignIn() {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const navigate = useNavigate();
-  // const token = useSelector(state) => state.auth.token
+  //const token = useSelector((state) => state.auth.token);
   const {
     register,
     handleSubmit,
@@ -23,10 +23,10 @@ export default function SignIn() {
         `${process.env.REACT_APP_API_URL}/users/login`,
         formData
       );
-      const user = jwt_decode(data);  
+      const user = jwt_decode(data);
       dispatch(login({ token: data, user }));
       localStorage.setItem("token", data);
-        navigate("/")
+      navigate("/");
       console.log(data);
     } catch (error) {}
   };
@@ -37,11 +37,11 @@ export default function SignIn() {
         <div className="sign-in">
           <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="email">E-mail:</label>
-            <input type="email" {...register("email", { required: true })} />
+            <input type="email" placeholder="Enter your e-mail"{...register("email", { required: true })} />
             {errors.email && <div class="alert">Please Enter Your Email!</div>}
             <label htmlFor="password">Password:</label>
             <input
-              type="password"
+              type="password" placeholder="Enter your password"
               {...register("password", { required: true })}
             />
             {errors.password && (
