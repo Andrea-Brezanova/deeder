@@ -34,6 +34,7 @@ export default function Footer() {
             <a href="instagram.com" class="fa fa-instagram"></a>
           </div>
         </footer>
+        
         <p className="copyright">
           ©2022 owned by Kwame & Andrea Co. Limited | All rights reserved
         </p>
