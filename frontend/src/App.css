@@ -9,7 +9,7 @@ body {
   background-color: rgb(247, 248, 250);
   font-family: "DM Sans", sans-serif;
   font-size: smaller;
-  
+  background-color: rgb(227, 228, 230);
 }
 
 .nav {
@@ -184,3 +184,9 @@ button:hover {
   padding-bottom: 25px;
 }
 
+.hero1 {
+  /* background-image: url("../public/Images/hand.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh; */
+}
