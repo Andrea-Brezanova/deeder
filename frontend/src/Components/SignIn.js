@@ -10,7 +10,7 @@ export default function SignIn() {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const navigate = useNavigate();
-  // const token = useSelector(state) => state.auth.token)
+  // const token = useSelector(state) => state.auth.token
   const {
     register,
     handleSubmit,

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../redux/reducers/auth";
 
@@ -8,21 +8,22 @@ export default function Navbar() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
     <div className="nav">
-      <div>Logo</div>
+      <NavLink to="/" className="logo" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Logo</NavLink>
+      <NavLink to="/" className="app-name" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Deeder</NavLink>
       <div class-name="nav-items">
-      <Link to="/protected/profile">Profile</Link>
+      <NavLink to="/protected/profile" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Profile</NavLink>
         {!isAuthenticated ? (
           <>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/signin">Sign in</Link>
-            <Link to="/signup">Sign up</Link>
+            <NavLink to="/" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Home</NavLink>
+            <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>About</NavLink>
+            <NavLink to="/signin" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Sign in</NavLink>
+            <NavLink to="/signup" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Sign up</NavLink>
           </>
         ) : (
-          <Link to="/" onClick={()=>{
+          <NavLink to="/" onClick={()=>{
             localStorage.removeItem("token");
             dispatch(logout());
-          }}>Log out</Link>
+          }}>Log out</NavLink>
         )}
       </div>
     </div>

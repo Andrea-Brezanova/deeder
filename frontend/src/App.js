@@ -25,7 +25,7 @@ function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="protected" element={<Protected />}>
             <Route path="profile" element={<Profile />} />
-            <Route path="offer-help" element={<OfferHelp />} />
+            <Route path="offer-help" element={<OfferHelp />}/>
             <Route path="get-help" element={<GetHelp />} />
             <Route path="offer-company" element={<OfferCompany />} />
             <Route path="get-company" element={<GetCompany />} />

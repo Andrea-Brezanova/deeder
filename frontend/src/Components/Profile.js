@@ -1,13 +1,24 @@
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function Profile() {
+  useEffect(() => {
+    axios.get(`http://localhost:3000/users/${user.id}`).then((res)=> {
+      console.log(res)
+    }).catch((err)=> {
+      console.log(err)
+    })
+}, []);
+
   const user = useSelector((state) => {
     return state.auth.user;
   });
 
-  axios.get(`http://localhost:3000/users/${user.id}`)
-  return <div>Email: {user.email}</div>;
+
+  
+  
+  return <div>Welcome: {user.userName}</div>;
 }
 
 export default Profile;
