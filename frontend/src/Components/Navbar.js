@@ -8,22 +8,82 @@ export default function Navbar() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
     <div className="nav">
-      <NavLink to="/" className="logo" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Logo</NavLink>
-      <NavLink to="/" className="app-name" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Deeder</NavLink>
-      <div class-name="nav-items">
-      <NavLink to="/protected/profile" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Profile</NavLink>
+      <div className="logo">
+        <img src="/Images/Logo-blue.png" alt="logo.png"></img>
+        <NavLink
+          to="/"
+          className="deeder"
+          style={({ isActive }) => ({ color: isActive ? "white" : "white" })}
+        >
+          Deeder
+        </NavLink>
+      </div>
+      <div className="nav-items">
         {!isAuthenticated ? (
           <>
-            <NavLink to="/" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Home</NavLink>
-            <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>About</NavLink>
-            <NavLink to="/signin" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Sign in</NavLink>
-            <NavLink to="/signup" style={({ isActive }) => ({ color: isActive ? "white" : "white"})}>Sign up</NavLink>
+            <NavLink
+              to="/"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/signin"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Sign in
+            </NavLink>
+            <NavLink
+              to="/signup"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Sign up
+            </NavLink>
           </>
         ) : (
-          <NavLink to="/" onClick={()=>{
-            localStorage.removeItem("token");
-            dispatch(logout());
-          }}>Log out</NavLink>
+          <>
+            <NavLink
+              to="/protected/profile"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Profile
+            </NavLink>
+
+            <NavLink
+              to="/"
+              className="nav-link"
+              onClick={() => {
+                localStorage.removeItem("token");
+                dispatch(logout());
+              }}
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Log out
+            </NavLink>
+          </>
         )}
       </div>
     </div>
