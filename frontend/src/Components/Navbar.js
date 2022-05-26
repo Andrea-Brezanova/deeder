@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../redux/reducers/auth";
 
@@ -8,21 +8,82 @@ export default function Navbar() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
     <div className="nav">
-      <div>Logo</div>
-      <div class-name="nav-items">
-      <Link to="/protected/profile">Profile</Link>
+      <div className="logo">
+        <img src="/Images/Logo-blue.png" alt="logo.png"></img>
+        <NavLink
+          to="/"
+          className="deeder"
+          style={({ isActive }) => ({ color: isActive ? "white" : "white" })}
+        >
+          Deeder
+        </NavLink>
+      </div>
+      <div className="nav-items">
         {!isAuthenticated ? (
           <>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/signin">Sign in</Link>
-            <Link to="/signup">Sign up</Link>
+            <NavLink
+              to="/"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/signin"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Sign in
+            </NavLink>
+            <NavLink
+              to="/signup"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Sign up
+            </NavLink>
           </>
         ) : (
-          <Link to="/" onClick={()=>{
-            localStorage.removeItem("token");
-            dispatch(logout());
-          }}>Log out</Link>
+          <>
+            <NavLink
+              to="/protected/profile"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Profile
+            </NavLink>
+
+            <NavLink
+              to="/"
+              className="nav-link"
+              onClick={() => {
+                localStorage.removeItem("token");
+                dispatch(logout());
+              }}
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "white",
+              })}
+            >
+              Log out
+            </NavLink>
+          </>
         )}
       </div>
     </div>

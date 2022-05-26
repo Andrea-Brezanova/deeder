@@ -1,21 +1,61 @@
-.App {
+* {
   text-align: center;
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  background-image: linear-gradient(rgb(10, 29, 92) 20%, rgb(100, 205, 185));
+}
 
 .nav {
+  height: 100px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
   padding: 1rem 4rem;
+  gap: 2rem;
   color: #ffff;
-  background-color: rgb(5, 82, 95);
+  background-color: rgb(10, 29, 92);
+  text-decoration: none !important;
+  font-family: "DM Sans", sans-serif;
+  
+  font-size: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+.deeder {
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  font-size: 40px;
+
 }
 
 .nav-items {
   display: flex;
-  gap: 2rem;
-  text-decoration: none;
+  justify-content: space-between; 
   color: #ffff;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+img {
+  height: 20%;
+  width: 20%;
 }
 
 
@@ -29,4 +69,3 @@
   flex-direction: column;
   gap: 1rem;
 }
-
