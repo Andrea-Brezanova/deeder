@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import Layout from "./Components/Layout";
 import Home from "./Components/Home";
 import About from "./Components/About";
@@ -31,7 +31,7 @@ function App() {
             <Route path="offer-company" element={<OfferCompany />} />
             <Route path="get-company" element={<GetCompany />} />
           </Route>
-          <Route path="allposts" element={<AllPosts />} />
+          <Route path="posts" element={<AllPosts />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

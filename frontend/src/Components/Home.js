@@ -1,23 +1,24 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
     <div className="main-body">
-      <a className="offer-help" href=".com">
-        <div>OFFER-HELP</div>
-      </a>
-      <a className="get-help" href=".com">
-        <div>GET-HELP</div>
-      </a>
+      <NavLink className="offer-help" to="/protected/offer-help">
+        <div>OFFER HELP</div>
+        </NavLink>
+      
+      <NavLink className="get-help" to="/protected/get-help">
+        <div>GET HELP</div>
+      </NavLink>
 
-      <a className="offer-company" href=".com">
-        <div>OFFER-COMPANY</div>
-      </a>
+      <NavLink className="offer-company" to="/protected/offer-company">
+        <div>OFFER COMPANY</div>
+      </NavLink>
 
-      <a className="get-company" href=".com">
-        <div>GET-COMPANY</div>
-      </a>
+      <NavLink className="get-company" to="/protected/get-company">
+        <div>GET COMPANY</div>
+      </NavLink>
     </div>
   );
 }
