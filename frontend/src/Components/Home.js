@@ -3,22 +3,39 @@ import { Navigate, useNavigate, NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="main-body">
-      <NavLink className="offer-help" to="/protected/offer-help">
-        <div>OFFER HELP</div>
+    <>
+      <div className="hero">
+        <p>Where good deeds and friendships happen</p>
+      </div>
+      <div className="about">
+        <img
+          className="helpers"
+          src="/Images/helpers.png"
+          alt="helpers"
+          href="/"
+        ></img>
+        <p>
+          Welcome to Deeder! <br /> <br />A place for helping others, meeting
+          someone new and making friends all at the same time!
+        </p>
+      </div>
+      <div className="action">
+        <p>What would you like to do today?</p>
+      </div>
+      <div className="main-body">
+        <NavLink className="offer-help" to="/protected/offer-help">
+          <div>Help somebody</div>
         </NavLink>
-      
-      <NavLink className="get-help" to="/protected/get-help">
-        <div>GET HELP</div>
-      </NavLink>
-
-      <NavLink className="offer-company" to="/protected/offer-company">
-        <div>OFFER COMPANY</div>
-      </NavLink>
-
-      <NavLink className="get-company" to="/protected/get-company">
-        <div>GET COMPANY</div>
-      </NavLink>
-    </div>
+        <NavLink className="offer-help" to="/protected/get-help">
+          <div>Meet somebody</div>
+        </NavLink>
+      </div>
+      <div className="app-icons">
+        <p>Download the app, post your request and start making friends!</p>
+        <a href="www.google.com">
+          <img className="google" src="/Images/google-play-badge.png"></img>
+        </a>
+      </div>
+    </>
   );
 }
