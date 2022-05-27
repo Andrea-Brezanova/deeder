@@ -37,7 +37,16 @@ export default function Navbar() {
                 color: isActive ? "orange" : "white",
               })}
             >
-              About
+              How it works
+            </NavLink>
+            <NavLink
+              to="/posts"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "orange" : "white",
+              })}
+            >
+              All Posts
             </NavLink>
             <NavLink
               to="/signin"
@@ -60,7 +69,7 @@ export default function Navbar() {
           </>
         ) : (
           <>
-           <NavLink
+            <NavLink
               to="/"
               className="nav-link"
               style={({ isActive }) => ({
@@ -76,7 +85,7 @@ export default function Navbar() {
                 color: isActive ? "orange" : "white",
               })}
             >
-              About
+              How it works
             </NavLink>
             <NavLink
               to="/protected/profile"

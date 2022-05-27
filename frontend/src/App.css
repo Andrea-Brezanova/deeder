@@ -25,7 +25,7 @@ body {
   background-color: rgb(1, 20, 82);
   text-decoration: none !important;
   font-family: "DM Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size:2rem;
 }
 
 .logo {
@@ -126,23 +126,67 @@ button:hover {
   font-size: smaller;
 }
 
+
+
+.hero {
+  height: 100vh;
+  /* background-color: rgb(227, 228, 230);b */
+  background-image: url("/public/Images/Fists.jpg");
+  background-size: cover;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.about {
+  height: auto;
+  width: auto;
+  background-color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about > p {
+  margin-top: 70px;
+  padding: 60px;
+  color:black;
+  
+}
+.helpers {
+  height: 50%;
+  width: 50%;
+}
+
+.action {
+  margin: 20px;
+  padding: 20px;
+  font-size: 2rem;
+}
+
 .main-body {
+  height: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   gap: 5px;
   margin: 25px 100px 25px 100px;
+  background-color: rgb(227, 228, 230);
+  font-family: "DM Sans", sans-serif;
+  color: white;
 }
-
 .main-body > a {
   border: 1px solid;
   text-align: center;
   padding: 20px 20px;
   font-size: 30px;
-  height: 400px;
-  border-radius:4px;
+  height: 110px;
+  border-radius:15px;
   text-decoration: none;
-  border: 1px solid;
+  color: white;
 }
 
 .offer-help:hover, .get-help:hover, .offer-company:hover, .get-company:hover  {
@@ -153,22 +197,33 @@ button:hover {
 
 
 .offer-help{
+  background-color: orange;
   background-repeat: no-repeat;
 }
 
 .get-help{
-  background-image: url("../src/Image/gethelp1.jpg");
+  background-color: orange;
   align-content: center;
 }
 
 .offer-company{
-  background-image: url("../src/Image/getcompany.jpg");
+  background-color: orange;
+}
+
+.get-company {
+  background-color: orange;
+}
+
+.app-icons {
+ 
+  background-color: white;
 }
 
 .footer-container {
   background-color: rgb(10, 29, 92);
-  border-top-left-radius: 290px;
-  border-bottom-right-radius: 290px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
 }
 
 .main-footer {
@@ -220,4 +275,28 @@ button:hover {
 .copyright {
   color: aliceblue;
   padding: 10px 0px 20px 0px;
+}
+
+.offer{
+  display: flex;
+  justify-content:center;
+}
+
+textarea {
+  height: 200px;
+  width: 500px;
+}
+
+.offer-btn {
+
+}
+
+.about-me {
+  display:flex;
+  align-items: flex-start;
+}
+
+/* ALL POSTS */
+.all-posts {
+  height: 600px;
 }

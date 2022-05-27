@@ -1,6 +1,5 @@
 const postModel = require("../models/Post");
 
-
 //Display all posts
 const getPosts = async (req, res, next) => {
   try {
@@ -15,7 +14,7 @@ const getPosts = async (req, res, next) => {
 const getPost = async (req, res, next) => {
   try {
     const {
-      params: { id  },
+      params: { id },
     } = req;
     const post = await postModel.findById(id).populate("author subcategory");
     res.json(post);
@@ -28,9 +27,9 @@ const getPost = async (req, res, next) => {
 const createPost = async (req, res, next) => {
   try {
     const {
-      body: { author, title, body, subcategory  },
+      body: { author, body, subcategory },
     } = req;
-    const newPost = await postModel.create({ author, title, body, subcategory });
+    const newPost = await postModel.create({ author, body, subcategory });
     res.json(newPost);
   } catch (error) {
     res.status(500).send(error.message);
@@ -41,15 +40,18 @@ const createPost = async (req, res, next) => {
 const updatePost = async (req, res, next) => {
   try {
     const {
-      params: { id  },
+      params: { id },
     } = req;
 
     const {
-      body: {
-        author, title, body, date, subcategory
-      }
+      body: { author, body, date, subcategory },
     } = req;
-    const post = await postModel.findByIdAndUpdate(id, { author, title, body, date, subcategory });
+    const post = await postModel.findByIdAndUpdate(id, {
+      author,
+      body,
+      date,
+      subcategory,
+    });
     res.json(post);
   } catch (error) {
     res.status(500).send(error.message);
@@ -60,7 +62,7 @@ const updatePost = async (req, res, next) => {
 const deletePost = async (req, res, next) => {
   try {
     const {
-      params: { id  },
+      params: { id },
     } = req;
     const post = await postModel.findByIdAndDelete(id);
     res.json(post);
