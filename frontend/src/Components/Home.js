@@ -4,8 +4,10 @@ import { Navigate, useNavigate, NavLink } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <div className="hero">
+    <div className="hero">
+      <div className="slogan">
         <p>Where good deeds and friendships happen</p>
+      </div>
       </div>
       <div className="about">
         <img
