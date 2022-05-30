@@ -26,22 +26,22 @@ export default function Home() {
         </div>
       </div>
       <div className="about-container">
-        
         <div className="reach-out-img">
           <img src="/Images/reach-out.png"></img>
         </div>
         <div>
           <div>
-            <p className="heading">Welcome to Deeder</p>
+            <p className="heading">Made in your city ... for your city</p>
           </div>
           <div className="welcome-text-container">
             <p class="welcome-text">
-              A place for helping others, meeting someone new and making friends
-              all at the same time!
+              <p>In the mood for helping someone today?</p>
+              <p>New in town and feeling lonely?</p>
+              <p>Reach out and connect!</p>
+              <p>There's always someone to hang out with!</p>
             </p>
           </div>
         </div>
-        
       </div>
       <div>
         <p class="how-it-works">How it works</p>
