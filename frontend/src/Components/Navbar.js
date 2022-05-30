@@ -88,6 +88,15 @@ export default function Navbar() {
               How it works
             </NavLink>
             <NavLink
+              to="/posts"
+              className="nav-link"
+              style={({ isActive }) => ({
+                color: isActive ? "orange" : "white",
+              })}
+            >
+              All Posts
+            </NavLink>
+            <NavLink
               to="/protected/profile"
               className="nav-link"
               style={({ isActive }) => ({
