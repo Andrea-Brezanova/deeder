@@ -28,9 +28,17 @@ function AllPosts() {
         })}
       </div>
       <div className="all-posts">
-        All posts from database go here
-        <input type="text" placeholder="Search.."></input>
+        <input
+          required
+          className="search-bar"
+          type="text"
+          placeholder="Search.."
+        ></input>
+        <button type="submit" className="search-button" value="SUBMIT">
+          SEARCH
+        </button>
       </div>
+      <div className="search-results">njjj</div>
     </>
   );
 }
