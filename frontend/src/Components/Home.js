@@ -15,7 +15,7 @@ export default function Home() {
             <p className="heading">Welcome to Deeder</p>
           </div>
           <div className="welcome-text-container">
-            <p class="welcome-text">
+            <p className="welcome-text">
               A place for helping others, meeting someone new and making friends
               all at the same time!
             </p>
@@ -43,82 +43,134 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div>
-        <p class="how-it-works">Here's how it works</p>
-      </div>
-      <div class="card-grid">
-        <div class="card card-shadow">
-          <div class="card-header card-image">
-            <img src="/Images/bees.png"></img>
-          </div>
-          <div class="card-body"></div>
-          Sign up and become a member. The more the merrier. Only by becoming a
-          member can we all feel safe.
-          <div class="card-footer"></div>
+        <div className="how-it-works">
+          <p>Here's how it works</p>
         </div>
+        <div className="grid-container">
+          <div
+            className="card"
+            style={{ height: 30 + "rem", width: 18 + "rem" }}
+          >
+            <img
+              className="card-img-top"
+              src="./Images/bees.png"
+              alt="Card image cap"
+            />
 
-        <div class="card card-shadow">
-          <div class="card-header">
-            <img src="/Images/looking.jpg"></img>
+            <div className="card-body">
+              <h5 className="card-title">Become a member</h5> <br />
+              <p className="card-text">The more the merrier! </p>
+            </div>
           </div>
-          <div class="card-body"></div>
-          See who is looking for help or company. Browse our list created from
-          users' requests. Remember, one good deed here and there could make a
-          big difference in someone's day.
-          <div class="card-footer"></div>
-        </div>
 
-        <div class="card card-shadow">
-          <div class="card-header">
-            <img src="/Images/bicycle.jpg"></img>
+          <div
+            className="card"
+            style={{ height: 30 + "rem", width: 18 + "rem" }}
+          >
+            <img
+              className="card-img-top"
+              src="../Images/looking.jpg"
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">See who's here</h5> <br />
+              <p className="card-text">
+                Browse the posts created by other users. <br /> Choose who you'd
+                like to help or with whom you'd like to meet.
+                <br />{" "}
+              </p>
+            </div>
           </div>
-          <div class="card-body"></div>
-          Choose who you'd like to help or with whom you'd like to meet.
-          <div class="card-footer"></div>
-        </div>
 
-        <div class="card card-shadow">
-          <div class="card-header">
-            <img src="/Images/yes-i-can.gif"></img>
+          <div
+            className="card"
+            style={{ height: 30 + "rem", width: 18 + "rem" }}
+          >
+            <img
+              className="card-img-top"
+              src="./Images/elderly.jpg"
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Decide on your next move</h5> <br />
+              <p className="card-text">
+                Remember, one good deed here and there could make a big
+                difference in someone's day.
+              </p>
+            </div>
           </div>
-          <div class="card-body"></div>
-          Reach out. Don't be shy, this is not a dating site. Just your local
-          peeps looking forward to spending time together while doing something
-          useful or fun.
-          <div class="card-footer"></div>
-        </div>
 
-        <div class="card card-shadow">
-          <div class="card-header">
-            <img src="/Images/painting.png"></img>
+          <div
+            className="card"
+            style={{ height: 30 + "rem", width: 18 + "rem" }}
+          >
+            <img
+              class="card-img-top"
+              src="./Images/painting.png"
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 clasNames="card-title">Reach out</h5> <br />
+              <p className="card-text">
+                Don't be shy, this is not a dating site. Just your local peeps
+                looking forward to spending time together while doing something
+                useful or fun.
+              </p>
+            </div>
           </div>
-          <div class="card-body"></div>
-          Need help with something? You can ask for help too! Just sign up and
-          post your request! Then wait and be sure to have cookies at home ready
-          for your guest (really cool helper!)
-          <div class="card-footer"></div>
-        </div>
 
-        <div class="card card-shadow">
-          <div class="card-header">
-            <img src="/Images/chatting.jpg"></img>
+          <div
+            className="card"
+            style={{ height: 30 + "rem", width: 18 + "rem" }}
+          >
+            <img
+              className="card-img-top"
+              src="./Images/help-wanted.jpg"
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Need help with a project?</h5> <br />
+              <p className="card-text">
+                You can ask for help too! Just sign up and post your request!
+                Then wait and be sure to have cookies at home ready for your
+                future helping friendships!
+              </p>
+            </div>
           </div>
-          <div class="card-body"></div>
-          Feeling lonely or wanna make a friend? Suggest some activity you like
-          and someone will surely join you soon!
-          <div class="card-footer"></div>
+
+          <div
+            className="card"
+            style={{ height: 30 + "rem", width: 18 + "rem" }}
+          >
+            <img
+              className="card-img-top"
+              src="./Images/chatting.jpg"
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Looking for company?</h5> <br />
+              <p className="card-text">
+                Feeling lonely or wanna make a friend? Suggest some activity you
+                like and someone will surely join you soon!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="action">
-        <p>What would you like to do today?</p>
+        <p>Ready to get out there?</p>
       </div>
-      <div className="main-body">
-        <NavLink className="offer-help" to="/protected/offer-help">
-          <div>Sign up</div>
-        </NavLink>
-        <NavLink className="offer-help" to="/protected/get-help">
-          <div>Ask for helper</div>
-        </NavLink>
+      <div className="action-container">
+        <div className="main-body action-container">
+          <NavLink className="offer-help" to="/protected/offer-help">
+            <div>Yes I want to help!</div>
+          </NavLink>
+          <NavLink className="offer-help" to="/protected/get-help">
+            <div>I'd love to hang out</div>
+          </NavLink>
+        </div>
       </div>
       <div className="app-icons">
         <p>Download the app, post your request and start making friends!</p>
