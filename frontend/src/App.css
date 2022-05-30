@@ -153,6 +153,7 @@ button:hover {
   font-size: 2rem;
   display: flex;
   justify-content: center;
+  
 }
 
 .heading {
@@ -165,7 +166,7 @@ button:hover {
   margin-top: 60px;
   display: flex;
   justify-content: center; 
-  
+  margin-right: 80px;
 }
 
 .welcome-text {
@@ -202,6 +203,7 @@ button:hover {
 .how-it-works {
   font-family: "Pacifico", cursive;
   font-size: 40px;
+  margin-top: 60px;
 }
 
 .card-grid {
@@ -216,13 +218,12 @@ button:hover {
   background: white;
   border: 1px solid rgb(1, 20, 82);
   border-radius: .25rem;
-
   --padding: 1rem; 
- 
   border: 1px solid rgb(227, 228, 230);
   border-radius: 0.25rem;
   max-width: 400px;
   overflow: hidden; 
+  height: 300px;
 }
 
 .card.card-shadow {
@@ -230,26 +231,26 @@ button:hover {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* .card-header {
+.card-header {
   padding: var(--pading);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-} */
+} 
 
-/* .card-header.card-image {
+.card-header.card-image {
   overflow: hidden;
-} */
+} 
 
-/* .card-header.card-image > img {
+.card-header.card-image > img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-} */
+} 
 
-/* .card:hover > .card-header.card-image > img {
+.card:hover > .card-header.card-image > img {
   transform: scale(1.025);
   transition: 200ms transform ease-in-out;
 }
@@ -263,7 +264,7 @@ button:hover {
   margin-top: 1rem;
   padding: 0 var(--pading);
   padding-top: 0;
-} */
+} 
 
 /* MAIN BODY */
 
