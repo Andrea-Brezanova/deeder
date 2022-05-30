@@ -14,7 +14,7 @@ body {
 
 /* NAVBAR */
 .nav {
-  height: 100px;
+  height: 150px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -129,7 +129,7 @@ button:hover {
 /* HERO SECTION */
 
 .hero {
-  height: 50vh;
+  height: 80vh;
   background-image: url("/public/Images/Fists.jpg");
   background-size: cover;
   color: white;
@@ -198,71 +198,35 @@ button:hover {
 
 /* CARDS */
 
+.grid-container {
+  background-color: rgb(255, 203, 107);
+  height: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  padding-left: 200px;
+  border: 1px solid red;
+}
+
 .how-it-works {
   font-family: "Pacifico", cursive;
   font-size: 40px;
-  margin-top: 60px;
+  padding: 50px;
+  background-color: rgb(255, 203, 107);
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1.5rem;
-  align-items: center;
-  margin: 50px;
-}
-
-.card {
-  background: white;
-  border: 1px solid rgb(1, 20, 82);
-  border-radius: .25rem;
-  --padding: 1rem; 
-  border: 1px solid rgb(227, 228, 230);
-  border-radius: 0.25rem;
-  max-width: 400px;
-  overflow: hidden; 
-  height: 300px;
-}
-
-.card.card-shadow {
-  border: none;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-  padding: var(--pading);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
-} 
-
-.card-header.card-image {
-  overflow: hidden;
-} 
-
-.card-header.card-image > img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+.card-img-top {
   object-fit: cover;
-  object-position: center;
-} 
-
-.card:hover > .card-header.card-image > img {
-  transform: scale(1.025);
-  transition: 200ms transform ease-in-out;
+  height: auto;
 }
 
 .card-body {
-  font-size: 0.9rem;
-  padding: 0 var(--pading);
+  border-radius: 20px;
 }
 
-.card-footer {
-  margin-top: 1rem;
-  padding: 0 var(--pading);
-  padding-top: 0;
-} 
+.card {
+  border: 1px solid red;
+}
 
 /* MAIN BODY */
 
@@ -276,6 +240,7 @@ button:hover {
   background-color: rgb(227, 228, 230);
   font-family: "DM Sans", sans-serif;
   color: white;
+  
 }
 .main-body > a {
   border: 1px solid;
@@ -302,12 +267,16 @@ button:hover {
 .action {
   font-family: "Pacifico", cursive;
   font-size: 40px;
+  margin-top: 50px;
 }
 
 .action-container {
   display: flex;
   justify-content: center;
   gap: 50px;
+  
+  background-color: white;
+  
 }
 .offer-help:hover,
 .get-help:hover,
@@ -319,21 +288,21 @@ button:hover {
 }
 
 .offer-help {
-  background-color: orange;
+  background-color: rgb(1, 20, 82);
   background-repeat: no-repeat;
 }
 
 .get-help {
-  background-color: orange;
+  background-color: rgb(1, 20, 82);
   align-content: center;
 }
 
 .offer-company {
-  background-color: orange;
+  background-color: rgb(1, 20, 82);
 }
 
 .get-company {
-  background-color: orange;
+  background-color: rgb(1, 20, 82);
 }
 
 .app-icons {
