@@ -127,18 +127,23 @@ button:hover {
 }
 
 
+/* HERO SECTION */
 
 .hero {
-  height: 100vh;
-  /* background-color: rgb(227, 228, 230);b */
+  height: 50vh;
   background-image: url("/public/Images/Fists.jpg");
   background-size: cover;
   color: white;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 60px;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
   display: flex;
-  justify-content: center;
-  align-items:center;
+  justify-content:right;
+  align-items:flex-end;
+}
+.slogan {
+  margin: 50px;
+  padding: 50px;
+  padding-right: 100px;
 }
 
 .about {
