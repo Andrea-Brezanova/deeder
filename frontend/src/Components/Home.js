@@ -52,51 +52,60 @@ export default function Home() {
             <img src="/Images/bees.png"></img>
           </div>
           <div class="card-body"></div>
-          Sign up and become a member. The more the merrier. Only by becoming a member can we all feel safe.
+          Sign up and become a member. The more the merrier. Only by becoming a
+          member can we all feel safe.
           <div class="card-footer"></div>
-          
         </div>
 
         <div class="card card-shadow">
           <div class="card-header">
-          <img src="/Images/looking.jpg"></img>
+            <img src="/Images/looking.jpg"></img>
           </div>
           <div class="card-body"></div>
-          See who is looking for help or company. 
-          Browse our list created from users' requests.
-          Remember, one good deed here and there could make a big difference in someone's day.
+          See who is looking for help or company. Browse our list created from
+          users' requests. Remember, one good deed here and there could make a
+          big difference in someone's day.
           <div class="card-footer"></div>
         </div>
 
         <div class="card card-shadow">
-          <div class="card-header"><img src="/Images/bicycle.jpg"></img></div>
+          <div class="card-header">
+            <img src="/Images/bicycle.jpg"></img>
+          </div>
           <div class="card-body"></div>
           Choose who you'd like to help or with whom you'd like to meet.
           <div class="card-footer"></div>
         </div>
 
         <div class="card card-shadow">
-          <div class="card-header"><img src="/Images/yes-i-can.gif"></img></div>
+          <div class="card-header">
+            <img src="/Images/yes-i-can.gif"></img>
+          </div>
           <div class="card-body"></div>
-          Reach out. Don't be shy, this is not a dating site. Just your local peeps looking forward to spending time together while doing something useful or fun. 
+          Reach out. Don't be shy, this is not a dating site. Just your local
+          peeps looking forward to spending time together while doing something
+          useful or fun.
           <div class="card-footer"></div>
         </div>
 
         <div class="card card-shadow">
-          <div class="card-header"><img src="/Images/painting.png"></img></div>
+          <div class="card-header">
+            <img src="/Images/painting.png"></img>
+          </div>
           <div class="card-body"></div>
-          Need help with something? 
-          You can ask for help too!
-          Just sign up and post your request!
-          Then wait and be sure to have cookies at home ready for your guest (really cool helper!) 
+          Need help with something? You can ask for help too! Just sign up and
+          post your request! Then wait and be sure to have cookies at home ready
+          for your guest (really cool helper!)
           <div class="card-footer"></div>
         </div>
 
         <div class="card card-shadow">
-          <div class="card-header"><img src="/Images/chatting.jpg"></img></div>
+          <div class="card-header">
+            <img src="/Images/chatting.jpg"></img>
+          </div>
           <div class="card-body"></div>
-          Feeling lonely or wanna make a friend?
-          Suggest some activity you like and someone will surely join you soon!
+          Feeling lonely or wanna make a friend? Suggest some activity you like
+          and someone will surely join you soon!
           <div class="card-footer"></div>
         </div>
       </div>
@@ -108,7 +117,7 @@ export default function Home() {
           <div>Sign up</div>
         </NavLink>
         <NavLink className="offer-help" to="/protected/get-help">
-          <div>Just browse</div>
+          <div>Ask for helper</div>
         </NavLink>
       </div>
       <div className="app-icons">
