@@ -109,16 +109,19 @@ export default function Home() {
           <div class="card-footer"></div>
         </div>
       </div>
+      
       <div className="action">
-        <p>What would you like to do today?</p>
+        <p>Ready to get out there?</p>
       </div>
-      <div className="main-body">
+      <div className="action-container">
+      <div className="main-body action-container">
         <NavLink className="offer-help" to="/protected/offer-help">
-          <div>Sign up</div>
+          <div>Yes I want to help!</div>
         </NavLink>
         <NavLink className="offer-help" to="/protected/get-help">
-          <div>Ask for helper</div>
+          <div>Uhhh I'd love to hang out</div>
         </NavLink>
+      </div>
       </div>
       <div className="app-icons">
         <p>Download the app, post your request and start making friends!</p>

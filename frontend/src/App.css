@@ -193,9 +193,7 @@ button:hover {
   width: 80%; 
 }
 
-/* MAIN BODY */
 
-/* OUR VISION */
 
 
 /* CARDS */
@@ -290,6 +288,27 @@ button:hover {
   color: white;
 }
 
+.two-buttons > a {
+  border: 1px solid;
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 30px;
+  height: 110px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.action {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+}
+
+.action-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
 .offer-help:hover,
 .get-help:hover,
 .offer-company:hover,
