@@ -389,8 +389,6 @@ textarea {
   width: 500px;
 }
 
-.offer-btn {
-}
 
 .about-me {
   display: flex;
@@ -398,6 +396,21 @@ textarea {
 }
 
 /* ALL POSTS */
-.all-posts {
-  height: 600px;
+
+.all-posts{
+  display: flex;
+ justify-content: center;
+ height: 400px;
+}
+
+.search-bar{
+  height: 35px;
+}
+
+.search-button{
+  height: 35px;
+  margin-top: 8px;
+  width:75px;
+  border-radius: 10px;
+  padding-left: 3px;
 }
