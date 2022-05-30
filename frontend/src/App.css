@@ -12,6 +12,7 @@ body {
   background-color: rgb(227, 228, 230);
 }
 
+/* NAVBAR */
 .nav {
   height: 100px;
   width: 100%;
@@ -25,7 +26,7 @@ body {
   background-color: rgb(1, 20, 82);
   text-decoration: none !important;
   font-family: "DM Sans", sans-serif;
-  font-size:2rem;
+  font-size: 2rem;
 }
 
 .logo {
@@ -34,7 +35,6 @@ body {
   align-items: center;
   gap: 1rem;
 }
-
 
 .deeder {
   flex-direction: row;
@@ -126,7 +126,6 @@ button:hover {
   font-size: smaller;
 }
 
-
 /* HERO SECTION */
 
 .hero {
@@ -134,20 +133,21 @@ button:hover {
   background-image: url("/public/Images/Fists.jpg");
   background-size: cover;
   color: white;
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
   display: flex;
-  justify-content:right;
-  align-items:flex-end;
+  justify-content: right;
+  align-items: flex-end;
 }
 .slogan {
   margin: 50px;
   padding: 50px;
   padding-right: 100px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 50px;
 }
 
-.about {
-  height: auto;
+/* ABOUT */
+.about-container {
+  min-height: 20rem;
   width: auto;
   background-color: white;
   font-size: 2rem;
@@ -155,15 +155,29 @@ button:hover {
   justify-content: center;
 }
 
-.about > p {
-  margin-top: 70px;
-  padding: 60px;
-  color:black;
+.heading {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  margin-top: 60px;
   
 }
-.helpers {
-  height: 50%;
-  width: 50%;
+.welcome-text-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center; 
+  
+}
+
+.welcome-text {
+  border: 1 px solid rgb(1, 20, 82);
+  padding: 10px 100px ;
+  color: black;
+  font-size: clamp(1rem, 2.5vw, 2rem); 
+}
+
+.helpers-img img {
+  height: 100%;
+  width: 100%;  
 }
 
 .action {
@@ -171,6 +185,87 @@ button:hover {
   padding: 20px;
   font-size: 2rem;
 }
+
+.reach-out-img  img{
+  margin-top: 40px;
+  height: 80%;
+  width: 80%; 
+}
+
+/* MAIN BODY */
+
+/* OUR VISION */
+
+
+/* CARDS */
+
+.how-it-works {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  align-items: center;
+  margin: 50px;
+}
+
+.card {
+  background: white;
+  border: 1px solid rgb(1, 20, 82);
+  border-radius: .25rem;
+
+  --padding: 1rem; 
+ 
+  border: 1px solid rgb(227, 228, 230);
+  border-radius: 0.25rem;
+  max-width: 400px;
+  overflow: hidden; 
+}
+
+.card.card-shadow {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .card-header {
+  padding: var(--pading);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+} */
+
+/* .card-header.card-image {
+  overflow: hidden;
+} */
+
+/* .card-header.card-image > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+} */
+
+/* .card:hover > .card-header.card-image > img {
+  transform: scale(1.025);
+  transition: 200ms transform ease-in-out;
+}
+
+.card-body {
+  font-size: 0.9rem;
+  padding: 0 var(--pading);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  padding: 0 var(--pading);
+  padding-top: 0;
+} */
+
+/* MAIN BODY */
 
 .main-body {
   height: 200px;
@@ -189,29 +284,31 @@ button:hover {
   padding: 20px 20px;
   font-size: 30px;
   height: 110px;
-  border-radius:15px;
+  border-radius: 15px;
   text-decoration: none;
   color: white;
 }
 
-.offer-help:hover, .get-help:hover, .offer-company:hover, .get-company:hover  {
-  transform: scale(1.01); 
+.offer-help:hover,
+.get-help:hover,
+.offer-company:hover,
+.get-company:hover {
+  transform: scale(1.01);
   transition: 0.3s;
   box-shadow: 2px 2px;
 }
 
-
-.offer-help{
+.offer-help {
   background-color: orange;
   background-repeat: no-repeat;
 }
 
-.get-help{
+.get-help {
   background-color: orange;
   align-content: center;
 }
 
-.offer-company{
+.offer-company {
   background-color: orange;
 }
 
@@ -220,15 +317,15 @@ button:hover {
 }
 
 .app-icons {
- 
   background-color: white;
 }
+
+/* FOOTER */
 
 .footer-container {
   background-color: rgb(10, 29, 92);
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  
 }
 
 .main-footer {
@@ -282,9 +379,9 @@ button:hover {
   padding: 10px 0px 20px 0px;
 }
 
-.offer{
+.offer {
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 textarea {
@@ -293,11 +390,10 @@ textarea {
 }
 
 .offer-btn {
-
 }
 
 .about-me {
-  display:flex;
+  display: flex;
   align-items: flex-start;
 }
 
