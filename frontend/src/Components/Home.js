@@ -59,7 +59,7 @@ export default function Home() {
             />
 
             <div className="card-body">
-              <h5 className="card-title">Become a member</h5> <br />
+              <h5 className="card-title">Become a member</h5> <br /><br/><br/>
               <p className="card-text">The more the merrier! </p>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title">See who's here</h5> <br />
-              <p className="card-text">
+              <p className="card-text"><br/>
                 Browse the posts created by other users. <br /> Choose who you'd
                 like to help or with whom you'd like to meet.
                 <br />{" "}
@@ -88,7 +88,7 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title">Decide on your next move</h5> <br />
-              <p className="card-text">
+              <p className="card-text"><br/>
                 Remember, one good deed here and there could make a big
                 difference in someone's day.
               </p>
@@ -104,7 +104,7 @@ export default function Home() {
             <div className="card-body">
               <h5 clasNames="card-title">Reach out</h5> <br />
               <p className="card-text">
-                Don't be shy, this is not a dating site. Just your local peeps
+                Don't be shy, this is not a dating site. <br/> <br/>Just your local peeps
                 looking forward to spending time together while doing something
                 useful or fun.
               </p>
@@ -120,9 +120,8 @@ export default function Home() {
             <div className="card-body">
               <h5 className="card-title">Need help with a project?</h5> <br />
               <p className="card-text">
-                You can ask for help too! Just sign up and post your request!
-                Then wait and be sure to have cookies at home ready for your
-                future helping friendships!
+                You can ask for help too! <br/><br/> Sign up and post your request! <br />
+                Then wait. <br/> 
               </p>
             </div>
           </div>
@@ -134,9 +133,9 @@ export default function Home() {
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 className="card-title">Looking for company?</h5> <br />
+              <h5 className="card-title">Wanna make friends?</h5> <br/><br />
               <p className="card-text">
-                Feeling lonely or wanna make a friend? Suggest some activity you
+                Suggest some activity you
                 like and someone will surely join you soon!
               </p>
             </div>
@@ -275,35 +274,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* <div>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-      </div> */}
 
       <div className="app-icons">
         <p>Download the App:</p>
