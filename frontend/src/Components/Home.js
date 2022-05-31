@@ -7,14 +7,16 @@ export default function Home() {
       <div className="hero">
         <div className="slogan">
           <p>Where good deeds and friendships happen</p>
+          <h5>Volunteering made easy</h5>
         </div>
       </div>
+
       <div className="about-container">
         <div>
-          <div>
+          <div className="welcome-text-container">
             <p className="heading">Welcome to Deeder</p>
           </div>
-          <div className="welcome-text-container">
+          <div>
             <p className="welcome-text">
               A place for helping others, meeting someone new and making friends
               all at the same time!
@@ -33,7 +35,7 @@ export default function Home() {
           <div>
             <p className="heading">Made in your city ... for your city</p>
           </div>
-          <div className="welcome-text-container">
+          <div className="welcome-text-container-right">
             <p class="welcome-text">
               <p>In the mood for helping someone today?</p>
               <p>New in town and feeling lonely?</p>
@@ -85,8 +87,8 @@ export default function Home() {
           </div>
 
           <div
-            className="card"
-            style={{ height: 30 + "rem", width: 18 + "rem" }}
+            className="try"
+           
           >
             <img
               className="card-img-top"
@@ -103,8 +105,8 @@ export default function Home() {
           </div>
 
           <div
-            className="card"
-            style={{ height: 30 + "rem", width: 18 + "rem" }}
+            className="try"
+           
           >
             <img
               class="card-img-top"
@@ -122,8 +124,7 @@ export default function Home() {
           </div>
 
           <div
-            className="card"
-            style={{ height: 30 + "rem", width: 18 + "rem" }}
+            className="try"
           >
             <img
               className="card-img-top"
@@ -141,8 +142,8 @@ export default function Home() {
           </div>
 
           <div
-            className="card"
-            style={{ height: 30 + "rem", width: 18 + "rem" }}
+            className="try"
+            
           >
             <img
               className="card-img-top"
@@ -173,14 +174,158 @@ export default function Home() {
         </div>
       </div>
       <div className="categories">
-        <p>CATEGORIES</p>
-
-        <div className="action-container">
-          <div></div>
+        <p className="browse">Browse the categories</p>
+        <div className="container-sm">
+          <div className="row pt-5 pb-5">
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+            <div className="col-md-3 p-2">
+              <img
+                className="img-fluid"
+                src="./Images/helpers.png"
+                alt="placeholder"
+              />
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* <div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="..." alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      </div> */}
+
+      
+
       <div className="app-icons">
-        <p>Download the app, post your request and start making friends!</p>
+        <p>Download the App:</p>
         <a href="www.google.com">
           <img className="google" src="/Images/google-play-badge.png"></img>
         </a>
