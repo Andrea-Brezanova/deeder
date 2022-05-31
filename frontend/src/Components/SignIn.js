@@ -34,22 +34,36 @@ export default function SignIn() {
   return (
     <>
       {!isAuthenticated ? (
-        <div className="sign-in">
-          <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="email">E-mail:</label>
-            <input type="email" placeholder="Enter your e-mail"{...register("email", { required: true })} />
-            {errors.email && <div class="alert">Please Enter Your Email!</div>}
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password" placeholder="Enter your password"
-              {...register("password", { required: true })}
-            />
-            {errors.password && (
-              <div className="alert">Please Enter Your Password!</div>
-            )}
-            <button className="get-btn" type="submit">Click to Login</button>
-          </form>
-          {/* <p>{token}</p> */}
+        <div className="container">
+          <div className="image-left">
+            <img src="./Images/garden-help.png" />
+          </div>
+          <div className="sign-in">
+            <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
+              <label htmlFor="email">E-mail:</label>
+              <input
+                type="email"
+                placeholder="Enter your e-mail"
+                {...register("email", { required: true })}
+              />
+              {errors.email && (
+                <div class="alert">Please Enter Your Email!</div>
+              )}
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                {...register("password", { required: true })}
+              />
+              {errors.password && (
+                <div className="alert">Please Enter Your Password!</div>
+              )}
+              <button className="get-btn" type="submit">
+                Click to Login
+              </button>
+            </form>
+            {/* <p>{token}</p> */}
+          </div>
         </div>
       ) : (
         <Navigate to="/protected/profile" />

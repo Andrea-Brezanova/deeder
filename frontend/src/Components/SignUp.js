@@ -62,7 +62,12 @@ function SignUp() {
           </form>
         </div>
       ) : (
-        <Navigate to="/protected/profile" />
+        <div className="container">
+          <div className="image-right">
+            <img src="./Images/bicycle.jpg">IMAGE RIGHT</img>
+          </div>
+          <Navigate to="/protected/profile" />
+        </div>
       )}
     </>
   );
