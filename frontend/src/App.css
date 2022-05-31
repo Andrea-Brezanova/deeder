@@ -6,10 +6,10 @@
 }
 
 body {
-  background-color: rgb(247, 248, 250);
+  background-color: white;
   font-family: "DM Sans", sans-serif;
   font-size: smaller;
-  background-color: rgb(227, 228, 230);
+  
 }
 
 /* NAVBAR */
@@ -42,7 +42,7 @@ body {
   text-decoration: none;
   font-family: "Pacifico", cursive;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .nav-items {
@@ -205,7 +205,7 @@ button:hover {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   padding-left: 200px;
-  border: 1px solid red;
+  gap: 1px;
 }
 
 .how-it-works {
@@ -274,7 +274,6 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 50px;
-  
   background-color: white;
   
 }
@@ -285,6 +284,7 @@ button:hover {
   transform: scale(1.01);
   transition: 0.3s;
   box-shadow: 2px 2px;
+  color: orange;
 }
 
 .offer-help {
@@ -309,6 +309,11 @@ button:hover {
   background-color: white;
 }
 
+.categories {
+  background-color: white;
+  border: 1px solid red;
+  height: 400px;
+}
 /* FOOTER */
 
 .footer-container {
