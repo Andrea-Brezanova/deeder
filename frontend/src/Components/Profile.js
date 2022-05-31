@@ -28,7 +28,7 @@ function Profile() {
         <p>What would you like to do today?</p>
       </div>
       <div className="main-body action-container">
-        <NavLink className="offer-help" to="/protected/posts">
+        <NavLink className="offer-help" to="/posts">
           <div>Help someone</div>
         </NavLink>
 
@@ -36,12 +36,12 @@ function Profile() {
           <div>Ask for help</div>
         </NavLink>
 
-        <NavLink className="offer-company" to="/protected/posts">
+        <NavLink className="offer-company" to="/posts">
           <div>Meet someone</div>
         </NavLink>
 
         <NavLink className="get-company" to="/protected/get-company">
-          <div>Ask for</div>
+          <div>Ask</div>
         </NavLink>
       </div>
     </>

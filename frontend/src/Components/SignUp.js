@@ -56,7 +56,7 @@ function SignUp() {
               {...register("password", { required: true })}
             />
             {errors.password && <div class="alert">Password is required</div>}
-            <button className="signup-button" type="submit">
+            <button className="get-btn" type="submit">
               Sign Up
             </button>
           </form>
