@@ -24,7 +24,7 @@ function AllPosts() {
     <>
       <div>
         {posts.map((element) => {
-          return <p key={element._id}> {element.title}</p>;
+          return <p key={element._id}> {element.author}, {element.body}, {element.subcategory}</p>;
         })}
       </div>
       <div className="all-posts">
@@ -32,13 +32,15 @@ function AllPosts() {
           required
           className="search-bar"
           type="text"
-          placeholder="Search.."
+          placeholder="Choose a category.."
         ></input>
         <button type="submit" className="search-button" value="SUBMIT">
-          SEARCH
+          Search
         </button>
       </div>
-      <div className="search-results">njjj</div>
+      <div className="search-results">
+        <div className="posts">HERE COME THE RESULTS FROM THE DATABASE SEARCH</div>
+        </div>
     </>
   );
 }

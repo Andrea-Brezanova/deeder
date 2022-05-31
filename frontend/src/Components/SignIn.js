@@ -45,9 +45,9 @@ export default function SignIn() {
               {...register("password", { required: true })}
             />
             {errors.password && (
-              <div class="alert">Please Enter Your Password!</div>
+              <div className="alert">Please Enter Your Password!</div>
             )}
-            <button type="submit">Click to Login</button>
+            <button className="get-btn" type="submit">Click to Login</button>
           </form>
           {/* <p>{token}</p> */}
         </div>
