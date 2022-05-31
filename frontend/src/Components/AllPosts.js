@@ -17,6 +17,7 @@ function AllPosts() {
   };
 
   useEffect(() => {
+    console.log(posts)
     getPosts();
   }, []);
 
@@ -35,14 +36,17 @@ function AllPosts() {
         </button>
       </div>
       <div className="search-results">
+      <p>HEIGHT OF THIS CONTAINER IS AUTO</p>
         <div className="posts">
-        <div>
         {posts.map((element) => {
-          return <div></div>;
+          return <div className="map-result">
+            
+            <p>{element._id},{element.author}</p>
+          </div>;
         })}
       </div>
         </div>
-        </div>
+       
     </>
   );
 }

@@ -14,6 +14,7 @@ import GetHelp from "./Components/GetHelp";
 import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
+import Post from "./Components/Post";
 
 function App() {
   return (

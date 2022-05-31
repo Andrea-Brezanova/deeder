@@ -51,10 +51,7 @@ export default function Home() {
           <p>Here's how it works</p>
         </div>
         <div className="grid-container">
-          <div
-            className="card"
-            style={{ height: 30 + "rem", width: 18 + "rem" }}
-          >
+          <div className="try">
             <img
               className="card-img-top"
               src="./Images/bees.png"
@@ -67,10 +64,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="card"
-            style={{ height: 30 + "rem", width: 18 + "rem" }}
-          >
+          <div className="try">
             <img
               className="card-img-top"
               src="../Images/looking.jpg"
@@ -86,10 +80,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="try"
-           
-          >
+          <div className="try">
             <img
               className="card-img-top"
               src="./Images/elderly.jpg"
@@ -104,10 +95,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="try"
-           
-          >
+          <div className="try">
             <img
               class="card-img-top"
               src="./Images/painting.png"
@@ -123,9 +111,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="try"
-          >
+          <div className="try">
             <img
               className="card-img-top"
               src="./Images/help-wanted.jpg"
@@ -141,10 +127,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="try"
-            
-          >
+          <div className="try">
             <img
               className="card-img-top"
               src="./Images/chatting.jpg"
@@ -321,8 +304,6 @@ export default function Home() {
   </a>
 </div>
       </div> */}
-
-      
 
       <div className="app-icons">
         <p>Download the App:</p>

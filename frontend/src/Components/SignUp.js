@@ -34,9 +34,7 @@ function SignUp() {
     <>
       {!isAuthenticated ? (
         <div className="container">
-          <div>
-            <img src="./Images/bees.jpg">IMAGE RIGHT</img>
-          </div>
+          
           <div className="signup-container">
             <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
               <label htmlFor="userName">User Name:</label>
@@ -66,6 +64,9 @@ function SignUp() {
                 Sign Up
               </button>
             </form>
+          </div>
+          <div>
+            <img className="bicycle" src="./Images/bicycle.jpg" />
           </div>
         </div>
       ) : (

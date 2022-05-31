@@ -66,10 +66,27 @@ img {
   justify-content: center;
 }
 
-/*.signup-form {
+
+
+.container {
   display: flex;
-  flex-direction: column;
-}*/
+  justify-content: center;
+  height: 600px;
+  margin-top: 100px;
+}
+
+.garden {
+  height: 300px;
+  width: 400px;
+  margin-right: 100px;
+}
+
+.bicycle {
+  height: 300px;
+  width: 400px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
 
 .sign-in {
   display: flex;
@@ -163,14 +180,12 @@ button:hover {
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  border: 1px solid red;
 }
 
 .heading {
   font-family: "Pacifico", cursive;
   font-size: 40px;
   margin-top: 100px;
-  border: 1px solid red;
 }
 
 .welcome-text-container {
@@ -179,7 +194,6 @@ button:hover {
   display: flex;
   justify-content: center;
   margin-right: 80px;
-  border: 1px solid red;
 }
 
 .welcome-text {
@@ -188,27 +202,23 @@ button:hover {
   color: black;
   font-size: clamp(1rem, 2.5vw, 2rem);
   margin-right: 10px;
-  border: 1px solid red;
 }
 
 .helpers-img img {
   height: 100%;
   width: 100%;
-  border: 1px solid red;
 }
 
 .action {
   margin: 20px;
   padding: 10px;
   font-size: 2rem;
-  border: 1px solid red;
 }
 
 .reach-out-img img {
   margin-top: 40px;
   height: 80%;
   width: 80%;
-  border: 1px solid red;
 }
 
 /* CARDS */
@@ -228,7 +238,6 @@ button:hover {
   font-size: 40px;
   padding: 50px;
   background-color: rgb(223, 223, 223);
-  border: 1px solid red;
 }
 
 .card-img-top {
@@ -237,7 +246,6 @@ button:hover {
 }
 
 .card-body {
- 
 }
 
 .try {
@@ -385,6 +393,7 @@ textarea {
   justify-content: center;
   height: 55px;
   background-color: rgb(223, 223, 223);
+  padding-top: 50px;
 }
 
 .search-bar {
@@ -401,16 +410,22 @@ textarea {
 
 .search-results {
   background-color: rgb(223, 223, 223);
-  height: 320px;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .posts {
-  height: 300px;
   border: 1px solid black;
-  border-radius: 10px;
-  margin-left: 200px;
-  margin-right: 200px;
   background-color: white;
+  height: auto;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.map-result {
+  background-color: grey;
 }
 
 /* FOOTER */
