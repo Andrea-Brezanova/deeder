@@ -164,10 +164,10 @@ export default function Home() {
       </div>
       <div className="action-container">
         <div className="main-body action-container">
-          <NavLink className="offer-help" to="/protected/offer-help">
+          <NavLink className="offer-help" to="/posts">
             <div>Yes I want to help!</div>
           </NavLink>
-          <NavLink className="offer-help" to="/protected/get-help">
+          <NavLink className="offer-help" to="/posts">
             <div>I'd love to hang out</div>
           </NavLink>
         </div>
@@ -176,9 +176,7 @@ export default function Home() {
         <p>CATEGORIES</p>
 
         <div className="action-container">
-          <div>
-            
-          </div>
+          <div></div>
         </div>
       </div>
       <div className="app-icons">
