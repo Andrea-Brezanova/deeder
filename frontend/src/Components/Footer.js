@@ -33,8 +33,14 @@ export default function Footer() {
             <a href="youtube.com" class="fa fa-youtube"></a>
             <a href="instagram.com" class="fa fa-instagram"></a>
           </div>
+          <div className="last-footer">
+            <img className="footer-logo" src="../Images/Logo-blue.png"></img>
+            <h3 class="deeder">Deeder</h3>
+            <p>Do good things<br></br>
+            Have fun together</p>
+          </div>
         </footer>
-        
+
         <p className="copyright">
           ©2022 owned by Kwame & Andrea Co. Limited | All rights reserved
         </p>

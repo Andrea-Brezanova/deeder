@@ -314,43 +314,7 @@ button:hover {
   border: 1px solid red;
   height: 400px;
 }
-/* FOOTER */
 
-.footer-container {
-  background-color: rgb(10, 29, 92);
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.main-footer {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  padding-top: 25px;
-  border-bottom: 2px solid white;
-}
-
-.main-footer a {
-  text-decoration: none;
-  color: aliceblue;
-  padding: 10px;
-}
-
-.mid-footer a:hover,
-.left-footer a:hover {
-  opacity: 0.7;
-  color: orange;
-}
-
-.left-footer,
-.mid-footer,
-.social-media-icons {
-  display: flex;
-  flex-direction: column;
-  font-family: "DM Sans", sans-serif;
-  color: orange;
-  align-items: flex-start;
-}
 
 .fa:hover {
   opacity: 0.7;
@@ -407,4 +371,51 @@ textarea {
   width:75px;
   border-radius: 10px;
   padding-left: 3px;
+}
+
+.last-footer{
+  color: aliceblue;
+  background-color: rgb(1, 20, 82);
+}
+.footer-logo{
+  height: 150px;
+  width:150px;
+}
+
+/* FOOTER */
+
+.footer-container {
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(1, 20, 82);
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-top: 25px;
+  border-bottom: 2px solid white;
+}
+
+.main-footer a {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 10px;
+}
+
+.mid-footer a:hover,
+.left-footer a:hover {
+  opacity: 0.7;
+  color: orange;
+}
+
+.left-footer,
+.mid-footer,
+.social-media-icons {
+  display: flex;
+  flex-direction: column;
+  font-family: "DM Sans", sans-serif;
+  color: orange;
+  align-items: flex-start;
 }
