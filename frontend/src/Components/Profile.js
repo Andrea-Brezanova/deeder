@@ -29,7 +29,7 @@ function Profile() {
   <div>Welcome: {user.userName}</div>
         <p>What would you like to do today?</p>
       </div>
-      <div className="main-body">
+      <div className="main-body action-container">
         <NavLink className="offer-help" to="/protected/offer-help">
           <div>OFFER HELP</div>
         </NavLink>

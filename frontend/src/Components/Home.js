@@ -172,6 +172,15 @@ export default function Home() {
           </NavLink>
         </div>
       </div>
+      <div className="categories">
+        <p>CATEGORIES</p>
+
+        <div className="action-container">
+          <div>
+            
+          </div>
+        </div>
+      </div>
       <div className="app-icons">
         <p>Download the app, post your request and start making friends!</p>
         <a href="www.google.com">
