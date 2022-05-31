@@ -163,42 +163,52 @@ button:hover {
   font-size: 2rem;
   display: flex;
   justify-content: center;
+  border: 1px solid red;
 }
 
 .heading {
   font-family: "Pacifico", cursive;
   font-size: 40px;
   margin-top: 100px;
+  border: 1px solid red;
 }
+
 .welcome-text-container {
   margin-top: 60px;
+  margin-left: 100px;
   display: flex;
   justify-content: center;
   margin-right: 80px;
+  border: 1px solid red;
 }
 
 .welcome-text {
   border: 1 px solid rgb(1, 20, 82);
-  padding: 10px 100px;
+  padding: 10px;
   color: black;
   font-size: clamp(1rem, 2.5vw, 2rem);
+  margin-right: 10px;
+  border: 1px solid red;
 }
 
 .helpers-img img {
   height: 100%;
   width: 100%;
+  border: 1px solid red;
 }
 
 .action {
   margin: 20px;
-  padding: 20px;
+  padding: 10px;
   font-size: 2rem;
+  border: 1px solid red;
 }
 
 .reach-out-img img {
   margin-top: 40px;
   height: 80%;
   width: 80%;
+  border: 1px solid red;
 }
 
 /* CARDS */
@@ -218,25 +228,32 @@ button:hover {
   font-size: 40px;
   padding: 50px;
   background-color: rgb(223, 223, 223);
+  border: 1px solid red;
 }
 
 .card-img-top {
   object-fit: cover;
-  height: auto;
+  height: 200px;
 }
 
 .card-body {
-  border-radius: 20px;
+ 
 }
 
-.card {
-  border: 1px solid red;
+.try {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: white;
+  gap: 3rem;
+  border-radius: 10px;
+  height: 500px;
+  width: 300px;
 }
 
 /* MAIN BODY */
 
 .main-body {
-  height: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
@@ -245,14 +262,13 @@ button:hover {
   background-color: rgb(227, 228, 230);
   font-family: "DM Sans", sans-serif;
   color: white;
-  
 }
 .main-body > a {
   border: 1px solid;
   text-align: center;
   padding: 20px 20px;
   font-size: 30px;
-  height: 110px;
+  height: 100px;
   border-radius: 15px;
   text-decoration: none;
   color: white;
@@ -270,17 +286,17 @@ button:hover {
 }
 
 .action {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Pacifico", cursive;
   font-size: 2rem;
   margin-top: 50px;
 }
 
-div.action-container {
+.action-container {
   display: flex;
   justify-content: center;
   gap: 50px;
   background-color: white;
-  height: 300px;
+  margin-bottom: 50px;
 }
 .offer-help:hover,
 .get-help:hover,
@@ -318,12 +334,14 @@ div.action-container {
 
 .categories {
   background-color: rgb(223, 223, 223);
-  border: 1px solid red;
   height: 700px;
 }
 
-
-
+.browse {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  padding-top: 50px;
+}
 .fa:hover {
   opacity: 0.7;
   font-size: 30px;
@@ -389,12 +407,11 @@ textarea {
 .posts {
   height: 300px;
   border: 1px solid black;
+  border-radius: 10px;
   margin-left: 200px;
   margin-right: 200px;
   background-color: white;
 }
-
-
 
 /* FOOTER */
 
@@ -432,13 +449,12 @@ textarea {
   font-family: "DM Sans", sans-serif;
   color: orange;
   align-items: flex-start;
-
 }
-.last-footer{
+.last-footer {
   color: aliceblue;
   background-color: rgb(1, 20, 82);
 }
-.footer-logo{
+.footer-logo {
   height: 150px;
-  width:150px;
+  width: 150px;
 }

@@ -33,41 +33,43 @@ function SignUp() {
   return (
     <>
       {!isAuthenticated ? (
-        <div className="signup-container">
-          <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="userName">User Name:</label>
-            <input
-              type="text"
-              placeholder="Enter your user-name"
-              {...register("userName", { required: true })}
-            />
-            {errors.userName && <div class="alert">User name is required</div>}
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              placeholder="Enter your E-mail"
-              {...register("email", { required: true })}
-            />
-            {errors.email && <div class="alert">Email is required</div>}
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              {...register("password", { required: true })}
-            />
-            {errors.password && <div class="alert">Password is required</div>}
-            <button className="get-btn" type="submit">
-              Sign Up
-            </button>
-          </form>
+        <div className="container">
+          <div>
+            <img src="./Images/bees.jpg">IMAGE RIGHT</img>
+          </div>
+          <div className="signup-container">
+            <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
+              <label htmlFor="userName">User Name:</label>
+              <input
+                type="text"
+                placeholder="Enter your user-name"
+                {...register("userName", { required: true })}
+              />
+              {errors.userName && (
+                <div class="alert">User name is required</div>
+              )}
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                placeholder="Enter your E-mail"
+                {...register("email", { required: true })}
+              />
+              {errors.email && <div class="alert">Email is required</div>}
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                {...register("password", { required: true })}
+              />
+              {errors.password && <div class="alert">Password is required</div>}
+              <button className="get-btn" type="submit">
+                Sign Up
+              </button>
+            </form>
+          </div>
         </div>
       ) : (
-        <div className="container">
-          <div className="image-right">
-            <img src="./Images/bicycle.jpg">IMAGE RIGHT</img>
-          </div>
-          <Navigate to="/protected/profile" />
-        </div>
+        <Navigate to="/protected/profile" />
       )}
     </>
   );

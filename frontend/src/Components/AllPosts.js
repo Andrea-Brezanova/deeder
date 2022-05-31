@@ -8,9 +8,9 @@ function AllPosts() {
   const getPosts = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/posts`
+        `${process.env.REACT_APP_API_URL}/posts`, {headers: {authorization: `bearer ${localStorage.getItem("token")}`}}
       );
-      console.log(response.data);
+     setPosts(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -22,11 +22,7 @@ function AllPosts() {
 
   return (
     <>
-      <div>
-        {posts.map((element) => {
-          return <p key={element._id}> {element.author}, {element.body}, {element.subcategory}</p>;
-        })}
-      </div>
+      
       <div className="all-posts">
         <input
           required
@@ -39,7 +35,13 @@ function AllPosts() {
         </button>
       </div>
       <div className="search-results">
-        <div className="posts">HERE COME THE RESULTS FROM THE DATABASE SEARCH</div>
+        <div className="posts">
+        <div>
+        {posts.map((element) => {
+          return <div></div>;
+        })}
+      </div>
+        </div>
         </div>
     </>
   );

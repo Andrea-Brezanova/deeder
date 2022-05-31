@@ -35,7 +35,7 @@ export default function SignIn() {
     <>
       {!isAuthenticated ? (
         <div className="container">
-          <div className="image-left">
+          <div>
             <img src="./Images/garden-help.png" />
           </div>
           <div className="sign-in">
