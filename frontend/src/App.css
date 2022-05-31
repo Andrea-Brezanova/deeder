@@ -377,15 +377,20 @@ textarea {
   padding-left: 3px;
 }
 
+.search-results {
+  background-color: rgb(223, 223, 223);
+  height: 320px;
+}
 
-.last-footer{
-  color: aliceblue;
-  background-color: rgb(1, 20, 82);
+.posts {
+  height: 300px;
+  border: 1px solid black;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: white;
 }
-.footer-logo{
-  height: 150px;
-  width:150px;
-}
+
+
 
 /* FOOTER */
 
@@ -424,4 +429,12 @@ textarea {
   color: orange;
   align-items: flex-start;
 
+}
+.last-footer{
+  color: aliceblue;
+  background-color: rgb(1, 20, 82);
+}
+.footer-logo{
+  height: 150px;
+  width:150px;
 }
