@@ -369,6 +369,30 @@ textarea {
   align-items: flex-start;
 }
 
+.request-body {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 50px 30px 50px;
+}
+
+.request-body p {
+  font-weight: bolder;
+}
+
+textarea {
+  border: 2px solid;
+  border-radius: 7px;
+  height: 300px;
+}
+
+select {
+  border: 2px solid;
+  width: auto;
+  border-radius: 5px;
+  max-height: 50px;
+}
+
+
 /* ALL POSTS */
 
 .all-posts {
@@ -430,7 +454,7 @@ textarea {
   justify-content: space-around;
   flex-direction: row;
   padding-top: 25px;
- padding-bottom: 20px;;
+  padding-bottom: 20px;
 }
 
 .main-footer a {
@@ -464,7 +488,6 @@ textarea {
   margin-top: 20px;
 }
 
-
 .fa:hover {
   opacity: 0.7;
   font-size: 30px;
@@ -484,5 +507,5 @@ textarea {
 .copyright {
   color: white;
   padding: 25px 0px 30px 0px;
-  border-top: 0.20rem dotted white;
+  border-top: 0.2rem dotted white;
 }
