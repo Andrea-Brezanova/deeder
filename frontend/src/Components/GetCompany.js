@@ -7,7 +7,6 @@ export default function GetHelp() {
   const [subcategories, setSubcategories] = useState([]);
   const [categories, setcategories] = useState([]);
 
-  console.log("HERE", subcategories);
   const {
     register,
     handleSubmit,
@@ -32,8 +31,10 @@ export default function GetHelp() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/categories")
-      
+      .get("http://localhost:3001/subcategories")
+
+      // .get("http://localhost:3001/categories")
+
       .then((res) => {
         setSubcategories(res.data);
       })
@@ -41,8 +42,6 @@ export default function GetHelp() {
         console.log(err);
       });
   }, []);
-  const names = subcategories.map((x) => x.name);
-  console.log("NAME", names);
 
   return (
     <>
@@ -65,19 +64,11 @@ export default function GetHelp() {
         <div className="subcategory-form">
           <div className="category-list">
             <p className="request-info">Please select a subcategory</p>
-            <select
-              style="min-height:40px;"
-              {...register("subcategory", { required: true })}
-            >
+
+            <select {...register("subcategory", { required: true })}>
               {subcategories.map((subcategory) => {
                 return (
-                  <option
-                    className="option1"
-                    value={subcategory._id}
-                    length="10"
-                  >
-                    {subcategory.name}
-                  </option>
+                  <option value={subcategory._id}>{subcategory.name}</option>
                 );
               })}
             </select>
