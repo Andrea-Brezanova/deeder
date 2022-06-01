@@ -5,6 +5,7 @@ import axios from "axios";
 export default function GetHelp() {
   const [body, setBody] = useState("");
   const [subcategories, setSubcategories] = useState([]);
+  const [categories, setcategories] = useState([]);
 
   const {
     register,
@@ -31,6 +32,7 @@ export default function GetHelp() {
   useEffect(() => {
     axios
       .get("http://localhost:3001/subcategories")
+      
       .then((res) => {
         setSubcategories(res.data);
       })
@@ -41,17 +43,11 @@ export default function GetHelp() {
 
   return (
     <>
-      <div className="write-request-form">PULL USER DATA FROM DB</div>
+      <div className="write-request-form">
+        Please fill out the form below. <br />
+        Remember to say what matters!
+      </div>
       <div className="offer">
-        
-          <div className="searchInputs">
-            <select {...register("subcategory", { required: true })}>
-              {subcategories.map((subcategory) => {
-                return <option value={subcategory._id}>{subcategory.name}</option>;
-              })}
-            </select>
-          </div>
-        
         <form onSubmit={handleSubmit(onSubmit)}>
           <textarea
             placeholder="Write something about yourself and get in touch!"
@@ -61,6 +57,29 @@ export default function GetHelp() {
           {errors.body && <div className="alert">Text is required</div>}
           <button className="get-btn">Submit</button>
         </form>
+        <div>
+          <div className="select-subcategory">
+            <p>Please select a subcategory</p>
+            <select {...register("subcategory", { required: true })}>
+              {subcategories.map((subcategory) => {
+                return (
+                  <option value={subcategory._id}>{subcategory.name}</option>
+                );
+              })}
+            </select>
+          </div>
+          <div className="select-category">
+            <p>Please select a category</p>
+            <select {...register("category", { required: true })}>
+              {categories.map((category) => {
+                return (
+                  <option value={category._id}>{category.name}</option>
+                );
+              })}
+            </select>
+            
+          </div>
+        </div>
       </div>
     </>
   );

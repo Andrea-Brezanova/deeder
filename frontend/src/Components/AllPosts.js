@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SearchBar from "../Components/SearchBar";
 
 function AllPosts() {
   const [posts, setPosts] = useState([]);
@@ -25,7 +26,12 @@ function AllPosts() {
     <>
       
       <div className="all-posts">
-        <input
+        
+      <SearchBar />
+        
+
+
+        {/* <input
           required
           className="search-bar"
           type="text"
@@ -33,14 +39,17 @@ function AllPosts() {
         ></input>
         <button type="submit" className="search-button" value="SUBMIT">
           Search
-        </button>
+        </button> */}
       </div>
       <div className="search-results">
       <p>HEIGHT OF THIS CONTAINER IS AUTO</p>
         <div className="posts">
-        {posts.map((element) => {
-          return <div className="map-result">
-            <p>{element._id},{element.author}</p>
+        {posts && posts.map((element) => {
+          return <div className="map-result" key={element._id}>
+            <p>{element.author.userName}</p>
+            <p>{element.body}</p>
+            <p>{element.date}</p>
+            {/* <p>{element.subcategory.name}</p> */}
           </div>;
         })}
       </div>
