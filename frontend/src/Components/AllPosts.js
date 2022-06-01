@@ -38,12 +38,11 @@ function AllPosts() {
       <div className="search-results">
       <p>HEIGHT OF THIS CONTAINER IS AUTO</p>
         <div className="posts">
-        {posts.map((element) => {
+        {/* {posts.map((element) => {
           return <div className="map-result">
-            
             <p>{element._id},{element.author}</p>
           </div>;
-        })}
+        })} */}
       </div>
         </div>
        

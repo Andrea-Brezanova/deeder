@@ -36,7 +36,7 @@ export default function SignIn() {
       {!isAuthenticated ? (
         <div className="container">
           <div>
-            <img className="garden" src="./Images/garden-help.png" />
+            <img className="garden" src="./Images/coffee-brake.jpg" />
           </div>
           <div className="sign-in">
             <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
@@ -47,7 +47,7 @@ export default function SignIn() {
                 {...register("email", { required: true })}
               />
               {errors.email && (
-                <div class="alert">Please Enter Your Email!</div>
+                <div className="alert">Please Enter Your Email!</div>
               )}
               <label htmlFor="password">Password:</label>
               <input

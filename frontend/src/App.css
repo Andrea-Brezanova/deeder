@@ -66,25 +66,24 @@ img {
   justify-content: center;
 }
 
-
-
 .container {
   display: flex;
   justify-content: center;
   height: 600px;
-  margin-top: 100px;
+  padding-top: 100px;
+  background-color: white;
 }
 
 .garden {
-  height: 300px;
-  width: 400px;
+  height: 400px;
+  width: 500px;
   margin-right: 100px;
 }
 
 .bicycle {
-  height: 300px;
-  width: 400px;
-  margin-top: 50px;
+  height: 400px;
+  width: 550px;
+  margin-top: 20px;
   margin-left: 100px;
 }
 
@@ -212,7 +211,10 @@ button:hover {
 .action {
   margin: 20px;
   padding: 10px;
-  font-size: 2rem;
+}
+
+.action > p {
+  font-size: 40px;
 }
 
 .reach-out-img img {
@@ -245,7 +247,8 @@ button:hover {
   height: 200px;
 }
 
-.card-body {
+.card-title {
+  font-weight: bold;
 }
 
 .try {
@@ -347,28 +350,8 @@ button:hover {
 
 .browse {
   font-family: "Pacifico", cursive;
-  font-size: 2rem;
+  font-size: 40px;
   padding-top: 50px;
-}
-.fa:hover {
-  opacity: 0.7;
-  font-size: 30px;
-  width: 50px;
-  color: orange;
-}
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 40px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.copyright {
-  color: aliceblue;
-  padding: 10px 0px 20px 0px;
 }
 
 .offer {
@@ -428,11 +411,17 @@ textarea {
   background-color: grey;
 }
 
+/* DOWNLOAD APP SECTION */
+.app-icons {
+  font-size: 40px;
+  font-family: "Pacifico", cursive;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 /* FOOTER */
 
 .footer-container {
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   background-color: rgb(1, 20, 82);
 }
 
@@ -441,12 +430,12 @@ textarea {
   justify-content: space-around;
   flex-direction: row;
   padding-top: 25px;
-  border-bottom: 2px solid white;
+ padding-bottom: 20px;;
 }
 
 .main-footer a {
   text-decoration: none;
-  color: aliceblue;
+  color: white;
   padding: 10px;
 }
 
@@ -466,10 +455,34 @@ textarea {
   align-items: flex-start;
 }
 .last-footer {
-  color: aliceblue;
+  color: white;
   background-color: rgb(1, 20, 82);
 }
 .footer-logo {
-  height: 150px;
+  height: 170px;
   width: 150px;
+  margin-top: 20px;
+}
+
+
+.fa:hover {
+  opacity: 0.7;
+  font-size: 30px;
+  width: 50px;
+  color: orange;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.copyright {
+  color: white;
+  padding: 25px 0px 30px 0px;
+  border-top: 0.20rem dotted white;
 }

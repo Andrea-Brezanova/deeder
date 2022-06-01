@@ -27,9 +27,10 @@ const getPost = async (req, res, next) => {
 const createPost = async (req, res, next) => {
   try {
     const {
-      body: { author, body, subcategory },
+      body: { body, subcategory }, 
+      user: {id}
     } = req;
-    const newPost = await postModel.create({ author, body, subcategory });
+    const newPost = await postModel.create({ author: id, body, subcategory });
     res.json(newPost);
   } catch (error) {
     res.status(500).send(error.message);
