@@ -32,7 +32,9 @@ export default function GetHelp() {
   useEffect(() => {
     axios
       .get("http://localhost:3001/subcategories")
+
       // .get("http://localhost:3001/categories")
+
       .then((res) => {
         setSubcategories(res.data);
       })
@@ -43,6 +45,7 @@ export default function GetHelp() {
 
   return (
     <>
+
       <div className="request-body">
         <div className="request-form">
           <p className="request-info">
@@ -62,6 +65,7 @@ export default function GetHelp() {
         <div className="subcategory-form">
           <div className="category-list">
             <p className="request-info">Please select a subcategory</p>
+
             <select {...register("subcategory", { required: true })}>
               {subcategories.map((subcategory) => {
                 return (
@@ -70,6 +74,7 @@ export default function GetHelp() {
               })}
             </select>
           </div>
+
         </div>
         <div className="category-form">
           <p className="request-info">Please select a category</p>
@@ -78,6 +83,7 @@ export default function GetHelp() {
               return <option value={category._id}>{category.name}</option>;
             })}
           </select>
+
         </div>
       </div>
     </>

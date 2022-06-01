@@ -41,7 +41,7 @@ function Profile() {
         </NavLink>
 
         <NavLink className="get-company" to="/protected/get-company">
-          <div>Ask</div>
+          <div>Ask for company</div>
         </NavLink>
       </div>
     </>

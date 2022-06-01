@@ -1,15 +1,34 @@
-import React from 'react';
+import Checkbox from './Checkbox';
+import { useState } from "react";
 
-export default function SearchBar() {
+const SearchBar = () => {
+  const [checkedOne, setCheckedOne] = useState(false);
+  const [checkedTwo, setCheckedTwo] = useState(false);
+
+  const handleChangeOne = () => {
+    setCheckedOne(!checkedOne);
+
+    
+  };
+
+  const handleChangeTwo = () => {
+    setCheckedTwo(!checkedTwo);
+  };
+
   return (
-    <>
-    <div>SearchBar</div>
-    <div className="search">
-          <div className="searchInputs">
-            <input type="text" />
-            <div className="seachIcon"></div>
-          </div>
-        </div>
-        </>
-  )
-}
+    <div>
+      <Checkbox
+        label="Value 1"
+        value={checkedOne}
+        onChange={handleChangeOne}
+      />
+      <Checkbox
+        label="Value 2"
+        value={checkedTwo}
+        onChange={handleChangeTwo}
+      />
+    </div>
+  );
+};
+
+export default SearchBar;

@@ -32,8 +32,8 @@ export default function GetHelp() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/subcategories")
-      // .get("http://localhost:3001/categories")
+      .get("http://localhost:3001/categories")
+      
       .then((res) => {
         setSubcategories(res.data);
       })
