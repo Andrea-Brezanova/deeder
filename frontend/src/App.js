@@ -14,7 +14,7 @@ import GetHelp from "./Components/GetHelp";
 import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
-import Post from "./Components/Post";
+import SearchBar from "./Components/SearchBar";
 
 function App() {
   return (
@@ -28,7 +28,9 @@ function App() {
           <Route path="protected" element={<Protected />}>
             <Route path="profile" element={<Profile />} />
             <Route path="offer-help" element={<OfferHelp />} />
-            <Route path="get-help" element={<GetHelp />} />
+            <Route path="get-help" element={<GetHelp />} >
+              <Route path="search-bar" element={<SearchBar />} />
+            </Route>
             <Route path="offer-company" element={<OfferCompany />} />
             <Route path="get-company" element={<GetCompany />} />
           </Route>

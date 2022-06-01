@@ -67,12 +67,12 @@ export default function About() {
             style={{ height: 30 + "rem", width: 18 + "rem" }}
           >
             <img
-              class="card-img-top"
+              className="card-img-top"
               src="./Images/painting.png"
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 clasNames="card-title">Reach out</h5> <br />
+              <h5 className="card-title">Reach out</h5> <br />
               <p className="card-text">
                 Don't be shy, this is not a dating site. Just your local peeps
                 looking forward to spending time together while doing something

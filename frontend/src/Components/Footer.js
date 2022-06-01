@@ -27,15 +27,15 @@ export default function Footer() {
           </div>
           <div className="social-media-icons">
             <h3>Follow us</h3>
-            <a href="facebook.com" class="fa fa-facebook"></a>
-            <a href="twitter.com" class="fa fa-twitter"></a>
-            <a href="linkedin.com" class="fa fa-linkedin"></a>
-            <a href="youtube.com" class="fa fa-youtube"></a>
-            <a href="instagram.com" class="fa fa-instagram"></a>
+            <a href="facebook.com" className="fa fa-facebook"></a>
+            <a href="twitter.com" className="fa fa-twitter"></a>
+            <a href="linkedin.com" className="fa fa-linkedin"></a>
+            <a href="youtube.com" className="fa fa-youtube"></a>
+            <a href="instagram.com" className="fa fa-instagram"></a>
           </div>
           <div className="last-footer">
             <img className="footer-logo" src="../Images/Logo-blue.png"></img>
-            <h3 class="deeder">Deeder</h3>
+            <h3 className="deeder">Deeder</h3>
             <p>Do good things<br></br>
             Have fun together</p>
           </div>

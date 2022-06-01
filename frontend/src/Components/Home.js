@@ -36,12 +36,12 @@ export default function Home() {
             <p className="heading">Made in your city ... for your city</p>
           </div>
           <div className="welcome-text-container-right">
-            <p class="welcome-text">
+            <div className="welcome-text">
               <p>In the mood for helping someone today?</p>
               <p>New in town and feeling lonely?</p>
               <p>Reach out and connect!</p>
               <p>There's always someone to hang out with!</p>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -97,12 +97,12 @@ export default function Home() {
 
           <div className="try">
             <img
-              class="card-img-top"
+              className="card-img-top"
               src="./Images/painting.png"
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 clasNames="card-title">Reach out</h5> <br />
+              <h5 className="card-title">Reach out</h5> <br />
               <p className="card-text">
                 Don't be shy, this is not a dating site. <br/> <br/>Just your local peeps
                 looking forward to spending time together while doing something

@@ -47,7 +47,7 @@ export default function SignIn() {
                 {...register("email", { required: true })}
               />
               {errors.email && (
-                <div class="alert">Please Enter Your Email!</div>
+                <div className="alert">Please Enter Your Email!</div>
               )}
               <label htmlFor="password">Password:</label>
               <input

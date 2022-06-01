@@ -44,7 +44,7 @@ function SignUp() {
                 {...register("userName", { required: true })}
               />
               {errors.userName && (
-                <div class="alert">User name is required</div>
+                <div className="alert">User name is required</div>
               )}
               <label htmlFor="email">Email:</label>
               <input
@@ -52,14 +52,14 @@ function SignUp() {
                 placeholder="Enter your E-mail"
                 {...register("email", { required: true })}
               />
-              {errors.email && <div class="alert">Email is required</div>}
+              {errors.email && <div className="alert">Email is required</div>}
               <label htmlFor="password">Password:</label>
               <input
                 type="password"
                 placeholder="Enter your password"
                 {...register("password", { required: true })}
               />
-              {errors.password && <div class="alert">Password is required</div>}
+              {errors.password && <div className="alert">Password is required</div>}
               <button className="get-btn" type="submit">
                 Sign Up
               </button>
