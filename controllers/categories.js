@@ -29,7 +29,7 @@ const createCategory = async (req, res, next) => {
     const {
       body: { name }
     } = req;
-    const newCategory = await categoryModel.create({ name }).populate("author");
+    const newCategory = await categoryModel.create({ name }).populate(("author"));
     res.json(newCategory);
   } catch (error) {
     res.status(500).send(error.message);

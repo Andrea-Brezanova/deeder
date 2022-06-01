@@ -43,23 +43,22 @@ export default function GetHelp() {
     <>
       <div className="write-request-form">PULL USER DATA FROM DB</div>
       <div className="offer">
-        <div className="search">
+        
           <div className="searchInputs">
             <select {...register("subcategory", { required: true })}>
               {subcategories.map((subcategory) => {
                 return <option value={subcategory._id}>{subcategory.name}</option>;
               })}
             </select>
-            <div className="seachIcon"></div>
           </div>
-        </div>
+        
         <form onSubmit={handleSubmit(onSubmit)}>
           <textarea
             placeholder="Write something about yourself and get in touch!"
             {...register("body", { required: true })}
           ></textarea>
 
-          {errors.body && <div className="alert">Text name is required</div>}
+          {errors.body && <div className="alert">Text is required</div>}
           <button className="get-btn">Submit</button>
         </form>
       </div>
