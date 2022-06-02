@@ -14,7 +14,7 @@ function AllPosts() {
 
   const [posts, setPosts] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [category, setCategory] = useState([]);
+  const [activeCategory, setActiveCategory] = useState([]);
   
 
   const getPosts = async () => {
@@ -27,6 +27,8 @@ function AllPosts() {
       );
       setPosts(response.data);
       setFiltered(response.data);
+      setActiveCategory(response.data);
+
     } catch (error) {
       console.log(error);
     }
@@ -39,7 +41,7 @@ function AllPosts() {
         {/* <Checkboxes /> */}
       </div>
       <div className="filter">
-        <Filter posts={posts} setFiltered={setFiltered} category={setCategory} setCategory={setCategory}/>
+        <Filter posts={posts} setFiltered={setFiltered} activeCategory={activeCategory}/>
       </div>
       <div className="result-container" >
         {posts &&

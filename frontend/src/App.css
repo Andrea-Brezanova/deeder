@@ -548,7 +548,14 @@ textarea {
   font-size: medium;
   font-family: "DM Sans", sans-serif;
   box-shadow: 5px 10px 8px #888888;
+  margin-bottom: 1rem;
   /* animation: mymove 5s infinite; */
+}
+
+.one-post:hover {
+  background: rgb(226, 230, 245);
+  border: rgb(226, 230, 245);
+  color: rgb(1, 20, 82);
 }
 
 /* @keyframes mymove {
@@ -563,6 +570,7 @@ textarea {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  
 }
 
 .filter-button {
@@ -575,6 +583,7 @@ textarea {
   background-color: rgb(1, 20, 82);
   color: white;
   cursor: pointer;
+  box-shadow: 5px 10px 8px #888888;
 }
 
 .filter-button:hover {
