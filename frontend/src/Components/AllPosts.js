@@ -31,17 +31,11 @@ function AllPosts() {
       <div className="all-posts">
         <SearchBar />
       </div>
-      <div className="result-container" key={post._id}>
+      <div className="result-container" >
         {posts &&
-          posts.map((element) => {
+          posts.map((post) => {
             return (
-              <OnePost post={element} />
-
-              // <div className="map-result" key={post._id}>
-              //   <p>{post.author.userName}</p>
-              //   <p>{post.body}</p>
-              //   <p>{post.date}</p>
-              // {/* <p>{post.subcategory.name && post.subcategory.name}</p> */}
+              <OnePost post={post} key={post._id}/>
             );
           })}
       </div>

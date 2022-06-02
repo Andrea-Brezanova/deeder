@@ -6,7 +6,7 @@ function OnePost({post}) {
    <p>{post.author.userName}</p>
     <p>{post.body}</p>
     <p>{post.date}</p>
-    <p>{post.subcategory.name && post.subcategory.name}</p> 
+    {/* <p>{post.subcategory.name && post.subcategory.name}</p>  */}
     </div>
   );
 }
