@@ -160,11 +160,7 @@ export default function Home() {
         <div className="container-sm">
           <div className="row pt-5 pb-5">
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <p>hello</p>
             </div>
             <div className="col-md-3 p-2">
               <img

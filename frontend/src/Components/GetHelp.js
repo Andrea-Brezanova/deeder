@@ -5,7 +5,7 @@ import axios from "axios";
 export default function GetHelp() {
   const [body, setBody] = useState("");
   const [subcategories, setSubcategories] = useState([]);
-  const [categories, setcategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const {
     register,
@@ -53,7 +53,7 @@ export default function GetHelp() {
           </p>
           <form onSubmit={handleSubmit(onSubmit)}>
             <textarea
-              placeholder="Write something about yourself and get in touch!"
+              placeholder="Write details about what you need help with!"
               {...register("body", { required: true })}
             ></textarea>
             {errors.body && (
@@ -63,7 +63,7 @@ export default function GetHelp() {
           </form>
         </div>
         <div className="subcategory-form">
-          <div className="category-list">
+          <div className="subcategory-list">
             <p className="request-info">Please select a subcategory</p>
 
             <select {...register("subcategory", { required: true })}>
@@ -77,7 +77,7 @@ export default function GetHelp() {
 
         </div>
         <div className="category-form">
-          <p className="request-info">Please select a category</p>
+          <p className="category-list">Please select a category</p>
           <select {...register("category", { required: true })}>
             {categories.map((category) => {
               return <option value={category._id}>{category.name}</option>;

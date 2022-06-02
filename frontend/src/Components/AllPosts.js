@@ -34,14 +34,14 @@ function AllPosts() {
     }
   };
 
-  console.log(posts);
+  console.log("here", activeCategory);
   return (
     <div>
       <div className="all-posts">
         {/* <Checkboxes /> */}
       </div>
       <div className="filter">
-        <Filter posts={posts} setFiltered={setFiltered} activeCategory={activeCategory}/>
+        <Filter posts={posts} setFiltered={setFiltered} activeCategory={activeCategory} setActiveCategory={setActiveCategory}/>
       </div>
       <div className="result-container" >
         {posts &&

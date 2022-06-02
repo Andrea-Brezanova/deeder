@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import axios from "axios";
+// import Dropdown from "./BACKUP";
 
 export default function GetHelp() {
   const [body, setBody] = useState("");
@@ -33,8 +34,6 @@ export default function GetHelp() {
     axios
       .get("http://localhost:3001/subcategories")
 
-      // .get("http://localhost:3001/categories")
-
       .then((res) => {
         setSubcategories(res.data);
       })
@@ -44,7 +43,7 @@ export default function GetHelp() {
   }, []);
 
   return (
-    <>
+    <div>
       <div className="request-body">
         <div className="request-form">
           <p className="request-info">
@@ -58,31 +57,27 @@ export default function GetHelp() {
             {errors.body && (
               <div className="alert">This field can not be empty</div>
             )}
-            <button className="get-btn">Submit</button>
-          </form>
-        </div>
-        <div className="subcategory-form">
-          <div className="category-list">
-            <p className="request-info">Please select a subcategory</p>
+            <div className="submit-section">
+              <div className="subcategory-form">
+                <div className="subcategory-list">
+                  <p className="request-info">Please select a subcategory</p>
 
-            <select {...register("subcategory", { required: true })}>
-              {subcategories.map((subcategory) => {
-                return (
-                  <option value={subcategory._id}>{subcategory.name}</option>
-                );
-              })}
-            </select>
-          </div>
-        </div>
-        <div className="category-form">
-          <p className="request-info">Please select a category</p>
-          <select {...register("category", { required: true })}>
-            {categories.map((category) => {
-              return <option value={category._id}>{category.name}</option>;
-            })}
-          </select>
-        </div>
+                  <select {...register("subcategory", { required: true })}>
+                    {subcategories.map((subcategory) => {
+                      return (
+                        <option value={subcategory._id}>
+                          {subcategory.name}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+              </div>
+              <button className="get-btn">Submit</button>
+            </div>
+          </form>
+        </div>       
       </div>
-    </>
+    </div>
   );
 }
