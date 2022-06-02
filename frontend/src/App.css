@@ -264,7 +264,7 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
-  padding-left: 200px;
+  padding: 0px 200px;
   grid-column-gap: 2rem;
   grid-row-gap: 0rem;
 }
@@ -278,8 +278,9 @@ button:hover {
 
 .card-img-top {
   width: 50%;
-  height: 30vh;
+  height: 270px;
   padding: 1.5rem;
+  object-fit:fill;
 }
 
 .card-title {
@@ -295,6 +296,7 @@ button:hover {
   height: 500px;
   width: 400;
   box-shadow: 5px 10px 8px #888888;
+  overflow: hidden;
 }
 
 
@@ -320,7 +322,7 @@ button:hover {
   padding: 20px 20px;
   font-size: 1.5rem;
   height: auto;
-  width: 40rem;
+  width: 20rem;
   border-radius: 1.2rem;
   text-decoration: none;
   color: white;
