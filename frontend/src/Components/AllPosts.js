@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import SearchBar from "../Components/SearchBar";
+import Checkboxes from "../Components/Checkboxes";
 import OnePost from "../Components/OnePost";
 
 function AllPosts() {
@@ -29,7 +29,7 @@ function AllPosts() {
   return (
     <div>
       <div className="all-posts">
-        <SearchBar />
+        <Checkboxes />
       </div>
       <div className="result-container" >
         {posts &&

@@ -232,7 +232,7 @@ button:hover {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   padding-left: 200px;
-  gap: 1px;
+  gap: 2rem;
 }
 
 .how-it-works {
@@ -243,8 +243,9 @@ button:hover {
 }
 
 .card-img-top {
-  object-fit: cover;
-  height: 200px;
+  width: 50%;
+  height: 30vh;
+  padding: 1.5rem;
 }
 
 .card-title {
@@ -256,10 +257,14 @@ button:hover {
   flex-direction: column;
   border: 1px solid black;
   background-color: white;
-  gap: 3rem;
+  gap: 1rem;
   border-radius: 10px;
   height: 500px;
-  width: 300px;
+  width: 400;
+}
+
+.card-body {
+  padding-bottom: 5px;
 }
 
 /* MAIN BODY */
@@ -430,7 +435,7 @@ textarea {
   justify-content: space-around;
   flex-direction: row;
   padding-top: 25px;
- padding-bottom: 20px;;
+  padding-bottom: 20px;
 }
 
 .main-footer a {
@@ -464,7 +469,6 @@ textarea {
   margin-top: 20px;
 }
 
-
 .fa:hover {
   opacity: 0.7;
   font-size: 30px;
@@ -484,5 +488,18 @@ textarea {
 .copyright {
   color: white;
   padding: 25px 0px 30px 0px;
-  border-top: 0.20rem dotted white;
+  border-top: 0.2rem dotted white;
+}
+
+/* POSTS RENDERED LIST */
+
+.result-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.hearts {
+  width: 25%;
+  height: 7vh;
+  object-fit: cover;
 }

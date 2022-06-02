@@ -14,7 +14,7 @@ import GetHelp from "./Components/GetHelp";
 import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
-import SearchBar from "./Components/SearchBar";
+import SearchBar from "./Components/Checkboxes";
 
 function App() {
   return (
