@@ -14,11 +14,14 @@ import GetHelp from "./Components/GetHelp";
 import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
+
 import SearchBar from "./Components/Checkboxes";
+
 
 function App() {
   return (
     <div className="App">
+    
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

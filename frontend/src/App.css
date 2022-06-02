@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+.App {
+  min-width: 100vh;
+}
 
 body {
   background-color: white;
@@ -26,6 +29,7 @@ body {
   text-decoration: none !important;
   font-family: "DM Sans", sans-serif;
   font-size: 2rem;
+  height: fit-content;
 }
 
 .logo {
@@ -49,6 +53,29 @@ body {
   justify-content: space-between;
   color: #ffff;
   gap: 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffff;
+    gap: 2rem;
+    font-size: 16px;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-items {
+    display: flex;
+
+    justify-content: space-between;
+    color: #ffff;
+    gap: 2rem;
+    font-size: 24px;
+  }
 }
 
 .nav-link {
@@ -168,7 +195,13 @@ button:hover {
   padding: 50px;
   padding-right: 100px;
   font-family: "DM Sans", sans-serif;
-  font-size: 50px;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+}
+
+@media only screen and (max-width: 400px) {
+  .slogan p {
+    visibility: hidden;
+  }
 }
 
 /* ABOUT */
@@ -183,7 +216,7 @@ button:hover {
 
 .heading {
   font-family: "Pacifico", cursive;
-  font-size: 40px;
+  font-size: clamp(2rem, 3.5vw, 2rem);
   margin-top: 100px;
 }
 
@@ -449,6 +482,7 @@ textarea {
   color: white;
   padding: 25px 0px 30px 0px;
   border-top: 0.2rem dotted white;
+
 }
 
 /* ALL POSTS = POSTS RENDERED LIST*/
@@ -547,4 +581,5 @@ textarea {
   background: white;
   border: 1px solid rgb(1, 20, 82);
   color: rgb(1, 20, 82);
+
 }

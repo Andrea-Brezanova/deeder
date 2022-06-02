@@ -31,8 +31,10 @@ export default function GetHelp() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/categories")
-      
+      .get("http://localhost:3001/subcategories")
+
+      // .get("http://localhost:3001/categories")
+
       .then((res) => {
         setSubcategories(res.data);
       })
@@ -43,23 +45,26 @@ export default function GetHelp() {
 
   return (
     <>
-      <div className="write-request-form">
-        Please fill out the form below. <br />
-        Remember to say what matters!
-      </div>
-      <div className="offer">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <textarea
-            placeholder="Write something about yourself and get in touch!"
-            {...register("body", { required: true })}
-          ></textarea>
+      <div className="request-body">
+        <div className="request-form">
+          <p className="request-info">
+            Please fill out the form below. Remember to say what matters!
+          </p>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <textarea
+              placeholder="Write something about yourself and get in touch!"
+              {...register("body", { required: true })}
+            ></textarea>
+            {errors.body && (
+              <div className="alert">This field can not be empty</div>
+            )}
+            <button className="get-btn">Submit</button>
+          </form>
+        </div>
+        <div className="subcategory-form">
+          <div className="category-list">
+            <p className="request-info">Please select a subcategory</p>
 
-          {errors.body && <div className="alert">Text is required</div>}
-          <button className="get-btn">Submit</button>
-        </form>
-        <div>
-          <div className="select-subcategory">
-            <p>Please select a subcategory</p>
             <select {...register("subcategory", { required: true })}>
               {subcategories.map((subcategory) => {
                 return (
@@ -68,16 +73,14 @@ export default function GetHelp() {
               })}
             </select>
           </div>
-          <div className="select-category">
-            <p>Please select a category</p>
-            <select {...register("category", { required: true })}>
-              {categories.map((category) => {
-                return (
-                  <option value={category._id}>{category.name}</option>
-                );
-              })}
-            </select>
-          </div>
+        </div>
+        <div className="category-form">
+          <p className="request-info">Please select a category</p>
+          <select {...register("category", { required: true })}>
+            {categories.map((category) => {
+              return <option value={category._id}>{category.name}</option>;
+            })}
+          </select>
         </div>
       </div>
     </>
