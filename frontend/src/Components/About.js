@@ -100,17 +100,19 @@ export default function About() {
           </div>
         </div>
       </div>
+      <div>
       <div className="action">
         <p>Ready to get out there?</p>
       </div>
       <div className="action-container">
-      <div className="main-body action-container">
-        <NavLink className="offer-help" to="/posts">
-          <div>Yes I want to help!</div>
-        </NavLink>
-        <NavLink className="offer-help" to="/posts">
-          <div>I'd love to hang out</div>
-        </NavLink>
+        <div className="main-body action-container">
+          <NavLink className="offer-help" to="/posts">
+            <p className="blue-buttons">Yes I want to offer help!</p>
+          </NavLink>
+          <NavLink className="offer-help" to="/posts">
+            <p className="blue-buttons">I'd love request help/company</p>
+          </NavLink>
+        </div>
       </div>
     </div>
     </>

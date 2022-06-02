@@ -297,6 +297,7 @@ button:hover {
   box-shadow: 5px 10px 8px #888888;
 }
 
+
 .card-body {
   padding-bottom: 5px;
 }
@@ -317,9 +318,10 @@ button:hover {
   border: 1px solid;
   text-align: center;
   padding: 20px 20px;
-  font-size: 30px;
-  height: 100px;
-  border-radius: 15px;
+  font-size: 1.5rem;
+  height: auto;
+  width: 40rem;
+  border-radius: 1.2rem;
   text-decoration: none;
   color: white;
 }
@@ -363,6 +365,10 @@ button:hover {
   background-repeat: no-repeat;
 }
 
+.what-to-do{
+  height: 800px;
+
+}
 .get-help {
   background-color: rgb(1, 20, 82);
   align-content: center;
@@ -376,15 +382,15 @@ button:hover {
   background-color: rgb(1, 20, 82);
 }
 
-.app-icons {
-  background-color: white;
-}
+/* .app-icons {
+  background-color: orange;
+} */
 
 /* CATEGORIES */
 
 .categories {
   background-color: rgb(223, 223, 223);
-  height: 700px;
+  height: auto;
 }
 
 .browse {
@@ -406,6 +412,25 @@ textarea {
 .about-me {
   display: flex;
   align-items: flex-start;
+}
+
+.category-button {
+  padding: 0.5rem;
+  border: none;
+  height: 4rem;
+  width: 10rem;
+  border-radius: 1rem;
+  border: 2px solid rgb(1, 20, 82);
+  background-color: rgb(1, 20, 82);
+  color: white;
+  cursor: pointer;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.category-button:hover {
+  background: rgb(226, 230, 245);
+  border: rgb(226, 230, 245);
+  color: rgb(1, 20, 82);
 }
 
 /* DOWNLOAD APP SECTION */

@@ -59,7 +59,9 @@ export default function Home() {
             />
 
             <div className="card-body">
-              <h5 className="card-title">Become a member</h5> <br /><br/><br/>
+              <h5 className="card-title">Become a member</h5> <br />
+              <br />
+              <br />
               <p className="card-text">The more the merrier! </p>
             </div>
           </div>
@@ -72,7 +74,8 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title">See who's here</h5> <br />
-              <p className="card-text"><br/>
+              <p className="card-text">
+                <br />
                 Browse the posts created by other users. <br /> Choose who you'd
                 like to help or with whom you'd like to meet.
                 <br />{" "}
@@ -88,7 +91,8 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title">Decide on your next move</h5> <br />
-              <p className="card-text"><br/>
+              <p className="card-text">
+                <br />
                 Remember, one good deed here and there could make a big
                 difference in someone's day.
               </p>
@@ -104,9 +108,9 @@ export default function Home() {
             <div className="card-body">
               <h5 className="card-title">Reach out</h5> <br />
               <p className="card-text">
-                Don't be shy, this is not a dating site. <br/> <br/>Just your local peeps
-                looking forward to spending time together while doing something
-                useful or fun.
+                Don't be shy, this is not a dating site. <br /> <br />
+                Just your local peeps looking forward to spending time together
+                while doing something useful or fun.
               </p>
             </div>
           </div>
@@ -120,8 +124,9 @@ export default function Home() {
             <div className="card-body">
               <h5 className="card-title">Need help with a project?</h5> <br />
               <p className="card-text">
-                You can ask for help too! <br/><br/> Sign up and post your request! <br />
-                Then wait. <br/> 
+                You can ask for help too! <br />
+                <br /> Sign up and post your request! <br />
+                Then wait. <br />
               </p>
             </div>
           </div>
@@ -133,139 +138,121 @@ export default function Home() {
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 className="card-title">Wanna make friends?</h5> <br/><br />
+              <h5 className="card-title">Wanna make friends?</h5> <br />
+              <br />
               <p className="card-text">
-                Suggest some activity you
-                like and someone will surely join you soon!
+                Suggest some activity you like and someone will surely join you
+                soon!
               </p>
             </div>
           </div>
         </div>
       </div>
+      <div>
       <div className="action">
         <p>Ready to get out there?</p>
       </div>
       <div className="action-container">
         <div className="main-body action-container">
           <NavLink className="offer-help" to="/posts">
-            <div>Yes I want to help!</div>
+            <div>Yes I want to offer help!</div>
           </NavLink>
           <NavLink className="offer-help" to="/posts">
-            <div>I'd love to hang out</div>
+            <div>I'd love request help/company</div>
           </NavLink>
         </div>
       </div>
+
+
+      </div>
+      
       <div className="categories">
         <p className="browse">Browse the categories</p>
         <div className="container-sm">
           <div className="row pt-5 pb-5">
             <div className="col-md-3 p-2">
-              <p>hello</p>
+              <button className="category-button">Cleaning help</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Delivery of goods</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Shopping</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Handy person</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Assembly</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Painting</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Transport something</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Repairs</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Electrical</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Gardening help</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Packing and lifting</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Other house projects</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Make music together</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Go clubbing</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Cook a meal/Have a dinner</button>
             </div>
             <div className="col-md-3 p-2">
-              <img
-                className="img-fluid"
-                src="./Images/helpers.png"
-                alt="placeholder"
-              />
+              <button className="category-button">Go to an event</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Do sports</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Go for a walk</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Go to a restaurant</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Hiking trip around Berlin</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Weekend camping</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Bike somewhere</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Just hang out outside</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Help with school stuff</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Help with a digital projects</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Help with a creative project</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Smoke some weed</button>
+            </div>
+            <div className="col-md-3 p-2">
+              <button className="category-button">Some other activity</button>
             </div>
           </div>
         </div>
