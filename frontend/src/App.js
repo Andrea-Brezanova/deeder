@@ -14,8 +14,10 @@ import GetHelp from "./Components/GetHelp";
 import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import NoPage from "./Components/NoPage";
-import SearchBar from "./Components/SearchBar";
-import hmenu from "./Components/hmenu";
+
+import SearchBar from "./Components/Checkboxes";
+
+
 function App() {
   return (
     <div className="App">
@@ -30,7 +32,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="offer-help" element={<OfferHelp />} />
             <Route path="get-help" element={<GetHelp />} >
-              <Route path="search-bar" element={<SearchBar />} />
+              {/* <Route path="search-bar" element={<SearchBar />} /> */}
             </Route>
             <Route path="offer-company" element={<OfferCompany />} />
             <Route path="get-company" element={<GetCompany />} />
