@@ -1,8 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Checkboxes from "../Components/Checkboxes";
+// import Checkboxes from "../Components/Checkboxes";
 import OnePost from "../Components/OnePost";
+import Filter from "../Components/Filter";
 
 function AllPosts() {
   useEffect(() => {
@@ -29,7 +30,10 @@ function AllPosts() {
   return (
     <div>
       <div className="all-posts">
-        <Checkboxes />
+        {/* <Checkboxes /> */}
+      </div>
+      <div className="filter">
+        <Filter />
       </div>
       <div className="result-container" >
         {posts &&
