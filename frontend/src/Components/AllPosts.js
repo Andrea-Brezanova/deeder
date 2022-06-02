@@ -6,11 +6,16 @@ import OnePost from "../Components/OnePost";
 import Filter from "../Components/Filter";
 
 function AllPosts() {
+
+
   useEffect(() => {
     getPosts();
   }, []);
 
   const [posts, setPosts] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [category, setCategory] = useState([]);
+  
 
   const getPosts = async () => {
     try {
@@ -21,6 +26,7 @@ function AllPosts() {
         }
       );
       setPosts(response.data);
+      setFiltered(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +39,7 @@ function AllPosts() {
         {/* <Checkboxes /> */}
       </div>
       <div className="filter">
-        <Filter />
+        <Filter posts={posts} setFiltered={setFiltered} category={setCategory} setCategory={setCategory}/>
       </div>
       <div className="result-container" >
         {posts &&

@@ -29,7 +29,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="offer-help" element={<OfferHelp />} />
             <Route path="get-help" element={<GetHelp />} >
-              <Route path="search-bar" element={<SearchBar />} />
+              {/* <Route path="search-bar" element={<SearchBar />} /> */}
             </Route>
             <Route path="offer-company" element={<OfferCompany />} />
             <Route path="get-company" element={<GetCompany />} />
