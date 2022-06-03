@@ -216,7 +216,7 @@ button:hover {
 
 .heading {
   font-family: "Pacifico", cursive;
-  font-size: clamp(2rem, 3.5vw, 2rem);
+  font-size: 40px;
   margin-top: 100px;
 }
 
@@ -230,7 +230,7 @@ button:hover {
 
 .welcome-text {
   border: 1 px solid rgb(1, 20, 82);
-  padding: 10px;
+  padding-top: 100px;
   color: black;
   font-size: clamp(1rem, 2.5vw, 2rem);
   margin-right: 10px;
@@ -250,10 +250,11 @@ button:hover {
   font-size: 40px;
 }
 
-.reach-out-img img {
-  margin-top: 40px;
-  height: 80%;
-  width: 80%;
+
+img {
+  
+  height: auto;
+  width: 40%;
 }
 
 /* CARDS */
