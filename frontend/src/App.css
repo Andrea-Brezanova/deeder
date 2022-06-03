@@ -603,3 +603,10 @@ select {
   border: 1px solid rgb(1, 20, 82);
   color: rgb(1, 20, 82);
 }
+
+.thank-you{
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin: 50px 0 50px 0px;
+}

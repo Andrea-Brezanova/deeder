@@ -4,9 +4,9 @@ function ThankYou() {
   
 
   return (
-    <div>
-      <p>THANK YOU WINDOW</p>
-    </div>
+    <>
+      <p className="thank-you">THANKs, YOUR ENTRY HAS BEEN SUBMITED</p>
+    </>
   );
 }
 
