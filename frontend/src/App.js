@@ -1,5 +1,5 @@
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, NavLink } from "react-router-dom";
 import Layout from "./Components/Layout";
 import Home from "./Components/Home";
@@ -13,15 +13,14 @@ import OfferHelp from "./Components/OfferHelp";
 import GetHelp from "./Components/GetHelp";
 import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
+import ThankYou from "./Components/ThankYou";
 import NoPage from "./Components/NoPage";
 
 import SearchBar from "./Components/Checkboxes";
 
-
 function App() {
   return (
     <div className="App">
-    
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -34,12 +33,12 @@ function App() {
             <Route path="get-help" element={<GetHelp />} />
             <Route path="offer-company" element={<OfferCompany />} />
             <Route path="get-company" element={<GetCompany />} />
+            <Route path="thank-you" element={<ThankYou />} />
           </Route>
           <Route path="posts" element={<AllPosts />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-      
     </div>
   );
 }

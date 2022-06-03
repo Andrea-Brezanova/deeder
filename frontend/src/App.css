@@ -250,9 +250,7 @@ button:hover {
   font-size: 40px;
 }
 
-
 img {
-  
   height: auto;
   width: 40%;
 }
@@ -266,7 +264,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   padding: 0px 200px;
-  padding-bottom: 100px;;
+  padding-bottom: 100px;
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
 }
@@ -283,7 +281,7 @@ img {
   width: 50%;
   height: 270px;
   padding: 1.5rem;
-  object-fit:fill;
+  object-fit: fill;
 }
 
 .card-title {
@@ -297,12 +295,10 @@ img {
   gap: 1rem;
   border-radius: 20px;
   min-height: 500px;
-  /* min-width: 300px; */
   max-width: 20rem;
-  box-shadow: 5px 10px 8px #888888;
+  box-shadow: 2px 3px 4px #888888;
   overflow: scroll;
 }
-
 
 .card-body {
   padding-bottom: 5px;
@@ -371,9 +367,8 @@ img {
   background-repeat: no-repeat;
 }
 
-.what-to-do{
+.what-to-do {
   height: 800px;
-
 }
 .get-help {
   background-color: rgb(1, 20, 82);
@@ -547,39 +542,67 @@ select {
 /* ALL POSTS = POSTS RENDERED LIST*/
 
 .result-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-column-gap: 1rem;
-  grid-row-gap: 2rem;
   background-color: rgb(223, 223, 223);
-  padding: 0 3rem;
+  
+}
+
+.post-and-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .hearts {
-  width: 25%;
-  height: 7vh;
-  padding-bottom: 0.2rem;
+  width: 100%;
+  height: 15vh;
+  padding: 20px;
 }
 
 .one-post {
   border: 1px solid white;
-  border-radius: 1rem;
   background-color: white;
   font-size: medium;
   font-family: "DM Sans", sans-serif;
-  box-shadow: 5px 10px 8px #888888;
-  margin-bottom: 1rem;
-  max-width: 20rem;
-  min-height: 20rem;
-  overflow:scroll;
+  box-shadow: 2px 3px 4px #888888;
+  padding: 1rem;
+  overflow: scroll;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
 }
 
 .one-post:hover {
   background: rgb(226, 230, 245);
   border: rgb(226, 230, 245);
-  color: rgb(1, 20, 82);
+  cursor: pointer;
 }
 
+.hearts:hover {
+  border: rgb(226, 230, 245);
+  cursor: pointer;
+}
+
+.post-info {
+  height: 10rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-right: 1px solid black;;
+}
+
+.post-description {
+  height: 10rem;
+  width: 40rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* FILTER */
 .filter-container {
   height: 10rem;
   background: rgb(223, 223, 223);
@@ -606,4 +629,28 @@ select {
   background: white;
   border: 1px solid rgb(1, 20, 82);
   color: rgb(1, 20, 82);
+}
+
+.animate__animated.animate__bounce {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  --animate-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 400px;
+}
+
+.thanks-entry {
+  display: flex;
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  padding-bottom: 55px;
+  align-items: center;
+
+  justify-content: center;
+}
+.heart-logo {
+  height: 95px;
+  width: 100px;
 }
