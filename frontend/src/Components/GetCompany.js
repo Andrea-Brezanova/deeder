@@ -25,7 +25,7 @@ export default function GetHelp() {
           headers: { authorization: `bearer ${localStorage.getItem("token")}` },
         }
       );
-      navigate("/posts");
+      navigate("/protected/thank-you");
       console.log(data);
     } catch (error) {
       console.log(error);

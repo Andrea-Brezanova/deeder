@@ -1,5 +1,4 @@
-const { Schema, model} = require("mongoose");
-
+const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema({
   userName: {
@@ -17,8 +16,9 @@ const userSchema = new Schema({
     required: true,
     select: false,
   },
-  phone: {
+  phoneNumber: {
     type: Number,
+    required: true,
   },
   location: {
     type: String,
