@@ -18,7 +18,7 @@ const filtered = activeCategory.filter((category) => (
         {/* <button className="filter-button" onClick={() => setActiveCategory([])}>All Posts</button>
         <button className="filter-button" onClick={() => setActiveCategory([])}>Help wanted</button>
         <button className="filter-button" onClick={() => setActiveCategory([])}>Company wanted</button> */}
-        <button className="filter-button" onClick={filtered}>CLICK MEEE</button>
+        {/* <button className="filter-button" onClick={filtered}>CLICK MEEE</button> */}
     </div>
   )
 }

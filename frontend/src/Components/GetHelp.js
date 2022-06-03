@@ -1,12 +1,16 @@
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// import Dropdown from "./BACKUP";
+
 
 export default function GetHelp() {
   const [body, setBody] = useState("");
   const [subcategories, setSubcategories] = useState([]);
   const [categories, setcategories] = useState([]);
+
+
+  const navigate = useNavigate();
 
   const {
     register,
@@ -23,7 +27,7 @@ export default function GetHelp() {
           headers: { authorization: `bearer ${localStorage.getItem("token")}` },
         }
       );
-
+        navigate("/posts");
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -67,7 +71,7 @@ export default function GetHelp() {
                   <select {...register("subcategory", { required: true })}>
                     {subcategories.map((subcategory) => {
                       return (
-                        <option value={subcategory._id}>
+                        <option value={subcategory._id} key={subcategory._id}>
                           {subcategory.name}
                         </option>
                       );
