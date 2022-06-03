@@ -150,7 +150,7 @@ export default function Home() {
       </div>
       <div>
       <div className="action">
-        <p>Ready to get out there?</p>
+        <p>Why Deeder?</p>
       </div>
       <div className="action-container">
         <div className="main-body action-container">

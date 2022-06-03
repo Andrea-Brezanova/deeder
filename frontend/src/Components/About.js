@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { Navigate, useNavigate, NavLink } from "react-router-dom";
 
 export default function About() {
   return (
     <>
-    <div>
+      <div>
         <div className="how-it-works">
           <p>Here's how it works</p>
         </div>
@@ -17,7 +17,9 @@ export default function About() {
             />
 
             <div className="card-body">
-              <h5 className="card-title">Become a member</h5> <br /><br/><br/>
+              <h5 className="card-title">Become a member</h5> <br />
+              <br />
+              <br />
               <p className="card-text">The more the merrier! </p>
             </div>
           </div>
@@ -30,7 +32,8 @@ export default function About() {
             />
             <div className="card-body">
               <h5 className="card-title">See who's here</h5> <br />
-              <p className="card-text"><br/>
+              <p className="card-text">
+                <br />
                 Browse the posts created by other users. <br /> Choose who you'd
                 like to help or with whom you'd like to meet.
                 <br />{" "}
@@ -46,7 +49,8 @@ export default function About() {
             />
             <div className="card-body">
               <h5 className="card-title">Decide on your next move</h5> <br />
-              <p className="card-text"><br/>
+              <p className="card-text">
+                <br />
                 Remember, one good deed here and there could make a big
                 difference in someone's day.
               </p>
@@ -62,9 +66,9 @@ export default function About() {
             <div className="card-body">
               <h5 className="card-title">Reach out</h5> <br />
               <p className="card-text">
-                Don't be shy, this is not a dating site. <br/> <br/>Just your local peeps
-                looking forward to spending time together while doing something
-                useful or fun.
+                Don't be shy, this is not a dating site. <br /> <br />
+                Just your local peeps looking forward to spending time together
+                while doing something useful or fun.
               </p>
             </div>
           </div>
@@ -78,8 +82,9 @@ export default function About() {
             <div className="card-body">
               <h5 className="card-title">Need help with a project?</h5> <br />
               <p className="card-text">
-                You can ask for help too! <br/><br/> Sign up and post your request! <br />
-                Then wait. <br/> 
+                You can ask for help too! <br />
+                <br /> Sign up and post your request! <br />
+                Then wait. <br />
               </p>
             </div>
           </div>
@@ -91,30 +96,31 @@ export default function About() {
               alt="Card image cap"
             />
             <div className="card-body">
-              <h5 className="card-title">Wanna make friends?</h5> <br/><br />
+              <h5 className="card-title">Wanna make friends?</h5> <br />
+              <br />
               <p className="card-text">
-                Suggest some activity you
-                like and someone will surely join you soon!
+                Suggest some activity you like and someone will surely join you
+                soon!
               </p>
             </div>
           </div>
         </div>
       </div>
       <div>
-      <div className="action">
-        <p>Ready to get out there?</p>
-      </div>
-      <div className="action-container">
-        <div className="main-body action-container">
-          <NavLink className="offer-help" to="/posts">
-            <p className="blue-buttons">Yes I want to offer help!</p>
-          </NavLink>
-          <NavLink className="offer-help" to="/posts">
-            <p className="blue-buttons">I'd love request help/company</p>
-          </NavLink>
+        <div className="action">
+          <p>Ready to get out there?</p>
+        </div>
+        <div className="action-container">
+          <div className="main-body action-container">
+            <NavLink className="offer-help" to="posts">
+              <p className="blue-buttons">Yes I want to offer help!</p>
+            </NavLink>
+            <NavLink className="offer-help" to="protected/get-help">
+              <p className="blue-buttons">I'd love request help/company</p>
+            </NavLink>
+          </div>
         </div>
       </div>
-    </div>
     </>
-  )
+  );
 }
