@@ -13,29 +13,24 @@ export default function Home() {
 
       <div className="about-container">
         <div>
-          <div className="welcome-text-container">
-            <p className="heading">Welcome to Deeder</p>
-          </div>
-          <div>
-            <p className="welcome-text">
-              A place for helping others, meeting someone new and making friends
-              all at the same time!
-            </p>
-          </div>
+          <p className="heading welcome-text-container">Welcome to Deeder</p>
+          <p className="welcome-text">
+            A place for helping others, meeting someone new and making friends
+            all at the same time!
+          </p>
         </div>
         <div className="helpers-img">
           <img src="/Images/helpers.png"></img>
         </div>
       </div>
+
       <div className="about-container">
-        <div className="reach-out-img">
+        
           <img src="/Images/reach-out.png"></img>
-        </div>
+        
         <div>
-          <div>
-            <p className="heading">Made in your city ... for your city</p>
-          </div>
           <div className="welcome-text-container-right">
+            <p className="heading">Made in your city ... for your city</p>
             <div className="welcome-text">
               <p>In the mood for helping someone today?</p>
               <p>New in town and feeling lonely?</p>
@@ -148,24 +143,16 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
-      <div className="action">
-        <p>Ready to get out there?</p>
-      </div>
-      <div className="action-container">
-        <div className="main-body action-container">
-          <NavLink className="offer-help" to="/posts">
-            <div>Yes I want to offer help!</div>
-          </NavLink>
-          <NavLink className="offer-help" to="/posts">
-            <div>I'd love request help/company</div>
-          </NavLink>
+
+      <div className="why-deeder">
+        <div className="action">
+          <p>Why Deeder?</p>
+        </div>
+        <div>
+          <p>helo</p>
         </div>
       </div>
 
-
-      </div>
-      
       <div className="categories">
         <p className="browse">Browse the categories</p>
         <div className="container-sm">
@@ -213,7 +200,9 @@ export default function Home() {
               <button className="category-button">Go clubbing</button>
             </div>
             <div className="col-md-3 p-2">
-              <button className="category-button">Cook a meal/Have a dinner</button>
+              <button className="category-button">
+                Cook a meal/Have a dinner
+              </button>
             </div>
             <div className="col-md-3 p-2">
               <button className="category-button">Go to an event</button>
@@ -228,7 +217,9 @@ export default function Home() {
               <button className="category-button">Go to a restaurant</button>
             </div>
             <div className="col-md-3 p-2">
-              <button className="category-button">Hiking trip around Berlin</button>
+              <button className="category-button">
+                Hiking trip around Berlin
+              </button>
             </div>
             <div className="col-md-3 p-2">
               <button className="category-button">Weekend camping</button>
@@ -240,13 +231,19 @@ export default function Home() {
               <button className="category-button">Just hang out outside</button>
             </div>
             <div className="col-md-3 p-2">
-              <button className="category-button">Help with school stuff</button>
+              <button className="category-button">
+                Help with school stuff
+              </button>
             </div>
             <div className="col-md-3 p-2">
-              <button className="category-button">Help with a digital projects</button>
+              <button className="category-button">
+                Help with a digital projects
+              </button>
             </div>
             <div className="col-md-3 p-2">
-              <button className="category-button">Help with a creative project</button>
+              <button className="category-button">
+                Help with a creative project
+              </button>
             </div>
             <div className="col-md-3 p-2">
               <button className="category-button">Smoke some weed</button>

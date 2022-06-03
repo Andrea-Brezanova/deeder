@@ -47,11 +47,13 @@ export default function GetHelp() {
       <div className="request-body">
         <div className="request-form">
           <p className="request-info">
-            Please fill out the form below. Remember to say what matters!
+            Ask for help in the form below. 
+            <br />
+            Make sure to offer back cookies!
           </p>
           <form onSubmit={handleSubmit(onSubmit)}>
             <textarea
-              placeholder="Write something about yourself and get in touch!"
+              placeholder=" Describe what you need help with here. "
               {...register("body", { required: true })}
             ></textarea>
             {errors.body && (

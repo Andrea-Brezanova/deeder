@@ -9,10 +9,10 @@ import { Navigate, useNavigate } from "react-router-dom";
 function OfferHelp() {
   return (
     <>
-      <div>PULL USER DATA FROM DB</div>
+      <div></div>
       <div className="offer">
         <form>
-          <textarea placeholder="Write something about yourself and get in touch!">
+          <textarea placeholder="Write something about yourself or what you have in mind!">
             
           </textarea>
           <button className="offer-btn">Send message</button>
