@@ -9,10 +9,11 @@ export default function About() {
     <>
       <div>
       <div className="how-it-works">
-          <p>Here's how it works</p>
-          <p>Here's how it works</p>
-          <p>Here's how it works</p>
-          <p>Here's how it works</p>
+          <p>Become a member by opening an account.</p>
+          <button>Click here</button>
+          <p>See all posts and answer someone!</p>
+          <p>If you need help, fill out the form and accept calls</p>
+          
           
         </div>
         <div className="grid-container">

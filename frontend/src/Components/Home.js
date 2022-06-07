@@ -162,9 +162,9 @@ export default function Home() {
           <p>Why Deeder?</p>
         </div>
         <div>
-          <p>It's easy to use</p>
+          <p>Super easy to use</p>
           <p>Connects young and old</p>
-          <p>Security guaranteed! We verify our users so no need to worry.</p>
+          <p>We verify our users so no need to worry</p>
         </div>
       </div>
 

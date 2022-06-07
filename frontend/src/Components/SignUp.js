@@ -57,7 +57,7 @@ function SignUp() {
               )}
               <label htmlFor="location">City:</label>
               <input
-                type="location"
+                type="text"
                 placeholder="What city do you live in?"
                 {...register("location", { required: false })}
               />

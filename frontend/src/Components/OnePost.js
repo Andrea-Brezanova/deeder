@@ -3,19 +3,19 @@ import { useNavigate } from "react-router-dom";
 
 function OnePost({ post }) {
   const navigate = useNavigate();
+  
 
   let newDate = new Date(post.date);
   console.log("new date", newDate);
+
+  console.log("here", post)
   return (
     <div className="post-and-heart">
       <div className="one-post">
         {post ? (
           <>
-          <img src={post.location}></img>
+            <img className="profile-image" src={post.author.picture} alt="profile-image" />
             <div className="post-info">
-              <p>
-                Category: {post.subcategory.name ? post.subcategory.name : ""}
-              </p>
               {
                 <p>
                   User's name:{" "}
@@ -28,8 +28,11 @@ function OnePost({ post }) {
                   {post.phoneNumber ? post.author.phoneNumber : ""}
                 </p>
               }
-              <p>Date: {newDate.toLocaleString()}</p>
               <p>City: {post.location}</p>
+              <p>
+                Category: {post.subcategory.name ? post.subcategory.name : ""}
+              </p>
+              <p>Date: {newDate.toLocaleString()}</p>
             </div>
             <div className="post-description">
               <p>{post.body}</p>
@@ -41,7 +44,7 @@ function OnePost({ post }) {
       </div>
       <div>
         <img
-        /* <Link to="/protected/answer">
+          /* <Link to="/protected/answer">
            img 
         </Link>    
         */

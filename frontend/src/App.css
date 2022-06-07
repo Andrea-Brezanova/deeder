@@ -96,7 +96,7 @@ img {
 .container {
   display: flex;
   justify-content: center;
-  height: 600px;
+  min-height: 800px;
   padding-top: 100px;
   background-color: white;
 }
@@ -110,7 +110,7 @@ img {
 .bicycle {
   height: 400px;
   width: 550px;
-  margin-top: 20px;
+  margin-top: 80px;
   margin-left: 100px;
 }
 
@@ -122,7 +122,6 @@ img {
 
 label {
   font-family: "DM Sans", sans-serif;
-
   font-weight: bolder;
 }
 
@@ -269,7 +268,7 @@ img {
 }
 
 .how-it-works {
-  font-family: "Pacifico", cursive;
+  font-family: "DM Sans", sans-serif;
   font-size: 40px;
   padding-top: 70px;
   padding-bottom: 50px;
@@ -563,18 +562,23 @@ select {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  gap: 3rem;
 }
 
 .hearts {
   width: 100%;
   height: 15vh;
-  padding: 20px;
+  padding: 10px;
 }
 
-.heart-logo {
-  width: 20%;
-  
-  padding: 20px;
+.hearts:hover {
+  border: rgb(226, 230, 245);
+  cursor: pointer;
+  transform: scale(1.8);
+}
+
+.profile-image {
+  max-width: 25%;
 }
 
 .one-post {
@@ -584,7 +588,7 @@ select {
   font-family: "DM Sans", sans-serif;
   box-shadow: 2px 3px 4px #888888;
   overflow: scroll;
-  width: 1000px;
+  width: 1200px;
   min-height: 200px;
   display: flex;
   justify-content: center;
@@ -597,11 +601,6 @@ select {
   cursor: pointer;
 }
 
-.hearts:hover {
-  border: rgb(226, 230, 245);
-  cursor: pointer;
-}
-
 .post-info {
   
   padding: 2rem;
@@ -610,8 +609,8 @@ select {
   align-items: flex-start;
   font-size: 1rem;
   font-weight: bolder;
-  border-right: 1px solid black;
-  min-width: 35%;
+  border-right: 0.5px solid grey;
+  min-width: 30%;
 }
 
 .post-description {
@@ -678,15 +677,16 @@ select {
   display: flex;
   font-family: "Pacifico", cursive;
   font-size: 2rem;
-  padding-bottom: 55px;
   align-items: center;
-
   justify-content: center;
+  padding-bottom: 140px;
 }
-.hearts {
-  height: 95px;
-  width: 100px;
+
+.heart-logo {
+  width: 20%;
+  padding: 20px;
 }
+
 
 @media screen and (max-width: 767px) {
   .categories {
@@ -701,7 +701,7 @@ select {
     width: 2;
   }
 }
-
+ /* ERROR HANDLING */
 .no-page {
 background-color: rgb(223, 223, 223);
 font-family: "Pacifico", cursive;
