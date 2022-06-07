@@ -1,20 +1,24 @@
 import React from "react";
 
 function OnePost({ post }) {
+
+  let newDate = new Date(post.date);
+  console.log("new date", newDate);
   return (
-    <div className="post-and-heart">
-      <div className="one-post">
-        <div className="post-info">
-          <p className="post-author">Name: {post.author.userName}</p>
-          <p classname="post-date">Date: {post.date}</p>
-          <p className="post-number">Phone number:{post.phoneNumber}</p>
-          {/* <p className="post-subcategory">Subcageory: {post.subcategory.name ? post.subcategory.name : ""}</p>  */}
-        </div>
-        <p className="post-description">{post.body}</p>
-      </div>
-      <div>
-        <img className="hearts" src={"./Images/heart.gif"} alt="" />
-      </div>
+    <div className="one-post">
+      {post ? (
+        // post.author
+        <>
+          <p>{post.body}</p>
+          {<p>{post.author ? post.author.userName : "no username"}</p>}
+          <p>{newDate.toLocaleString()}</p>
+          <p>{post.subcategory.name ? post.subcategory.name : ""}</p>
+          <img className="hearts" src={"./Images/heart.gif"} alt="" />
+        </>
+      ) : (
+        "nope"
+      )}
+
     </div>
   );
 }
