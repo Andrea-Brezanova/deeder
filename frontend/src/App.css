@@ -644,6 +644,7 @@ select {
 
 .animate__animated.animate__bounce {
   display: flex;
+
   align-items: center;
 
   justify-content: center;
@@ -653,15 +654,18 @@ select {
 }
 
 .thanks-entry {
+
   display: flex;
   font-family: "Pacifico", cursive;
   font-size: 2rem;
   padding-bottom: 55px;
   align-items: center;
 
+
   justify-content: center;
 }
 .heart-logo {
+
   height: 95px;
   width: 100px;
 }

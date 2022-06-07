@@ -15,6 +15,7 @@ import OfferCompany from "./Components/OfferCompany";
 import GetCompany from "./Components/GetCompany";
 import ThankYou from "./Components/ThankYou";
 import Answer from "./Components/Answer";
+
 import NoPage from "./Components/NoPage";
 
 import SearchBar from "./Components/Checkboxes";
@@ -35,7 +36,9 @@ function App() {
             <Route path="offer-company" element={<OfferCompany />} />
             <Route path="get-company" element={<GetCompany />} />
             <Route path="thank-you" element={<ThankYou />} />
+
             <Route path="answer" element={<Answer />} />
+
           </Route>
           <Route path="posts" element={<AllPosts />} />
           <Route path="*" element={<NoPage />} />
