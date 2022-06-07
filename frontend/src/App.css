@@ -250,9 +250,7 @@ button:hover {
   font-size: 40px;
 }
 
-
 img {
-  
   height: auto;
   width: 40%;
 }
@@ -266,7 +264,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   padding: 0px 200px;
-  padding-bottom: 100px;;
+  padding-bottom: 100px;
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
 }
@@ -283,7 +281,7 @@ img {
   width: 50%;
   height: 270px;
   padding: 1.5rem;
-  object-fit:fill;
+  object-fit: fill;
 }
 
 .card-title {
@@ -302,7 +300,6 @@ img {
   box-shadow: 5px 10px 8px #888888;
   overflow: scroll;
 }
-
 
 .card-body {
   padding-bottom: 5px;
@@ -371,9 +368,8 @@ img {
   background-repeat: no-repeat;
 }
 
-.what-to-do{
+.what-to-do {
   height: 800px;
-
 }
 .get-help {
   background-color: rgb(1, 20, 82);
@@ -606,4 +602,29 @@ select {
   background: white;
   border: 1px solid rgb(1, 20, 82);
   color: rgb(1, 20, 82);
+}
+
+.animate__animated.animate__bounce {
+  display: flex;
+ align-items: center;
+
+ justify-content: center;
+  --animate-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 400px;
+ 
+}
+
+.thanks-entry{
+  display: flex;
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  padding-bottom: 55px;
+  align-items: center;
+
+ justify-content: center;
+}
+.heart-logo{
+  height: 95px;
+  width: 100px;
 }

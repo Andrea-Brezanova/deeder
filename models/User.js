@@ -20,6 +20,7 @@ const userSchema = new Schema({
     type: Number,
     required: true,
   },
+  
   location: {
     type: String,
   },
