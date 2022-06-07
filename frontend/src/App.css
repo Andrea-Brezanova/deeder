@@ -293,8 +293,8 @@ img {
   background-color: white;
   gap: 1rem;
   border-radius: 20px;
-  min-height: 500px;
-  min-width: 300px;
+  min-height: 300px;
+  min-width: 200px;
   box-shadow: 5px 10px 8px #888888;
   overflow: hidden;
 }
@@ -602,25 +602,38 @@ select {
 
 .animate__animated.animate__bounce {
   display: flex;
- align-items: center;
+  align-items: center;
 
- justify-content: center;
+  justify-content: center;
   --animate-duration: 2s;
   animation-iteration-count: infinite;
   height: 400px;
- 
 }
 
-.thanks-entry{
+.thanks-entry {
   display: flex;
   font-family: "Pacifico", cursive;
   font-size: 2rem;
   padding-bottom: 55px;
   align-items: center;
 
- justify-content: center;
+  justify-content: center;
 }
-.heart-logo{
+.heart-logo {
   height: 95px;
   width: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .categories {
+    flex-wrap: wrap;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: brown;
+  }
+  .col-md-3 {
+    width: 2;
+  }
 }
