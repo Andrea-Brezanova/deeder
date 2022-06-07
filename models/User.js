@@ -23,6 +23,9 @@ const userSchema = new Schema({
   location: {
     type: String,
   },
+  picture: {
+    type: String,
+  }
 });
 
 const userModel = model("User", userSchema);

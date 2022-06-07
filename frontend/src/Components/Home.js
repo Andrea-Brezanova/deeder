@@ -1,7 +1,10 @@
 import React from "react";
-import { Navigate, useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="hero">
@@ -20,7 +23,7 @@ export default function Home() {
           </p>
         </div>
         <div className="helpers-img">
-          <img src="/Images/helpers.png"></img>
+          <img src="/Images/helpers.png" />
         </div>
       </div>
 
@@ -46,12 +49,13 @@ export default function Home() {
         </div>
         <div className="grid-container">
           <div className="try">
-            <img
-              className="card-img-top"
-              src="./Images/bees.png"
-              alt="Card image cap"
-            />
-
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/bees.png"
+                alt="Card image cap"
+              />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Become a member</h5> <br />
               <br />
@@ -61,11 +65,13 @@ export default function Home() {
           </div>
 
           <div className="try">
-            <img
-              className="card-img-top"
-              src="../Images/looking.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="../Images/looking.jpg"
+                alt="Card image cap"
+              />
+            </div>
             <div className="card-body">
               <h5 className="card-title">See who's here</h5> <br />
               <p className="card-text">
@@ -78,11 +84,13 @@ export default function Home() {
           </div>
 
           <div className="try">
-            <img
-              className="card-img-top"
-              src="./Images/elderly.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/elderly.jpg"
+                alt="Card image cap"
+              />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Decide on your next move</h5> <br />
               <p className="card-text">
@@ -94,11 +102,13 @@ export default function Home() {
           </div>
 
           <div className="try">
-            <img
-              className="card-img-top"
-              src="./Images/painting.png"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/painting.png"
+                alt="Card image cap"
+              />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Reach out</h5> <br />
               <p className="card-text">
@@ -110,11 +120,13 @@ export default function Home() {
           </div>
 
           <div className="try">
-            <img
-              className="card-img-top"
-              src="./Images/help-wanted.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/help-wanted.jpg"
+                alt="Card image cap"
+              />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Need help with a project?</h5> <br />
               <p className="card-text">
@@ -126,11 +138,13 @@ export default function Home() {
           </div>
 
           <div className="try">
-            <img
-              className="card-img-top"
-              src="./Images/chatting.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/chatting.jpg"
+                alt="Card image cap"
+              />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Wanna make friends?</h5> <br />
               <br />
@@ -148,7 +162,9 @@ export default function Home() {
           <p>Why Deeder?</p>
         </div>
         <div>
-          <p>helo</p>
+          <p>It's easy to use</p>
+          <p>Connects young and old</p>
+          <p>Security guaranteed! We verify our users so no need to worry.</p>
         </div>
       </div>
 
@@ -157,7 +173,12 @@ export default function Home() {
         <div className="container-sm">
           <div className="row pt-5 pb-5">
             <div className="col-md-3 col-sm-4 col-xs-6 p-2 ">
-              <button className="category-button">Cleaning help</button>
+              <button
+                onClick={() => navigate("/cleaning")}
+                className="category-button"
+              >
+                Cleaning help
+              </button>
             </div>
             <div className="col-md-3 col-sm-4 col-xs-6 p-2">
               <button className="category-button">Delivery of goods</button>

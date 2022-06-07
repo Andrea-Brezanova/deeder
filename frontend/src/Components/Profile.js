@@ -25,7 +25,7 @@ function Profile() {
     <div className="what-to-do">
       <div className="action">
         <p>Welcome {user.userName}!</p>
-        <p>What would you like to do today?</p>
+        <p className="today">What would you like to do today?</p>
       </div>
       <div className="main-body action-container">
         <NavLink className="offer-help" to="/posts">

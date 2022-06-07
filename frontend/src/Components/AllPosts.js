@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-// import Checkboxes from "../Components/Checkboxes";
 import OnePost from "../Components/OnePost";
 import Filter from "../Components/Filter";
 
@@ -12,8 +11,6 @@ function AllPosts() {
 
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState("");
-  // const [filtered, setFiltered] = useState([]);
-  // const [activeCategory, setActiveCategory] = useState([]);
 
   const getPosts = async () => {
     try {
@@ -24,30 +21,20 @@ function AllPosts() {
         }
       );
       setPosts(response.data);
-      // setFiltered(response.data);
-      // setActiveCategory(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  // console.log("here", activeCategory);
   return (
     <div>
-
-      <div className="filter">
-        {/* <Filter
-          posts={posts}
-          setPosts={setPosts}
-          // setFiltered={setFiltered}
-          // activeCategory={activeCategory}
-          // setActiveCategory={setActiveCategory}
-        /> */}
-        
-      </div>
+      <div className="filter"></div>
       <div className="result-container">
         <p className="select-category">Select category:</p>
-      <select className="filter-list" onChange={(e) => setFilter(e.target.value)}>
+        <select
+          className="filter-list"
+          onChange={(e) => setFilter(e.target.value)}
+        >
           {" "}
           <option value="">ALL POSTS</option>
           <option value="62879c849c20178ec23510ab">HELP</option>

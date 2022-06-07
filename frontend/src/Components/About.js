@@ -8,17 +8,22 @@ export default function About() {
   return (
     <>
       <div>
-        <div className="how-it-works">
+      <div className="how-it-works">
           <p>Here's how it works</p>
+          <p>Here's how it works</p>
+          <p>Here's how it works</p>
+          <p>Here's how it works</p>
+          
         </div>
         <div className="grid-container">
           <div className="try">
-            <img
-              className="card-img-top"
-              src="./Images/bees.png"
-              alt="Card image cap"
-            />
-
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/bees.png"
+                alt="Card image cap"
+              />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Become a member</h5> <br />
               <br />
@@ -28,11 +33,13 @@ export default function About() {
           </div>
 
           <div className="try">
+          <div className="img-container">
             <img
               className="card-img-top"
               src="../Images/looking.jpg"
               alt="Card image cap"
             />
+            </div>
             <div className="card-body">
               <h5 className="card-title">See who's here</h5> <br />
               <p className="card-text">
@@ -45,11 +52,13 @@ export default function About() {
           </div>
 
           <div className="try">
+          <div className="img-container">
             <img
               className="card-img-top"
               src="./Images/elderly.jpg"
               alt="Card image cap"
             />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Decide on your next move</h5> <br />
               <p className="card-text">
@@ -61,11 +70,13 @@ export default function About() {
           </div>
 
           <div className="try">
+          <div className="img-container">
             <img
               className="card-img-top"
               src="./Images/painting.png"
               alt="Card image cap"
             />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Reach out</h5> <br />
               <p className="card-text">
@@ -77,11 +88,13 @@ export default function About() {
           </div>
 
           <div className="try">
+          <div className="img-container">
             <img
               className="card-img-top"
               src="./Images/help-wanted.jpg"
               alt="Card image cap"
             />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Need help with a project?</h5> <br />
               <p className="card-text">
@@ -93,11 +106,13 @@ export default function About() {
           </div>
 
           <div className="try">
+          <div className="img-container">
             <img
               className="card-img-top"
               src="./Images/chatting.jpg"
               alt="Card image cap"
             />
+            </div>
             <div className="card-body">
               <h5 className="card-title">Wanna make friends?</h5> <br />
               <br />

@@ -3,12 +3,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
 export default function GetHelp() {
   const [body, setBody] = useState("");
   const [subcategories, setSubcategories] = useState([]);
   const [categories, setcategories] = useState([]);
-
 
   const navigate = useNavigate();
 
@@ -27,12 +25,16 @@ export default function GetHelp() {
           headers: { authorization: `bearer ${localStorage.getItem("token")}` },
         }
       );
-        navigate("/protected/thank-you");
+      navigate("/protected/thank-you");
       console.log(data);
     } catch (error) {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     axios
@@ -51,7 +53,7 @@ export default function GetHelp() {
       <div className="request-body">
         <div className="request-form">
           <p className="request-info">
-            Ask for help in the form below. 
+            Ask for help in the form below.
             <br />
             Make sure to offer back cookies!
           </p>
@@ -82,7 +84,7 @@ export default function GetHelp() {
               <button className="get-btn">Submit</button>
             </div>
           </form>
-        </div>       
+        </div>
       </div>
     </div>
   );

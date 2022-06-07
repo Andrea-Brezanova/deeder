@@ -55,6 +55,13 @@ function SignUp() {
               {errors.phoneNumber && (
                 <div className="alert">Phone number is required</div>
               )}
+              <label htmlFor="location">City:</label>
+              <input
+                type="location"
+                placeholder="What city do you live in?"
+                {...register("location", { required: false })}
+              />
+              {errors.password && <div className="alert">Location is required</div>}
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
@@ -69,6 +76,7 @@ function SignUp() {
                 {...register("password", { required: true })}
               />
               {errors.password && <div className="alert">Password is required</div>}
+              
               <button className="get-btn" type="submit">
                 Sign Up
               </button>
