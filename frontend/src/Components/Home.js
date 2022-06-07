@@ -32,7 +32,7 @@ export default function Home() {
           <div className="welcome-text-container-right">
             <p className="heading">Made in your city ... for your city</p>
             <div className="welcome-text">
-              <p>In the mood for helping someone today?</p>
+              <p>In a mood for helping someone today?</p>
               <p>New in town and feeling lonely?</p>
               <p>Reach out and connect!</p>
               <p>There's always someone to hang out with!</p>

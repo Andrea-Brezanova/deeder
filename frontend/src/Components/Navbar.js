@@ -7,7 +7,7 @@ export default function Navbar() {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
-    <div className="nav">
+    <div className="nav sticky">
       <div className="logo">
         <img src="/Images/Logo-blue.png" alt="logo.png" href="/"></img>
         <NavLink

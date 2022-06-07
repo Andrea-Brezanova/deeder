@@ -31,6 +31,16 @@ body {
   font-size: 2rem;
   height: fit-content;
 }
+/* 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+} */
 
 .logo {
   display: flex;
@@ -556,7 +566,7 @@ select {
 .hearts {
   width: 100%;
   height: 15vh;
-  padding: 20px;
+  padding: 15px;
 }
 
 .one-post {
@@ -573,15 +583,16 @@ select {
   border-radius: 20px;
 }
 
-.one-post:hover {
+/* .one-post:hover {
   background: rgb(226, 230, 245);
   border: rgb(226, 230, 245);
   cursor: pointer;
-}
+} */
 
 .hearts:hover {
   border: rgb(226, 230, 245);
   cursor: pointer;
+  transform: scale(1.6);
 }
 
 .post-info {
