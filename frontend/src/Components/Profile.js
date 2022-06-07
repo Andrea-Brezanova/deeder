@@ -24,7 +24,7 @@ function Profile() {
   return (
     <div className="what-to-do">
       <div className="action">
-        <p>Wow!!Yeah..Wonderful<br></br>Welcome {user.userName}!</p>
+        <p>Welcome {user.userName}!</p>
         <p>What would you like to do today?</p>
       </div>
       <div className="main-body action-container">

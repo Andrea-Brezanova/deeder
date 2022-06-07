@@ -43,15 +43,17 @@ function AllPosts() {
           // activeCategory={activeCategory}
           // setActiveCategory={setActiveCategory}
         /> */}
-        <select onChange={(e) => setFilter(e.target.value)}>
+        
+      </div>
+      <div className="result-container">
+        <p className="select-category">Select category:</p>
+      <select className="filter-list" onChange={(e) => setFilter(e.target.value)}>
           {" "}
           <option value="">ALL POSTS</option>
           <option value="62879c849c20178ec23510ab">HELP</option>
           <option value="62879b5f9c20178ec23510a7">COMPANY</option>
           <option value="6297512199c7f554fede8195">OTHER</option>
         </select>
-      </div>
-      <div className="result-container">
         {posts && filter === ""
           ? posts.map((post) => <OnePost post={post} key={post._id} />)
           : posts
