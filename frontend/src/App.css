@@ -294,10 +294,11 @@ img {
   background-color: white;
   gap: 1rem;
   border-radius: 20px;
-  min-height: 500px;
-  max-width: 20rem;
+
+  min-height: 300px;
+  min-width: 200px;
   box-shadow: 2px 3px 4px #888888;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .card-body {
@@ -539,8 +540,6 @@ select {
   margin: 2rem 0rem;
 }
 
-/* ALL POSTS = POSTS RENDERED LIST*/
-
 .result-container {
   background-color: rgb(223, 223, 223);
 }
@@ -632,6 +631,7 @@ select {
 
 .animate__animated.animate__bounce {
   display: flex;
+
   align-items: center;
 
   justify-content: center;
@@ -652,4 +652,18 @@ select {
 .heart-logo {
   height: 95px;
   width: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .categories {
+    flex-wrap: wrap;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: brown;
+  }
+  .col-md-3 {
+    width: 2;
+  }
 }
