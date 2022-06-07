@@ -18,7 +18,6 @@ const userSchema = new Schema({
   },
   phoneNumber: {
     type: Number,
-    required: true,
   },
   location: {
     type: String,
