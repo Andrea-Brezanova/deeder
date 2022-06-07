@@ -25,9 +25,8 @@ export default function Home() {
       </div>
 
       <div className="about-container">
-        
-          <img src="/Images/reach-out.png"></img>
-        
+        <img src="/Images/reach-out.png"></img>
+
         <div>
           <div className="welcome-text-container-right">
             <p className="heading">Made in your city ... for your city</p>
@@ -157,13 +156,13 @@ export default function Home() {
         <p className="browse">Browse the categories</p>
         <div className="container-sm">
           <div className="row pt-5 pb-5">
-            <div className="col-md-3 p-2">
+            <div className="col-md-3 col-sm-4 col-xs-6 p-2 ">
               <button className="category-button">Cleaning help</button>
             </div>
-            <div className="col-md-3 p-2">
+            <div className="col-md-3 col-sm-4 col-xs-6 p-2">
               <button className="category-button">Delivery of goods</button>
             </div>
-            <div className="col-md-3 p-2">
+            <div className="col-md-3 col-sm-4 col-xs-6 p-2">
               <button className="category-button">Shopping</button>
             </div>
             <div className="col-md-3 p-2">
