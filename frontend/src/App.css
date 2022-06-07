@@ -96,7 +96,7 @@ img {
 .container {
   display: flex;
   justify-content: center;
-  height: 600px;
+  min-height: 800px;
   padding-top: 100px;
   background-color: white;
 }
@@ -110,7 +110,7 @@ img {
 .bicycle {
   height: 400px;
   width: 550px;
-  margin-top: 20px;
+  margin-top: 80px;
   margin-left: 100px;
 }
 
@@ -122,7 +122,6 @@ img {
 
 label {
   font-family: "DM Sans", sans-serif;
-
   font-weight: bolder;
 }
 
@@ -571,11 +570,11 @@ select {
   padding: 20px;
 }
 
-.heart-logo {
-  width: 20%;
-  
-  padding: 20px;
+.hearts:hover {
+  border: rgb(226, 230, 245);
+  cursor: pointer;
 }
+
 
 .one-post {
   border: 1px solid white;
@@ -597,10 +596,9 @@ select {
   cursor: pointer;
 }
 
-.hearts:hover {
-  border: rgb(226, 230, 245);
-  cursor: pointer;
-}
+
+
+
 
 .post-info {
   
@@ -678,15 +676,16 @@ select {
   display: flex;
   font-family: "Pacifico", cursive;
   font-size: 2rem;
-  padding-bottom: 55px;
   align-items: center;
-
   justify-content: center;
+  padding-bottom: 140px;
 }
-.hearts {
-  height: 95px;
-  width: 100px;
+
+.heart-logo {
+  width: 20%;
+  padding: 20px;
 }
+
 
 @media screen and (max-width: 767px) {
   .categories {
