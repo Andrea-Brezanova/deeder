@@ -34,7 +34,6 @@ function AllPosts() {
   // console.log("here", activeCategory);
   return (
     <div>
-
       <div className="filter">
         {/* <Filter
           posts={posts}
