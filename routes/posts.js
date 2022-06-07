@@ -11,7 +11,7 @@ const {
 
 const postsRouter = express.Router();
 
-postsRouter.use(verifyJWT);
+
 postsRouter.route("/").get(getPosts).post(verifyJWT, createPost);
 
 postsRouter
