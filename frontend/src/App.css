@@ -577,6 +577,7 @@ select {
   background: rgb(226, 230, 245);
   border: rgb(226, 230, 245);
   cursor: pointer;
+
 }
 
 .hearts:hover {
@@ -593,6 +594,9 @@ select {
   font-size: 1rem;
   font-weight: bolder;
   border-right: 1px solid black;;
+}
+
+
 }
 
 .post-description {
