@@ -46,6 +46,15 @@ function SignUp() {
               {errors.userName && (
                 <div className="alert">User name is required</div>
               )}
+              <label htmlFor="phoneNumber">Phone Number:</label>
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                {...register("phoneNumber", { required: true})}
+              />
+              {errors.phoneNumber && (
+                <div className="alert">Phone number is required</div>
+              )}
               <label htmlFor="email">Email:</label>
               <input
                 type="email"

@@ -34,7 +34,7 @@ function AllPosts() {
   // console.log("here", activeCategory);
   return (
     <div>
-      <div className="all-posts">{/* <Checkboxes /> */}</div>
+
       <div className="filter">
         {/* <Filter
           posts={posts}

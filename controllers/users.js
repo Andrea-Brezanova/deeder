@@ -102,14 +102,14 @@ const updateUser = async (req, res, next) => {
     } = req;
 
     const {
-      body: { userName, location, email, password, phone },
+      body: { userName, location, email, password, phoneNumber },
     } = req;
     const user = await postModel.findByIdAndUpdate(id, {
       userName,
       location,
       email,
       password,
-      phone,
+      phoneNumber,
     });
     res.json(user);
   } catch (error) {

@@ -1,6 +1,7 @@
 import React from "react";
 
 function OnePost({ post }) {
+
   let newDate = new Date(post.date);
   console.log("new date", newDate);
   return (
@@ -17,6 +18,7 @@ function OnePost({ post }) {
       ) : (
         "nope"
       )}
+
     </div>
   );
 }
