@@ -42,10 +42,15 @@ function AllPosts() {
           <option value="6297512199c7f554fede8195">OTHER</option>
         </select>
         {posts && filter === ""
-          ? posts.map((post) => <OnePost post={post} key={post._id} />)
+          ? posts.map((post) => {
+            
+            console.log(post)
+
+          return <OnePost post={post} key={post._id} />})
           : posts
               .filter((el) => el.subcategory.category === filter)
               .map((post) => {
+                
                 return <OnePost post={post} key={post._id} />;
               })}
       </div>

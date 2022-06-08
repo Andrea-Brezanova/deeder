@@ -41,7 +41,7 @@ const login = async (req, res, next) => {
 const signup = async (req, res, next) => {
   try {
     const {
-      body: { userName, email, password, phoneNumber },
+      body: { userName, email, password, phoneNumber, location},
     } = req;
 
     const found = await userModel.findOne({ email });

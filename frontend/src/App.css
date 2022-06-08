@@ -710,3 +710,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+/* CLEANING */
+
+.cleaning {
+  min-height: 62rem;
+  background-image: url("../public/Images/under.jpg");
+
+}
