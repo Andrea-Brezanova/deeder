@@ -33,6 +33,10 @@ export default function GetHelp() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     axios
       .get("http://localhost:3001/subcategories")
 
