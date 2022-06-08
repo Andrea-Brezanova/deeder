@@ -41,7 +41,7 @@ const login = async (req, res, next) => {
 const signup = async (req, res, next) => {
   try {
     const {
-      body: { userName, email, password, phoneNumber },
+      body: { userName, email, password, phoneNumber, location},
     } = req;
 
     const found = await userModel.findOne({ email });
@@ -51,7 +51,7 @@ const signup = async (req, res, next) => {
     const hash = await bcrypt.hash(password, 6);
 
     //Create a new user if user doesn't exist
-    const user = await userModel.create({ userName, email, password: hash, phoneNumber });
+    const user = await userModel.create({ userName, email, password: hash, phoneNumber, location });
 
     //Create Jason Web Token (JWT)
     const token = jwt.sign(

@@ -298,9 +298,8 @@ img.card-img-top {
   background-color: white;
   gap: 1rem;
   border-radius: 20px;
-
-  min-height: 200px;
-  min-width: 200px;
+  min-height: 100px;
+  max-width: 300px;
   box-shadow: 2px 3px 4px #888888;
   overflow: hidden;
 }
@@ -710,4 +709,12 @@ height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+/* CLEANING */
+
+.cleaning {
+  min-height: 62rem;
+  background-image: url("../public/Images/under.jpg");
+
 }

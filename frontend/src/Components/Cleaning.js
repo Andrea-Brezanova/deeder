@@ -1,9 +1,15 @@
+import { useEffect } from "react";
+
 function Cleaning() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <>
-      <div>This page is not ready yet</div>
-      <div>We're working on it!</div>
-    </>
+    <div className="cleaning">
+      
+    </div>
   );
 }
 

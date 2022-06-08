@@ -6,10 +6,10 @@ function OnePost({ post }) {
   
 
   let newDate = new Date(post.date);
-  console.log("new date", newDate);
 
-  console.log("here", post)
+  
   return (
+    
     <div className="post-and-heart">
       <div className="one-post">
         {post ? (
@@ -25,10 +25,10 @@ function OnePost({ post }) {
               {
                 <p>
                   Phone number:{" "}
-                  {post.phoneNumber ? post.author.phoneNumber : ""}
+                  {post.author.phoneNumber ? post.author.phoneNumber : ""}
                 </p>
               }
-              <p>City: {post.location}</p>
+              <p>City: {post.author.location}</p>
               <p>
                 Category: {post.subcategory.name ? post.subcategory.name : ""}
               </p>
