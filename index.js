@@ -12,7 +12,7 @@ const answersRouter = require("./routes/answers");
 const app = express();
 const port = process.env.PORT || 3001;
 
-console.log("hi");
+
 
 app.use(cors());
 app.use(express.json());

@@ -36,7 +36,7 @@ export default function SignIn() {
       {!isAuthenticated ? (
         <div className="container">
           <div>
-            <img className="garden" src="./Images/coffee-brake.jpg" />
+            <img className="garden" alt="garden-pic" src="./Images/coffee-brake.jpg" />
           </div>
           <div className="sign-in">
             <form className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>

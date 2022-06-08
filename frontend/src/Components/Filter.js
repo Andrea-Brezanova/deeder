@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 function Filter({
   // setActiveCategory,
   // activeCategory,
@@ -16,19 +14,11 @@ function Filter({
   const handleFilter = (value) => {
     const allPosts = [...posts];
     setPosts(allPosts.filter((el) => el.subcategory.category === value));
-    // console.log("filtered test", filtered);
   };
-
-  console.log("filtered posts", posts);
 
   return (
     <div className="filter-container">
-      <button
-        className="filter-button"
-        // onClick={() => setPosts(allPosts)}
-      >
-        All Posts
-      </button>
+      <button className="filter-button">All Posts</button>
       <button className="filter-button" onClick={() => handleFilter(ids.help)}>
         Help wanted
       </button>

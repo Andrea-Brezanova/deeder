@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function Protected() {
 
   return (
     <div>
-        { isAuthenticated ? <Outlet /> : <Navigate to="/login"/> }
+        { isAuthenticated ? <Outlet /> : <Navigate to="/signin"/> }
     </div>
   );
 }

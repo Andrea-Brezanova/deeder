@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function GetHelp() {
-  const [body, setBody] = useState("");
   const [subcategories, setSubcategories] = useState([]);
-  const [categories, setcategories] = useState([]);
 
   const navigate = useNavigate();
 
@@ -38,7 +36,7 @@ export default function GetHelp() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/subcategories")
+      .get(`${process.env.REACT_APP_API_URL}/subcategories`)
 
       .then((res) => {
         setSubcategories(res.data);

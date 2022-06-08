@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import OnePost from "../Components/OnePost";
-import Filter from "../Components/Filter";
 
 function AllPosts() {
   useEffect(() => {
@@ -43,14 +42,11 @@ function AllPosts() {
         </select>
         {posts && filter === ""
           ? posts.map((post) => {
-            
-            console.log(post)
-
-          return <OnePost post={post} key={post._id} />})
+              return <OnePost post={post} key={post._id} />;
+            })
           : posts
               .filter((el) => el.subcategory.category === filter)
               .map((post) => {
-                
                 return <OnePost post={post} key={post._id} />;
               })}
       </div>

@@ -1,29 +1,25 @@
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import { Navigate, useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Profile() {
   const user = useSelector((state) => {
     return state.auth.user;
   });
 
-  console.log("user", user);
-
   const [info, setInfo] = useState();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/users/${user.id}`)
+      .get(`${process.env.REACT_APP_API_URL}3001/users/${user.id}`)
       .then((res) => {
         setInfo(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
-
-  console.log("info", info);
+  }, [user.id]);
 
   return (
     <>

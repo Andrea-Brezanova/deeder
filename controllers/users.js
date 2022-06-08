@@ -83,7 +83,7 @@ const getUsers = async (req, res, next) => {
 
 //Display one user
 const getUser = async (req, res, next) => {
-  console.log("user")
+ 
   try {
     const {
       params: { id },

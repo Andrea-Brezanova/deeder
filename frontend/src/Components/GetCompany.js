@@ -3,11 +3,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
 export default function GetHelp() {
-  const [body, setBody] = useState("");
   const [subcategories, setSubcategories] = useState([]);
-  const [categories, setcategories] = useState([]);
 
   const navigate = useNavigate();
   const {
@@ -38,7 +35,7 @@ export default function GetHelp() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/subcategories")
+      .get(`${process.env.REACT_APP_API_URL}/subcategories`)
 
       .then((res) => {
         setSubcategories(res.data);
@@ -53,7 +50,8 @@ export default function GetHelp() {
       <div className="request-body">
         <div className="request-form">
           <p className="request-info">
-            Ask for company here. <br />Remember to say what matters!
+            Ask for company here. <br />
+            Remember to say what matters!
           </p>
           <form onSubmit={handleSubmit(onSubmit)}>
             <textarea
@@ -82,7 +80,7 @@ export default function GetHelp() {
               <button className="get-btn">Submit</button>
             </div>
           </form>
-        </div>       
+        </div>
       </div>
     </div>
   );

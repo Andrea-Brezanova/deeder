@@ -1,20 +1,16 @@
 import React from "react";
-import { Navigate, useNavigate, NavLink } from "react-router-dom";
 import FunctionClick from "./FunctionClick";
 
 export default function About() {
-  const navigate = useNavigate;
-
   return (
     <>
       <div>
-      <div className="how-it-works">
+        <div className="how-it-works">
           {/* <p>Become a member by opening an account.</p>
           <button>Click here</button>
           <p>See all posts and answer someone!</p>
           <p>If you need help, fill out the form and accept calls</p>
            */}
-          
         </div>
         <div className="grid-container">
           <div className="try">
@@ -22,7 +18,7 @@ export default function About() {
               <img
                 className="card-img-top"
                 src="./Images/bees.png"
-                alt="Card image cap"
+                alt="Bees"
               />
             </div>
             <div className="card-body">
@@ -34,12 +30,12 @@ export default function About() {
           </div>
 
           <div className="try">
-          <div className="img-container">
-            <img
-              className="card-img-top"
-              src="../Images/looking.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="../Images/looking.jpg"
+                alt="Looking"
+              />
             </div>
             <div className="card-body">
               <h5 className="card-title">See who's here</h5> <br />
@@ -53,12 +49,12 @@ export default function About() {
           </div>
 
           <div className="try">
-          <div className="img-container">
-            <img
-              className="card-img-top"
-              src="./Images/elderly.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/elderly.jpg"
+                alt="elderly"
+              />
             </div>
             <div className="card-body">
               <h5 className="card-title">Decide on your next move</h5> <br />
@@ -71,12 +67,12 @@ export default function About() {
           </div>
 
           <div className="try">
-          <div className="img-container">
-            <img
-              className="card-img-top"
-              src="./Images/painting.png"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/painting.png"
+                alt="Painting"
+              />
             </div>
             <div className="card-body">
               <h5 className="card-title">Reach out</h5> <br />
@@ -89,12 +85,12 @@ export default function About() {
           </div>
 
           <div className="try">
-          <div className="img-container">
-            <img
-              className="card-img-top"
-              src="./Images/help-wanted.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/help-wanted.jpg"
+                alt="Help"
+              />
             </div>
             <div className="card-body">
               <h5 className="card-title">Need help with a project?</h5> <br />
@@ -107,12 +103,12 @@ export default function About() {
           </div>
 
           <div className="try">
-          <div className="img-container">
-            <img
-              className="card-img-top"
-              src="./Images/chatting.jpg"
-              alt="Card image cap"
-            />
+            <div className="img-container">
+              <img
+                className="card-img-top"
+                src="./Images/chatting.jpg"
+                alt="Chatting"
+              />
             </div>
             <div className="card-body">
               <h5 className="card-title">Wanna make friends?</h5> <br />
