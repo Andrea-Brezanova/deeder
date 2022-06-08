@@ -589,6 +589,7 @@ select {
   overflow: scroll;
   width: 1200px;
   min-height: 200px;
+  max-height: 200px;
   display: flex;
   justify-content: center;
   border-radius: 20px;
