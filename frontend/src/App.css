@@ -298,9 +298,8 @@ img.card-img-top {
   background-color: white;
   gap: 1rem;
   border-radius: 20px;
-
-  min-height: 200px;
-  min-width: 200px;
+  min-height: 100px;
+  max-width: 300px;
   box-shadow: 2px 3px 4px #888888;
   overflow: hidden;
 }

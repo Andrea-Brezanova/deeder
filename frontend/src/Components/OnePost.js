@@ -7,9 +7,10 @@ function OnePost({ post }) {
 
   let newDate = new Date(post.date);
   console.log("new date", newDate);
-
-  console.log("here", post)
+  console.log("location", post.user);
+  
   return (
+    
     <div className="post-and-heart">
       <div className="one-post">
         {post ? (
