@@ -15,9 +15,10 @@ function Profile() {
       .get(`${process.env.REACT_APP_API_URL}/users/${user.id}`)
       .then((res) => {
         setInfo(res.data);
+        console.log("info", info)
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   }, [user.id]);
 
@@ -49,14 +50,14 @@ function Profile() {
       <div className="profile-container">
         <img
           className="profile-image2"
-          src={info && info.picture}
+          src={info && info.picture ? info.picture : "No profile picture"}
           alt="profile"
         ></img>
 
         <div className="profile-info">
-          <p>Name: {info && info.userName}</p>
-          <p>Location: {info && info.location}</p>
-          <p>Phone Number: {info && info.phoneNumber}</p>
+          <p>Name: {info && info.userName ? info.userName : "No username"}</p>
+          <p>Location: {info && info.location ? info.location : "No location"}</p>
+          <p>Phone Number: {info && info.phoneNumber ? info.phoneNumber : "No phone number"}</p>
           <p>Email: {info && info.email}</p>
           <p>Password: {info && info.password}</p>
         </div>

@@ -3,18 +3,23 @@ import { useNavigate } from "react-router-dom";
 
 function OnePost({ post }) {
   const navigate = useNavigate();
-  
 
   let newDate = new Date(post.date);
 
-  
   return (
-    
     <div className="post-and-heart">
       <div className="one-post">
         {post ? (
           <>
-            <img className="profile-image" src={post.author.picture} alt="profile" />
+            {post.author?.picture ? ( 
+              <img
+                className="profile-image"
+                src={post.author.picture}
+                alt="author"
+              />
+            ) : (
+              "No picture"
+            )}
             <div className="post-info">
               {
                 <p>
