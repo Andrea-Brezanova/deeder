@@ -14,7 +14,7 @@ function OnePost({ post }) {
       <div className="one-post">
         {post ? (
           <>
-            <img className="profile-image" src={post.author.picture} alt="profile-image" />
+            <img className="profile-image" src={post.author.picture} alt="profile" />
             <div className="post-info">
               {
                 <p>

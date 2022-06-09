@@ -12,7 +12,7 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}3001/users/${user.id}`)
+      .get(`${process.env.REACT_APP_API_URL}/users/${user.id}`)
       .then((res) => {
         setInfo(res.data);
       })
